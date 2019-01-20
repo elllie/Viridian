@@ -12,8 +12,9 @@ class FirstViewController: UIViewController, UITableViewDataSource {
     
     let sections = ["All numbers are approximate"]
     let name = ["CO2 emissions reduced (lbs)", "Energy saved (kwh)", "Fuel savings (gal)", "Green miles traveled", "    from public transportation", "    on foot", "Number of times composted", "Number of times recycled", "    cans", "    paper", "    plastic", "    glass", "    batteries/electronics", "    other", "Paper saved (lbs)", "Plastic saved (lbs)", "    from bottles", "    from bags", "Water saved (gal)"]
-    let numbers = [StatisticsController().co2, StatisticsController().energy, StatisticsController().fuel, StatisticsController().greenMiles, StatisticsController().busMiles, StatisticsController().walkingMiles, StatisticsController().compostct, StatisticsController().recyclect, StatisticsController().canct, StatisticsController().paperct, StatisticsController().plasticct, StatisticsController().glassct, StatisticsController().eWasteCt, StatisticsController().otherRecycling, StatisticsController().paperlbs, StatisticsController().plasticlbs, StatisticsController().plasticFromBottles, StatisticsController().plasticFromBags, StatisticsController().water]
     
+    let numbers = [StatisticsController().co2, StatisticsController().energy, StatisticsController().fuel, StatisticsController().greenMiles, StatisticsController().busMiles, StatisticsController().walkingMiles, StatisticsController().compostct, StatisticsController().recyclect, StatisticsController().canct, StatisticsController().paperct, StatisticsController().plasticct, StatisticsController().glassct, StatisticsController().eWasteCt, StatisticsController().otherRecycling, StatisticsController().paperlbs, StatisticsController().plasticlbs, StatisticsController().plasticFromBottles, StatisticsController().plasticFromBags, StatisticsController().water]
+  
     func numberOfSections(in tableView: UITableView) -> Int {
         return sections.count
     }

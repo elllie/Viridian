@@ -311,42 +311,21 @@ final class StatisticsController {
         return String(gal)
     }()
     
-    lazy var compostct: String = {
-        guard let composts: Int = compost.count else { return "None yet" }
-        return String(composts)
-    }()
+    lazy var compostct: String = String(compost.count)
     
-    lazy var bottlect: String = {
-        guard let bottle: Int = bottles.count else { return "None yet" }
-        return String(bottle)
-    }()
+    lazy var bottlect: String = String(bottles.count)
     
-    lazy var recyclect: String = {
-        guard let recyclables: Int = recycling.count else { return "None yet" }
-        return String(recyclables)
-    }()
+    lazy var recyclect: String = String(recycling.count)
     
-    lazy var canct: String = {
-        guard let can: Int = cans.count else { return "None yet" }
-        return String(can)
-    }()
+    lazy var canct: String = String(cans.count)
     
-    lazy var paperct: String = {
-        let paper: Int = smallPapers.count + largePapers.count
-        return String(paper)
-    }()
+    lazy var paperct: String = String(smallPapers.count + largePapers.count)
     
-    lazy var plasticct: String = {
-        let plastic: Int = recycledBag.count + smallPlastic.count + largePlastic.count
-        return String(plastic)
-    }()
+    lazy var plasticct: String = String(recycledBag.count + smallPlastic.count + largePlastic.count)
     
     lazy var glassct: String = String(glass.count)
     
-    lazy var eWasteCt: String = {
-        let bats: Int = batteries.count + eWaste.count
-        return String(bats)
-    }()
+    lazy var eWasteCt: String = String(batteries.count + eWaste.count)
     
     lazy var otherRecycling: String = {
         let normal: Int = cans.count + smallPapers.count + largePapers.count + recycledBag.count + smallPlastic.count + largePlastic.count + glass.count + batteries.count + eWaste.count
@@ -358,15 +337,15 @@ final class StatisticsController {
         for entry in entries {
             paper = paper + Int(entry.paper)
         }
-        return String(Double(paper / 100))
+        return String(Double(paper) / 100)
     }()
     
     lazy var plasticlbs: String = {
-        var grams: Int = 0
+        var grams: Int64 = 0
         for entry in entries {
-            grams = grams + Int(entry.plastic)
+            grams = grams + entry.plastic
         }
-        return String(Double(grams / 454))
+        return String(Double(grams) / 454)
     }()
     
     lazy var plasticFromBottles: String = {
@@ -374,7 +353,7 @@ final class StatisticsController {
         for bottle in bottles {
             grams = grams + Int(bottle.plastic)
         }
-        return String(Double(grams / 454))
+        return String(Double(grams) / 454)
     }()
     
     lazy var plasticFromBags: String = {
@@ -388,7 +367,7 @@ final class StatisticsController {
         for bag in reusedBag {
             grams = grams + Int(bag.plastic)
         }
-        return String(Double(grams / 454))
+        return String(Double(grams) / 454)
     }()
     
     lazy var water: String = {

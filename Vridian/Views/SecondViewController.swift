@@ -51,7 +51,7 @@ class SecondViewController: UIViewController {
     }
 }
 // the alert view
-let alert = UIAlertController(title: "", message: "Log Successful", preferredStyle: .alert)
+let alert = UIAlertController(title: "", message: "📝✅", preferredStyle: .alert)
 
 class CategoriesViewController: UIViewController {
     
