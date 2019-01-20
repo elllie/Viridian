@@ -1,0 +1,630 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FD09C3D521F1E1B800845843 /* EntriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD09C3D421F1E1B800845843 /* EntriesTableViewController.swift */; };
+		FD09C3DF21F2053B00845843 /* ReusingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD09C3DE21F2053B00845843 /* ReusingViewController.swift */; };
+		FD31352221EFBA7400B49AEE /* DetailViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD31352121EFBA7400B49AEE /* DetailViewControllers.swift */; };
+		FD40CBF321E54832000E4CFC /* Activity.csv in Resources */ = {isa = PBXBuildFile; fileRef = FD40CBF221E54832000E4CFC /* Activity.csv */; };
+		FD6F180721DEA5F500E16584 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6F180621DEA5F500E16584 /* AppDelegate.swift */; };
+		FD6F180921DEA5F500E16584 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6F180821DEA5F500E16584 /* FirstViewController.swift */; };
+		FD6F180B21DEA5F500E16584 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6F180A21DEA5F500E16584 /* SecondViewController.swift */; };
+		FD6F180E21DEA5F500E16584 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD6F180C21DEA5F500E16584 /* Main.storyboard */; };
+		FD6F181021DEA5F700E16584 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD6F180F21DEA5F700E16584 /* Assets.xcassets */; };
+		FD6F181321DEA5F700E16584 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD6F181121DEA5F700E16584 /* LaunchScreen.storyboard */; };
+		FD9AF28821F266D900B71421 /* RecyclingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9AF28721F266D900B71421 /* RecyclingViewController.swift */; };
+		FDA7223521DF12BA006F7E69 /* Karla-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FDA7223021DF12BA006F7E69 /* Karla-Regular.ttf */; };
+		FDA7223621DF12BA006F7E69 /* Karla-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FDA7223121DF12BA006F7E69 /* Karla-Italic.ttf */; };
+		FDA7223721DF12BA006F7E69 /* Karla-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FDA7223221DF12BA006F7E69 /* Karla-Bold.ttf */; };
+		FDA7223821DF12BA006F7E69 /* Karla-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FDA7223321DF12BA006F7E69 /* Karla-BoldItalic.ttf */; };
+		FDA7223A21DF18FD006F7E69 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FDA7223921DF18FD006F7E69 /* Default-568h@2x.png */; };
+		FDBD30AD21F1319B00C16430 /* ReducingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBD30AC21F1319B00C16430 /* ReducingViewController.swift */; };
+		FDBD30CB21F1818800C16430 /* Activity.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = FDBD30CA21F1818800C16430 /* Activity.sqlite */; };
+		FDBD30E621F18D8E00C16430 /* SQLite.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDBD30D721F18A0400C16430 /* SQLite.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FDDB242F21E116DC00C191A7 /* Savegame.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FDDB242D21E116DC00C191A7 /* Savegame.xcdatamodeld */; };
+		FDFC379A21EE60CD004A6DD9 /* ActivityController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFC379921EE60CD004A6DD9 /* ActivityController.swift */; };
+		FDFC379D21EE69BB004A6DD9 /* LogController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFC379C21EE69BB004A6DD9 /* LogController.swift */; };
+		FDFC379F21EE6BA9004A6DD9 /* StatisticsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFC379E21EE6BA9004A6DD9 /* StatisticsController.swift */; };
+		FDFFD76121EADC6700311592 /* SavegameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFFD76021EADC6700311592 /* SavegameModel.swift */; };
+		FDFFD76321EBAADB00311592 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFFD76221EBAADB00311592 /* RootViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FDBD30D621F18A0400C16430 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDBD30CC21F18A0300C16430 /* SQLite.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EE247AD31C3F04ED00AE3E12;
+			remoteInfo = "SQLite iOS";
+		};
+		FDBD30D821F18A0400C16430 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDBD30CC21F18A0300C16430 /* SQLite.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EE247ADD1C3F04ED00AE3E12;
+			remoteInfo = "SQLiteTests iOS";
+		};
+		FDBD30DA21F18A0400C16430 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDBD30CC21F18A0300C16430 /* SQLite.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EE247B3C1C3F3ED000AE3E12;
+			remoteInfo = "SQLite Mac";
+		};
+		FDBD30DC21F18A0400C16430 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDBD30CC21F18A0300C16430 /* SQLite.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EE247B451C3F3ED000AE3E12;
+			remoteInfo = "SQLiteTests Mac";
+		};
+		FDBD30DE21F18A0400C16430 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDBD30CC21F18A0300C16430 /* SQLite.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 03A65E5A1C6BB0F50062603F;
+			remoteInfo = "SQLite tvOS";
+		};
+		FDBD30E021F18A0400C16430 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDBD30CC21F18A0300C16430 /* SQLite.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 03A65E631C6BB0F60062603F;
+			remoteInfo = "SQLiteTests tvOS";
+		};
+		FDBD30E221F18A0400C16430 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDBD30CC21F18A0300C16430 /* SQLite.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A121AC451CA35C79005A31D1;
+			remoteInfo = "SQLite watchOS";
+		};
+		FDBD30E721F18D8E00C16430 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDBD30CC21F18A0300C16430 /* SQLite.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = EE247AD21C3F04ED00AE3E12;
+			remoteInfo = "SQLite iOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FDBD30E921F18D8E00C16430 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				FDBD30E621F18D8E00C16430 /* SQLite.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		FD09C3D421F1E1B800845843 /* EntriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntriesTableViewController.swift; sourceTree = "<group>"; };
+		FD09C3DE21F2053B00845843 /* ReusingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusingViewController.swift; sourceTree = "<group>"; };
+		FD31352121EFBA7400B49AEE /* DetailViewControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewControllers.swift; sourceTree = "<group>"; };
+		FD40CBF221E54832000E4CFC /* Activity.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Activity.csv; sourceTree = "<group>"; };
+		FD6F180321DEA5F400E16584 /* Vridian.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vridian.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD6F180621DEA5F500E16584 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FD6F180821DEA5F500E16584 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		FD6F180A21DEA5F500E16584 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		FD6F180D21DEA5F500E16584 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FD6F180F21DEA5F700E16584 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FD6F181221DEA5F700E16584 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FD6F181421DEA5F700E16584 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD9AF28721F266D900B71421 /* RecyclingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecyclingViewController.swift; sourceTree = "<group>"; };
+		FDA7223021DF12BA006F7E69 /* Karla-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Karla-Regular.ttf"; sourceTree = "<group>"; };
+		FDA7223121DF12BA006F7E69 /* Karla-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Karla-Italic.ttf"; sourceTree = "<group>"; };
+		FDA7223221DF12BA006F7E69 /* Karla-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Karla-Bold.ttf"; sourceTree = "<group>"; };
+		FDA7223321DF12BA006F7E69 /* Karla-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Karla-BoldItalic.ttf"; sourceTree = "<group>"; };
+		FDA7223921DF18FD006F7E69 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		FDBD30AC21F1319B00C16430 /* ReducingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReducingViewController.swift; sourceTree = "<group>"; };
+		FDBD30CA21F1818800C16430 /* Activity.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = Activity.sqlite; sourceTree = "<group>"; };
+		FDBD30CC21F18A0300C16430 /* SQLite.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SQLite.xcodeproj; path = "../SQLite swift/SQLite.swift-master/SQLite.xcodeproj"; sourceTree = "<group>"; };
+		FDDB242E21E116DC00C191A7 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		FDFC379921EE60CD004A6DD9 /* ActivityController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityController.swift; sourceTree = "<group>"; };
+		FDFC379C21EE69BB004A6DD9 /* LogController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogController.swift; sourceTree = "<group>"; };
+		FDFC379E21EE6BA9004A6DD9 /* StatisticsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsController.swift; sourceTree = "<group>"; };
+		FDFFD76021EADC6700311592 /* SavegameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavegameModel.swift; sourceTree = "<group>"; };
+		FDFFD76221EBAADB00311592 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FD6F180021DEA5F300E16584 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FD31352021EFA89800B49AEE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FD31352121EFBA7400B49AEE /* DetailViewControllers.swift */,
+				FDBD30AC21F1319B00C16430 /* ReducingViewController.swift */,
+				FD09C3DE21F2053B00845843 /* ReusingViewController.swift */,
+				FD9AF28721F266D900B71421 /* RecyclingViewController.swift */,
+				FDFFD76221EBAADB00311592 /* RootViewController.swift */,
+				FD6F180821DEA5F500E16584 /* FirstViewController.swift */,
+				FD09C3D421F1E1B800845843 /* EntriesTableViewController.swift */,
+				FD6F180A21DEA5F500E16584 /* SecondViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FD6F17FA21DEA5F300E16584 = {
+			isa = PBXGroup;
+			children = (
+				FDA7223921DF18FD006F7E69 /* Default-568h@2x.png */,
+				FD6F180521DEA5F400E16584 /* Vridian */,
+				FD6F180421DEA5F400E16584 /* Products */,
+				FDBD30C621F17FE900C16430 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		FD6F180421DEA5F400E16584 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FD6F180321DEA5F400E16584 /* Vridian.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FD6F180521DEA5F400E16584 /* Vridian */ = {
+			isa = PBXGroup;
+			children = (
+				FDA7222E21DF12BA006F7E69 /* Karla */,
+				FD6F180621DEA5F500E16584 /* AppDelegate.swift */,
+				FDFC379821EE6095004A6DD9 /* Models */,
+				FDFC379B21EE60DC004A6DD9 /* Controllers */,
+				FD31352021EFA89800B49AEE /* Views */,
+				FD6F180C21DEA5F500E16584 /* Main.storyboard */,
+				FD6F180F21DEA5F700E16584 /* Assets.xcassets */,
+				FD6F181121DEA5F700E16584 /* LaunchScreen.storyboard */,
+				FD6F181421DEA5F700E16584 /* Info.plist */,
+			);
+			path = Vridian;
+			sourceTree = "<group>";
+		};
+		FDA7222E21DF12BA006F7E69 /* Karla */ = {
+			isa = PBXGroup;
+			children = (
+				FDA7223021DF12BA006F7E69 /* Karla-Regular.ttf */,
+				FDA7223121DF12BA006F7E69 /* Karla-Italic.ttf */,
+				FDA7223221DF12BA006F7E69 /* Karla-Bold.ttf */,
+				FDA7223321DF12BA006F7E69 /* Karla-BoldItalic.ttf */,
+			);
+			name = Karla;
+			path = "../../Asset Project Files/Karla";
+			sourceTree = "<group>";
+		};
+		FDBD30C621F17FE900C16430 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FDBD30CC21F18A0300C16430 /* SQLite.xcodeproj */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FDBD30CD21F18A0300C16430 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FDBD30D721F18A0400C16430 /* SQLite.framework */,
+				FDBD30D921F18A0400C16430 /* SQLiteTests iOS.xctest */,
+				FDBD30DB21F18A0400C16430 /* SQLite.framework */,
+				FDBD30DD21F18A0400C16430 /* SQLiteTests Mac.xctest */,
+				FDBD30DF21F18A0400C16430 /* SQLite.framework */,
+				FDBD30E121F18A0400C16430 /* SQLiteTests tvOS.xctest */,
+				FDBD30E321F18A0400C16430 /* SQLite.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FDFC379821EE6095004A6DD9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FD40CBF221E54832000E4CFC /* Activity.csv */,
+				FDBD30CA21F1818800C16430 /* Activity.sqlite */,
+				FDDB242D21E116DC00C191A7 /* Savegame.xcdatamodeld */,
+				FDFFD76021EADC6700311592 /* SavegameModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FDFC379B21EE60DC004A6DD9 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FDFC379921EE60CD004A6DD9 /* ActivityController.swift */,
+				FDFC379C21EE69BB004A6DD9 /* LogController.swift */,
+				FDFC379E21EE6BA9004A6DD9 /* StatisticsController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FD6F180221DEA5F300E16584 /* Vridian */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD6F181721DEA5F700E16584 /* Build configuration list for PBXNativeTarget "Vridian" */;
+			buildPhases = (
+				FD6F17FF21DEA5F300E16584 /* Sources */,
+				FD6F180021DEA5F300E16584 /* Frameworks */,
+				FD6F180121DEA5F300E16584 /* Resources */,
+				FDBD30E921F18D8E00C16430 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FDBD30E821F18D8E00C16430 /* PBXTargetDependency */,
+			);
+			name = Vridian;
+			productName = Roseling;
+			productReference = FD6F180321DEA5F400E16584 /* Vridian.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FD6F17FB21DEA5F300E16584 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				TargetAttributes = {
+					FD6F180221DEA5F300E16584 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = FD6F17FE21DEA5F300E16584 /* Build configuration list for PBXProject "Vridian" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FD6F17FA21DEA5F300E16584;
+			productRefGroup = FD6F180421DEA5F400E16584 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = FDBD30CD21F18A0300C16430 /* Products */;
+					ProjectRef = FDBD30CC21F18A0300C16430 /* SQLite.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				FD6F180221DEA5F300E16584 /* Vridian */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		FDBD30D721F18A0400C16430 /* SQLite.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SQLite.framework;
+			remoteRef = FDBD30D621F18A0400C16430 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FDBD30D921F18A0400C16430 /* SQLiteTests iOS.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "SQLiteTests iOS.xctest";
+			remoteRef = FDBD30D821F18A0400C16430 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FDBD30DB21F18A0400C16430 /* SQLite.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SQLite.framework;
+			remoteRef = FDBD30DA21F18A0400C16430 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FDBD30DD21F18A0400C16430 /* SQLiteTests Mac.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "SQLiteTests Mac.xctest";
+			remoteRef = FDBD30DC21F18A0400C16430 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FDBD30DF21F18A0400C16430 /* SQLite.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SQLite.framework;
+			remoteRef = FDBD30DE21F18A0400C16430 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FDBD30E121F18A0400C16430 /* SQLiteTests tvOS.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "SQLiteTests tvOS.xctest";
+			remoteRef = FDBD30E021F18A0400C16430 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FDBD30E321F18A0400C16430 /* SQLite.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SQLite.framework;
+			remoteRef = FDBD30E221F18A0400C16430 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FD6F180121DEA5F300E16584 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD6F181321DEA5F700E16584 /* LaunchScreen.storyboard in Resources */,
+				FD40CBF321E54832000E4CFC /* Activity.csv in Resources */,
+				FD6F181021DEA5F700E16584 /* Assets.xcassets in Resources */,
+				FDA7223621DF12BA006F7E69 /* Karla-Italic.ttf in Resources */,
+				FDBD30CB21F1818800C16430 /* Activity.sqlite in Resources */,
+				FDA7223721DF12BA006F7E69 /* Karla-Bold.ttf in Resources */,
+				FDA7223521DF12BA006F7E69 /* Karla-Regular.ttf in Resources */,
+				FDA7223A21DF18FD006F7E69 /* Default-568h@2x.png in Resources */,
+				FD6F180E21DEA5F500E16584 /* Main.storyboard in Resources */,
+				FDA7223821DF12BA006F7E69 /* Karla-BoldItalic.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FD6F17FF21DEA5F300E16584 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD6F180B21DEA5F500E16584 /* SecondViewController.swift in Sources */,
+				FD6F180721DEA5F500E16584 /* AppDelegate.swift in Sources */,
+				FDFC379D21EE69BB004A6DD9 /* LogController.swift in Sources */,
+				FD31352221EFBA7400B49AEE /* DetailViewControllers.swift in Sources */,
+				FDFC379F21EE6BA9004A6DD9 /* StatisticsController.swift in Sources */,
+				FDFC379A21EE60CD004A6DD9 /* ActivityController.swift in Sources */,
+				FDFFD76321EBAADB00311592 /* RootViewController.swift in Sources */,
+				FD09C3DF21F2053B00845843 /* ReusingViewController.swift in Sources */,
+				FD6F180921DEA5F500E16584 /* FirstViewController.swift in Sources */,
+				FD9AF28821F266D900B71421 /* RecyclingViewController.swift in Sources */,
+				FDDB242F21E116DC00C191A7 /* Savegame.xcdatamodeld in Sources */,
+				FD09C3D521F1E1B800845843 /* EntriesTableViewController.swift in Sources */,
+				FDBD30AD21F1319B00C16430 /* ReducingViewController.swift in Sources */,
+				FDFFD76121EADC6700311592 /* SavegameModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FDBD30E821F18D8E00C16430 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "SQLite iOS";
+			targetProxy = FDBD30E721F18D8E00C16430 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FD6F180C21DEA5F500E16584 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FD6F180D21DEA5F500E16584 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FD6F181121DEA5F700E16584 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FD6F181221DEA5F700E16584 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FD6F181521DEA5F700E16584 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FD6F181621DEA5F700E16584 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FD6F181821DEA5F700E16584 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MK7Q96J4DT;
+				INFOPLIST_FILE = "$(SRCROOT)/Vridian/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.vridian.Vridian;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FD6F181921DEA5F700E16584 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MK7Q96J4DT;
+				INFOPLIST_FILE = "$(SRCROOT)/Vridian/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.vridian.Vridian;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FD6F17FE21DEA5F300E16584 /* Build configuration list for PBXProject "Vridian" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD6F181521DEA5F700E16584 /* Debug */,
+				FD6F181621DEA5F700E16584 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FD6F181721DEA5F700E16584 /* Build configuration list for PBXNativeTarget "Vridian" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD6F181821DEA5F700E16584 /* Debug */,
+				FD6F181921DEA5F700E16584 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FDDB242D21E116DC00C191A7 /* Savegame.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FDDB242E21E116DC00C191A7 /* Model.xcdatamodel */,
+			);
+			currentVersion = FDDB242E21E116DC00C191A7 /* Model.xcdatamodel */;
+			path = Savegame.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = FD6F17FB21DEA5F300E16584 /* Project object */;
+}
