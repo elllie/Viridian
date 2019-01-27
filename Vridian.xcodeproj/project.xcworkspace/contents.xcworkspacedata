@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:/Volumes/Roseling/Roseling/Vridian.xcodeproj">
+      location = "self:Vridian.xcodeproj">
    </FileRef>
 </Workspace>
