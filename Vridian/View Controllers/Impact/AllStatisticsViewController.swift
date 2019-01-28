@@ -7,7 +7,45 @@
 
 import UIKit
 
-class AllStatisticsViewController: UIViewController {
+class AllStatisticsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        guard let header = view as? UITableViewHeaderFooterView else { return }
+        header.textLabel?.font = UIFont(name: "Karla-Regular", size: 14)
+        header.textLabel?.textColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
+        header.textLabel?.frame = header.frame
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
+        return sections.count
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return sections[section]
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return name.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        cell.textLabel?.text = name[indexPath.row]
+        cell.textLabel?.font = UIFont(name: "Karla-Bold", size: 16)
+        cell.detailTextLabel?.text = numbers[indexPath.row]
+        cell.detailTextLabel?.font = UIFont(name: "Karla-Regular", size: 16)
+        cell.detailTextLabel?.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        cell.isUserInteractionEnabled = false
+        return cell
+    }
+    
+    
+    let sections = ["All values are approximate"]
+    let name = ["CO2 emissions reduced (lbs)", "Energy saved (kwh)", "Fuel savings (gal)", "Green miles traveled", "    from public transportation", "    on foot", "Number of times composted", "Number of times recycled", "    cans", "    paper", "    plastic", "    glass", "    batteries/electronics", "    other", "Paper saved (lbs)", "Plastic saved (lbs)", "    from bottles", "    from bags", "Water saved (gal)"]
+    
+    let numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18"]
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,11 +80,20 @@ class AllStatisticsViewController: UIViewController {
         self.view.addSubview(viewAll)
         
         // Do any additional setup after loading the view.
-        let table: UITableViewController = AllStatisticsTableController()
-        let tableView = UITableView(frame: CGRect(x: 0, y: 150, width: UIScreen.main.bounds.width, height: 500), style: .grouped)
+//        let table: UITableViewController = AllStatisticsTableController()
+        let tableView: UITableView
+        switch UIDevice().type {
+        case .iPhoneSE,.iPhone5,.iPhone5S:
+           tableView = UITableView(frame: CGRect(x: 0, y: 125, width: UIScreen.main.bounds.width, height: (UIScreen.main.bounds.height)), style: .grouped)
+        default:
+            tableView = UITableView(frame: CGRect(x: 0, y: 100, width: UIScreen.main.bounds.width, height: (UIScreen.main.bounds.height)), style: .grouped)
+        }
+        tableView.contentInset = UIEdgeInsets(top: 0.0, left: 0.0, bottom: 100, right: 0.0)
+        tableView.backgroundColor = nil
+        tableView.dataSource = self
+        tableView.delegate = self
         tableView.register(AllStatCell.self, forCellReuseIdentifier: "cell")
-        tableView.dataSource = table
-        tableView.delegate = table
+
         self.view.addSubview(tableView)
     }
     

@@ -21,6 +21,9 @@ class TabBarController: UITabBarController {
         
         let tabBarList = [firstViewController, secondViewController]
         
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "Karla-Bold", size: 12)!], for: .normal)
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "Karla-Bold", size: 12)!], for: .selected)
+        
         viewControllers = tabBarList
         // Do any additional setup after loading the view.
     }
