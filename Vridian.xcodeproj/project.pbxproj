@@ -7,11 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FD28843321FCCEF300CC455F /* IdentifyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD28843221FCCEF300CC455F /* IdentifyModel.swift */; };
+		FD28843321FCCEF300CC455F /* IdentifyDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD28843221FCCEF300CC455F /* IdentifyDevice.swift */; };
 		FD642C9A21F8EEE30072C42B /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD642C9921F8EEE30072C42B /* TabBarController.swift */; };
 		FD642C9C21F8EF710072C42B /* ImpactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD642C9B21F8EF710072C42B /* ImpactViewController.swift */; };
 		FD642C9E21F8EF800072C42B /* LoggingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD642C9D21F8EF800072C42B /* LoggingViewController.swift */; };
-		FD642CA021F8F3A80072C42B /* OverrideFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD642C9F21F8F3A80072C42B /* OverrideFonts.swift */; };
 		FD642CA721F8F3D50072C42B /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = FD642CA221F8F3D50072C42B /* OFL.txt */; };
 		FD642CA821F8F3D50072C42B /* Karla-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FD642CA321F8F3D50072C42B /* Karla-Regular.ttf */; };
 		FD642CA921F8F3D50072C42B /* Karla-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FD642CA421F8F3D50072C42B /* Karla-Italic.ttf */; };
@@ -20,6 +19,8 @@
 		FD642CAD21F8F71C0072C42B /* ImpactNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD642CAC21F8F71C0072C42B /* ImpactNavController.swift */; };
 		FD642CAF21F8F94D0072C42B /* LoggingNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD642CAE21F8F94D0072C42B /* LoggingNavController.swift */; };
 		FD7CC7D121FD33E200F60562 /* AllStatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7CC7D021FD33E200F60562 /* AllStatCell.swift */; };
+		FDACF00721FEEEC9005365B9 /* ActivityData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDACF00621FEEEC9005365B9 /* ActivityData.swift */; };
+		FDACF00D21FF8F75005365B9 /* LogController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDACF00C21FF8F75005365B9 /* LogController.swift */; };
 		FDD89E3E21FCD54B00D287A4 /* AllStatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD89E3D21FCD54B00D287A4 /* AllStatisticsViewController.swift */; };
 		FDD89E4121FCDA5A00D287A4 /* EntriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD89E4021FCDA5A00D287A4 /* EntriesTableViewController.swift */; };
 		FDECAC1A21F8EBA1009D91EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDECAC1921F8EBA1009D91EE /* AppDelegate.swift */; };
@@ -29,11 +30,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		FD28843221FCCEF300CC455F /* IdentifyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentifyModel.swift; sourceTree = "<group>"; };
+		FD28843221FCCEF300CC455F /* IdentifyDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentifyDevice.swift; sourceTree = "<group>"; };
 		FD642C9921F8EEE30072C42B /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		FD642C9B21F8EF710072C42B /* ImpactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImpactViewController.swift; sourceTree = "<group>"; };
 		FD642C9D21F8EF800072C42B /* LoggingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggingViewController.swift; sourceTree = "<group>"; };
-		FD642C9F21F8F3A80072C42B /* OverrideFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverrideFonts.swift; sourceTree = "<group>"; };
 		FD642CA221F8F3D50072C42B /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
 		FD642CA321F8F3D50072C42B /* Karla-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Karla-Regular.ttf"; sourceTree = "<group>"; };
 		FD642CA421F8F3D50072C42B /* Karla-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Karla-Italic.ttf"; sourceTree = "<group>"; };
@@ -42,6 +42,8 @@
 		FD642CAC21F8F71C0072C42B /* ImpactNavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImpactNavController.swift; sourceTree = "<group>"; };
 		FD642CAE21F8F94D0072C42B /* LoggingNavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggingNavController.swift; sourceTree = "<group>"; };
 		FD7CC7D021FD33E200F60562 /* AllStatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllStatCell.swift; sourceTree = "<group>"; };
+		FDACF00621FEEEC9005365B9 /* ActivityData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityData.swift; sourceTree = "<group>"; };
+		FDACF00C21FF8F75005365B9 /* LogController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogController.swift; sourceTree = "<group>"; };
 		FDD89E3D21FCD54B00D287A4 /* AllStatisticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllStatisticsViewController.swift; sourceTree = "<group>"; };
 		FDD89E4021FCDA5A00D287A4 /* EntriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntriesTableViewController.swift; sourceTree = "<group>"; };
 		FDECAC1621F8EBA1009D91EE /* Vridian.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vridian.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -106,6 +108,16 @@
 			path = Logging;
 			sourceTree = "<group>";
 		};
+		FDACF00921FF8DCB005365B9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FDECAC2021F8EBA1009D91EE /* Vridian.xcdatamodeld */,
+				FDACF00621FEEEC9005365B9 /* ActivityData.swift */,
+				FD28843221FCCEF300CC455F /* IdentifyDevice.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		FDECAC0D21F8EBA0009D91EE = {
 			isa = PBXGroup;
 			children = (
@@ -126,13 +138,12 @@
 			isa = PBXGroup;
 			children = (
 				FDECAC1921F8EBA1009D91EE /* AppDelegate.swift */,
-				FD642C9F21F8F3A80072C42B /* OverrideFonts.swift */,
-				FD28843221FCCEF300CC455F /* IdentifyModel.swift */,
+				FDACF00C21FF8F75005365B9 /* LogController.swift */,
+				FDACF00921FF8DCB005365B9 /* Models */,
 				FD642CB021F8F9960072C42B /* View Controllers */,
 				FDECAC2321F8EBA3009D91EE /* Assets.xcassets */,
 				FDECAC2521F8EBA3009D91EE /* LaunchScreen.storyboard */,
 				FDECAC2821F8EBA3009D91EE /* Info.plist */,
-				FDECAC2021F8EBA1009D91EE /* Vridian.xcdatamodeld */,
 				FD642CA121F8F3D50072C42B /* Karla */,
 			);
 			path = Vridian;
@@ -216,10 +227,11 @@
 				FDD89E3E21FCD54B00D287A4 /* AllStatisticsViewController.swift in Sources */,
 				FD642C9A21F8EEE30072C42B /* TabBarController.swift in Sources */,
 				FD642C9C21F8EF710072C42B /* ImpactViewController.swift in Sources */,
-				FD642CA021F8F3A80072C42B /* OverrideFonts.swift in Sources */,
 				FD642C9E21F8EF800072C42B /* LoggingViewController.swift in Sources */,
-				FD28843321FCCEF300CC455F /* IdentifyModel.swift in Sources */,
+				FDACF00D21FF8F75005365B9 /* LogController.swift in Sources */,
+				FD28843321FCCEF300CC455F /* IdentifyDevice.swift in Sources */,
 				FDECAC1A21F8EBA1009D91EE /* AppDelegate.swift in Sources */,
+				FDACF00721FEEEC9005365B9 /* ActivityData.swift in Sources */,
 				FD642CAF21F8F94D0072C42B /* LoggingNavController.swift in Sources */,
 				FDECAC2221F8EBA1009D91EE /* Vridian.xcdatamodeld in Sources */,
 				FD7CC7D121FD33E200F60562 /* AllStatCell.swift in Sources */,
