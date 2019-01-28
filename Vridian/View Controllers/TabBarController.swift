@@ -21,8 +21,12 @@ class TabBarController: UITabBarController {
         
         let tabBarList = [firstViewController, secondViewController]
         
-        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "Karla-Bold", size: 12)!], for: .normal)
-        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "Karla-Bold", size: 12)!], for: .selected)
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "Karla-Bold", size: 11)!], for: .normal)
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "Karla-Bold", size: 11)!], for: .selected)
+        
+        UITabBar.appearance().backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        UITabBar.appearance().barTintColor = UIColor.white
+        UITabBar.appearance().isOpaque = true
         
         viewControllers = tabBarList
         // Do any additional setup after loading the view.
