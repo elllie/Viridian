@@ -11,7 +11,10 @@ class LoggingNavController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.navigationBar.tintColor = .white
+        self.navigationBar.isTranslucent = false
+        self.navigationBar.prefersLargeTitles = false
+        self.navigationBar.isHidden = true
         // Do any additional setup after loading the view.
     }
     

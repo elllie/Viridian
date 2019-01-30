@@ -20,5 +20,5 @@ struct Activity {
 }
 
 class Activities {
-    let a1 = Activity(id: 1, catID: 1, name: "Air-dried laundry", pts: 37479, kWh: 3.0, mi: 0, paper: 0, plastic: 0, water: 0)
+    let a1 = Activity(id: 1, catID: 1, name: "Air-dried laundry", pts: 37479, kWh: 3.0, mi: nil, paper: nil, plastic: nil, water: nil)
 }
