@@ -15,7 +15,7 @@ class LoggingViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
-        let welcome = UILabel(frame: CGRect(x: 30, y: 50, width: 250, height: 40))
+        let welcome = UILabel(frame: CGRect(x: 30, y: 50, width: 250, height: 45))
         welcome.text = "Log an activity"
         welcome.font = UIFont(name: "Karla-Bold", size: 36)
         welcome.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
@@ -142,8 +142,6 @@ class LoggingViewController: UIViewController {
         switch UIDevice().type {
         case .iPhoneSE,.iPhone5,.iPhone5S:
             foodButton = UIButton(frame: CGRect(x: 0, y: 0, width: 75, height: 75))
-//        case .iPhone6plus, .iPhone6Splus, .iPhone7plus, .iPhone8plus, .iPhoneXSMax:
-//            foodButton = UIButton(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
         default:
             foodButton = UIButton(frame: CGRect(x: 0, y: 0, width: 90, height: 90))
         }
@@ -172,7 +170,7 @@ class LoggingViewController: UIViewController {
         
         let categoryStack: UIStackView
         switch UIDevice().type {
-        case .iPhoneSE,.iPhone5,.iPhone5S:
+        case .iPhoneSE,.iPhone5,.iPhone5S, .iPhone6, .iPhone7, .iPhone8:
             categoryStack = UIStackView(frame: CGRect(x: 30, y: 0, width: 400, height: 100))
 //        case .iPhone6plus, .iPhone6Splus, .iPhone7plus, .iPhone8plus, .iPhoneXSMax:
 //            categoryStack = UIStackView(frame: CGRect(x: 30, y: 20, width: 400, height: 140))
@@ -199,8 +197,38 @@ class LoggingViewController: UIViewController {
         
         self.view.addSubview(scrollStack)
         
+        let recentsLabel: UILabel!
+        switch UIDevice().type {
+        case .iPhone5S, .iPhoneSE, .iPhone6, .iPhone7, .iPhone8:
+            recentsLabel = UILabel(frame: CGRect(x: 30, y: 325, width: 150, height: 40))
+            recentsLabel.font = UIFont(name: "Karla-Bold", size: 14)
+        default:
+            recentsLabel = UILabel(frame: CGRect(x: 30, y: 375, width: 150, height: 40))
+            recentsLabel.font = UIFont(name: "Karla-Bold", size: 16)
+        }
+        recentsLabel.text = "Recent activities"
+        recentsLabel.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        self.view.addSubview(recentsLabel)
+        
         loadRecents()
+        // recents collection view height: 140
+        
+        
+        let favoritesLabel: UILabel!
+        switch UIDevice().type {
+        case .iPhone5S, .iPhoneSE, .iPhone6, .iPhone7, .iPhone8:
+            favoritesLabel = UILabel(frame: CGRect(x: 30, y: 475, width: 150, height: 40))
+            favoritesLabel.font = UIFont(name: "Karla-Bold", size: 14)
+        default:
+            favoritesLabel = UILabel(frame: CGRect(x: 30, y: 525, width: 150, height: 40))
+            favoritesLabel.font = UIFont(name: "Karla-Bold", size: 16)
+        }
+        favoritesLabel.text = "Favorites"
+        favoritesLabel.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        self.view.addSubview(favoritesLabel)
         loadFavorites()
+        //favorites collection view height: 140
+        
     }
 
     @objc func recycle(sender: UIButton!) {
