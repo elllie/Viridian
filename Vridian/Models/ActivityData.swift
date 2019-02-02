@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Activity {
+struct FillActivity {
     var id: Int
     var catID: Int
     var name: String
@@ -19,6 +19,6 @@ struct Activity {
     var water: Float?
 }
 
-class Activities {
-    let a1 = Activity(id: 1, catID: 1, name: "Air-dried laundry", pts: 37479, kWh: 3.0, mi: nil, paper: nil, plastic: nil, water: nil)
+class Activity {
+    let a1 = FillActivity(id: 1, catID: 1, name: "Air-dried laundry", pts: 37479, kWh: 3.0, mi: nil, paper: nil, plastic: nil, water: nil)
 }
