@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct FillActivity {
+class Activity {
     var id: Int
     var catID: Int
     var name: String
@@ -17,8 +17,21 @@ struct FillActivity {
     var paper: Int?
     var plastic: Int?
     var water: Float?
+    
+    init(id: Int, catID: Int, name: String, pts: Int, kWh: Float?, mi: Float?, paper: Int?, plastic: Int?, water: Float?){
+        self.id = id
+        self.catID = catID
+        self.name = name
+        self.pts = pts
+        self.kWh = kWh ?? 0.0
+        self.mi = mi ?? 0.0
+        self.paper = paper ?? 0
+        self.plastic = plastic ?? 0
+        self.water = water ?? 0.0
+    }
 }
 
-class Activity {
-    let a1 = FillActivity(id: 1, catID: 1, name: "Air-dried laundry", pts: 37479, kWh: 3.0, mi: nil, paper: nil, plastic: nil, water: nil)
+class CurrentActivity {
+    static var sharedInstance = CurrentActivity()
+    var activity:Activity?
 }

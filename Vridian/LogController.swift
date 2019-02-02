@@ -25,9 +25,9 @@ final class LogController {
         let appDelegate = UIApplication.shared.delegate as? AppDelegate
         moc = appDelegate?.persistentContainer.viewContext
         
-//        let activity: Activity = CurrentActivity.sharedInstance.activity!
-        let activity = Activity().a1
-        print(activity)
+        let activity: Activity = CurrentActivity.sharedInstance.activity!
+
+        print(activity.name)
         
         print("Activity ID:", activity.id)
         print("Amount:", amount)
