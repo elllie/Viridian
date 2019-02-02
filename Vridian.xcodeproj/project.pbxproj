@@ -19,6 +19,9 @@
 		FD642CAD21F8F71C0072C42B /* ImpactNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD642CAC21F8F71C0072C42B /* ImpactNavController.swift */; };
 		FD642CAF21F8F94D0072C42B /* LoggingNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD642CAE21F8F94D0072C42B /* LoggingNavController.swift */; };
 		FD7CC7D121FD33E200F60562 /* AllStatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7CC7D021FD33E200F60562 /* AllStatCell.swift */; };
+		FD9441022206547900E6933F /* CategoryCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9441012206547900E6933F /* CategoryCollectionVC.swift */; };
+		FD94410422065BA400E6933F /* CategoryCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD94410322065BA400E6933F /* CategoryCollectionCell.swift */; };
+		FD94410622065C7E00E6933F /* ReducingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD94410522065C7E00E6933F /* ReducingViewController.swift */; };
 		FDACF00721FEEEC9005365B9 /* ActivityData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDACF00621FEEEC9005365B9 /* ActivityData.swift */; };
 		FDACF00D21FF8F75005365B9 /* LogController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDACF00C21FF8F75005365B9 /* LogController.swift */; };
 		FDD89E3E21FCD54B00D287A4 /* AllStatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD89E3D21FCD54B00D287A4 /* AllStatisticsViewController.swift */; };
@@ -43,6 +46,9 @@
 		FD642CAC21F8F71C0072C42B /* ImpactNavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImpactNavController.swift; sourceTree = "<group>"; };
 		FD642CAE21F8F94D0072C42B /* LoggingNavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggingNavController.swift; sourceTree = "<group>"; };
 		FD7CC7D021FD33E200F60562 /* AllStatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllStatCell.swift; sourceTree = "<group>"; };
+		FD9441012206547900E6933F /* CategoryCollectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionVC.swift; sourceTree = "<group>"; };
+		FD94410322065BA400E6933F /* CategoryCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionCell.swift; sourceTree = "<group>"; };
+		FD94410522065C7E00E6933F /* ReducingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReducingViewController.swift; sourceTree = "<group>"; };
 		FDACF00621FEEEC9005365B9 /* ActivityData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityData.swift; sourceTree = "<group>"; };
 		FDACF00C21FF8F75005365B9 /* LogController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogController.swift; sourceTree = "<group>"; };
 		FDD89E3D21FCD54B00D287A4 /* AllStatisticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllStatisticsViewController.swift; sourceTree = "<group>"; };
@@ -105,10 +111,21 @@
 			isa = PBXGroup;
 			children = (
 				FD642C9D21F8EF800072C42B /* LoggingViewController.swift */,
+				FD9441012206547900E6933F /* CategoryCollectionVC.swift */,
+				FD94410722065C8700E6933F /* Categories */,
+				FD94410322065BA400E6933F /* CategoryCollectionCell.swift */,
 				FDF1A0C02202108D00533592 /* RecentsFavorites.swift */,
 				FD642CAE21F8F94D0072C42B /* LoggingNavController.swift */,
 			);
 			path = Logging;
+			sourceTree = "<group>";
+		};
+		FD94410722065C8700E6933F /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				FD94410522065C7E00E6933F /* ReducingViewController.swift */,
+			);
+			path = Categories;
 			sourceTree = "<group>";
 		};
 		FDACF00921FF8DCB005365B9 /* Models */ = {
@@ -227,14 +244,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDF1A0C12202108D00533592 /* RecentsFavorites.swift in Sources */,
+				FD94410422065BA400E6933F /* CategoryCollectionCell.swift in Sources */,
 				FDD89E4121FCDA5A00D287A4 /* EntriesTableViewController.swift in Sources */,
 				FDD89E3E21FCD54B00D287A4 /* AllStatisticsViewController.swift in Sources */,
 				FD642C9A21F8EEE30072C42B /* TabBarController.swift in Sources */,
 				FD642C9C21F8EF710072C42B /* ImpactViewController.swift in Sources */,
+				FD9441022206547900E6933F /* CategoryCollectionVC.swift in Sources */,
 				FD642C9E21F8EF800072C42B /* LoggingViewController.swift in Sources */,
 				FDACF00D21FF8F75005365B9 /* LogController.swift in Sources */,
 				FD28843321FCCEF300CC455F /* IdentifyDevice.swift in Sources */,
 				FDECAC1A21F8EBA1009D91EE /* AppDelegate.swift in Sources */,
+				FD94410622065C7E00E6933F /* ReducingViewController.swift in Sources */,
 				FDACF00721FEEEC9005365B9 /* ActivityData.swift in Sources */,
 				FD642CAF21F8F94D0072C42B /* LoggingNavController.swift in Sources */,
 				FDECAC2221F8EBA1009D91EE /* Vridian.xcdatamodeld in Sources */,
