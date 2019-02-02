@@ -13,8 +13,8 @@ Every time you do something green, let Vridian know and it will tell you exactly
 Your carbon footprint is not limited to the number of miles you drive, or the amount of electricity you use. Vridian tracks eco-friendly activities spanning all areas of life.
 Everything you do adds up.
 
-## Show extraordinary kindness to the Earth.
+## Live your greenest life.
 
 > screenshots of top 5 impact
 
-Vridian tracks milestones that are important to you. It does all the heavy lifting so you can focus on living your greenest life.
+Showing extraordinary kindness to the Earth shouldn't take extraordinary effort. Vridian automatically tracks milestones that are important to you so you can focus on what matters most.
