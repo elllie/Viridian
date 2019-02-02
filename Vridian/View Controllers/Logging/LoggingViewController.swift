@@ -27,18 +27,28 @@ class LoggingViewController: UIViewController {
         searchPlaceholder.textColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
         self.view.addSubview(searchPlaceholder)
         
+        let pageScroll: UIScrollView!
+        switch UIDevice().type {
+        case .iPhone5S, .iPhoneSE, .iPhone6, .iPhone7, .iPhone8:
+            pageScroll = UIScrollView(frame: CGRect(x: 0, y: 150, width: UIScreen.main.bounds.width, height: (UIScreen.main.bounds.height - 150)))
+        default:
+            pageScroll = UIScrollView(frame: CGRect(x: 0, y: 180, width: UIScreen.main.bounds.width, height: (UIScreen.main.bounds.height - 180)))
+        }
+        pageScroll.contentSize = CGSize(width: UIScreen.main.bounds.width, height: 600)
+        pageScroll.showsVerticalScrollIndicator = false
+        
         let browseByType: UILabel
         switch UIDevice().type {
         case .iPhone5S, .iPhoneSE, .iPhone6, .iPhone7, .iPhone8:
-            browseByType = UILabel(frame: CGRect(x: 30, y: 150, width: 250, height: 40))
+            browseByType = UILabel(frame: CGRect(x: 30, y: 0, width: 250, height: 40))
             browseByType.font = UIFont(name: "Karla-Bold", size: 14)
         default:
-            browseByType = UILabel(frame: CGRect(x: 30, y: 180, width: 250, height: 40))
+            browseByType = UILabel(frame: CGRect(x: 30, y: 0, width: 250, height: 40))
             browseByType.font = UIFont(name: "Karla-Bold", size: 16)
         }
         browseByType.text = "...or browse by type"
         browseByType.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-        self.view.addSubview(browseByType)
+        pageScroll.addSubview(browseByType)
 
         
         let reducingButton: UIButton
@@ -191,24 +201,25 @@ class LoggingViewController: UIViewController {
         categoryStack.addArrangedSubview(recycling)
         categoryStack.addArrangedSubview(food)
         
-        let scrollStack = UIScrollView(frame: CGRect(x: 0, y: 200, width: UIScreen.main.bounds.width, height: 140))
+        let scrollStack = UIScrollView(frame: CGRect(x: 0, y: 50, width: UIScreen.main.bounds.width, height: 140))
         scrollStack.contentSize = CGSize(width: 450, height: 140)
         scrollStack.addSubview(categoryStack)
+        scrollStack.showsHorizontalScrollIndicator = false
         
-        self.view.addSubview(scrollStack)
+        pageScroll.addSubview(scrollStack)
         
         let recentsLabel: UILabel!
         switch UIDevice().type {
         case .iPhone5S, .iPhoneSE, .iPhone6, .iPhone7, .iPhone8:
-            recentsLabel = UILabel(frame: CGRect(x: 30, y: 325, width: 150, height: 40))
+            recentsLabel = UILabel(frame: CGRect(x: 30, y: 200, width: 150, height: 40))
             recentsLabel.font = UIFont(name: "Karla-Bold", size: 14)
         default:
-            recentsLabel = UILabel(frame: CGRect(x: 30, y: 375, width: 150, height: 40))
+            recentsLabel = UILabel(frame: CGRect(x: 30, y: 225, width: 150, height: 40))
             recentsLabel.font = UIFont(name: "Karla-Bold", size: 16)
         }
         recentsLabel.text = "Recent activities"
         recentsLabel.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-        self.view.addSubview(recentsLabel)
+        pageScroll.addSubview(recentsLabel)
         
         loadRecents()
         // recents collection view height: 140
@@ -217,18 +228,19 @@ class LoggingViewController: UIViewController {
         let favoritesLabel: UILabel!
         switch UIDevice().type {
         case .iPhone5S, .iPhoneSE, .iPhone6, .iPhone7, .iPhone8:
-            favoritesLabel = UILabel(frame: CGRect(x: 30, y: 475, width: 150, height: 40))
+            favoritesLabel = UILabel(frame: CGRect(x: 30, y: 350, width: 150, height: 40))
             favoritesLabel.font = UIFont(name: "Karla-Bold", size: 14)
         default:
-            favoritesLabel = UILabel(frame: CGRect(x: 30, y: 525, width: 150, height: 40))
+            favoritesLabel = UILabel(frame: CGRect(x: 30, y: 400, width: 150, height: 40))
             favoritesLabel.font = UIFont(name: "Karla-Bold", size: 16)
         }
         favoritesLabel.text = "Favorites"
         favoritesLabel.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-        self.view.addSubview(favoritesLabel)
+        pageScroll.addSubview(favoritesLabel)
         loadFavorites()
         //favorites collection view height: 140
         
+        self.view.addSubview(pageScroll)
     }
 
     @objc func recycle(sender: UIButton!) {
