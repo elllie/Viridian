@@ -5,6 +5,7 @@ body { margin: 0;}
     background: white;
     background-image: url('/vines/vine10.png'), url('/vines/vineword.png'), url('/vines/vine65.png'), url('/vines/vine75.png'), url('/vines/vine90.png');
     background-position: 10% 0%, 25% -144px, 65% -144px, 75% -72px, 90% -144px;
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
 }
 .why {
   width:100vw;
