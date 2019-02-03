@@ -3,7 +3,6 @@ body { margin: 0;}
     font-family: 'Karla', sans-serif;
     font-weight: bold;
     font-size: 48px;
-    color: #009B7D;
 }
 .splash {
     width:100vw;
@@ -12,8 +11,11 @@ body { margin: 0;}
     background-image: url('/vines/vine10.png'), url('/vines/vineword.png'), url('/vines/vine65.png'), url('/vines/vine75.png'), url('/vines/vine90.png');
     background-position: 10% 0%, 25% -144px, 65% -144px, 75% -72px, 90% -144px;
     background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
-    
+}
+.blurb1 {
+    margin: auto;
     text-align: left;
+    color: #009B7D;
 }
 .why {
   width:100vw;
