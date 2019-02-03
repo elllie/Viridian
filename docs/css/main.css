@@ -1,0 +1,41 @@
+body { margin: 0;}
+.splash {
+    width:100vw;
+    height: 100vh;
+    background: red;
+    background-image: url('some-image.jpg');
+    background-size: cover;
+}
+.why {
+  width:100vw;
+  height: 100vh;
+  background: orange;
+  background-image: url('some-image.jpg');
+  background-size: cover;
+}
+.description {
+  width:100vw;
+  height: 100vh;
+  background: yellow;
+  background-image: url('some-image.jpg');
+  background-size: cover;
+}
+.download {
+  width:100vw;
+  height: 100vh;
+  background: green;
+  background-image: url('some-image.jpg');
+  background-size: cover;
+}
+.credits {
+  width:100vw;
+  height: 100vh;
+  background: blue;
+  background-image: url('some-image.jpg');
+  background-size: cover;
+}
+.licensing {
+  width: 100vw;
+  height: 100;
+  background: white;
+}
