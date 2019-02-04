@@ -1,20 +1,37 @@
-## What difference does it make?
+## Tutorial Progress
 
-> screenshots of news headlines saying the world is gonna end in 2040
+***Bold** means I worked on that particular thing this week.*
+###### To reduce clutter, completed work is marked in green the week I finish it and then removed from the logs for subsequent weeks.
 
-With all the harrowing news of today, it's easy to feel like we as individuals are powerless to stop climate change.
-If giant corporations got us into this mess, why should a human go out of their way to recycle a single can, or take a shorter shower?
+-------------
 
-## Vridian is an environmentalist in your pocket.
+### Week 1 (January 28, 2019 - February 4, 2019)
 
-> screenshots of your total impact and logging 1a, 2e search, and an activity page
+#### Statistics Pages
+* **Statistics 1: Created** but not completed 🔶
+* **Statistics 2: Created** but not completed 🔶
+* **Statistics 3: Created** but not completed 🔶
 
-Every time you do something green, let Vridian know and it will tell you exactly the impact you've made.
-Your carbon footprint is not limited to the number of miles you drive, or the amount of electricity you use. Vridian tracks eco-friendly activities spanning all areas of life.
-Everything you do adds up.
+#### Statistics Functionality
+* Fetch all entries: No work done yet ‼️
+* Calculate secondary values: No work done yet ‼️
+* Calculate special values: No work done yet ‼️
+* Determine importance: No work done yet ‼️
+* Filter by importance: No work done yet ‼️
+* Telemetry: No work done yet ‼️
 
-## Live your greenest life.
+#### Logging Pages
+* **Logging 1: Created** but not completed 🔶
+* **Logging 2a (search): Created** but not completed 🔶
+* **Logging 2b (reducing): Created** but not completed 🔶
+* Logging 2c (reusing): No work done yet ‼️
+* Logging 2d (recycling): No work done yet ‼️
+* Logging 2e (food): No work done yet ‼️
+* Logging 3a (A-type activity pages): No work done yet ‼️
+* Logging 3b (B-type activity pages): No work done yet ‼️
+* Logging 3c (C-type activity pages): No work done yet ‼️
 
-> screenshots of top 5 impact
-
-Showing extraordinary kindness to the Earth shouldn't take extraordinary effort. Vridian automatically tracks milestones that are important to you so you can focus on what matters most.
+#### Logging Functionality
+* **Activity storage: Created** but not filled 🔶
+* **Log activities: Created and finished** ✅
+* Delete diary entries: No work done yet ‼️
