@@ -2,8 +2,6 @@
 
 ###### To reduce clutter, only tasks I actively worked on in a particular week are shown in that week's roundup.
 
--------------
-
 ### Week 1 (January 28, 2019 - February 4, 2019)
 
 #### Statistics Pages
