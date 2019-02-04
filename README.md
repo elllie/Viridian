@@ -1,4 +1,4 @@
-## Tutorial Progress
+## Tutorial Progress / What's New
 
 ###### To reduce clutter, only tasks I actively worked on in a particular week are shown in that week's roundup.
 
