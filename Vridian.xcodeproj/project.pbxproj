@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		FD0196E82207ECD20032A3BD /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0196E72207ECD20032A3BD /* CategoryCollectionViewCell.swift */; };
 		FD28843321FCCEF300CC455F /* IdentifyDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD28843221FCCEF300CC455F /* IdentifyDevice.swift */; };
+		FD5075592209E28300B7EC78 /* TypeAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5075582209E28300B7EC78 /* TypeAViewController.swift */; };
 		FD642C9A21F8EEE30072C42B /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD642C9921F8EEE30072C42B /* TabBarController.swift */; };
 		FD642C9C21F8EF710072C42B /* ImpactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD642C9B21F8EF710072C42B /* ImpactViewController.swift */; };
 		FD642C9E21F8EF800072C42B /* LoggingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD642C9D21F8EF800072C42B /* LoggingViewController.swift */; };
@@ -35,6 +36,7 @@
 /* Begin PBXFileReference section */
 		FD0196E72207ECD20032A3BD /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		FD28843221FCCEF300CC455F /* IdentifyDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentifyDevice.swift; sourceTree = "<group>"; };
+		FD5075582209E28300B7EC78 /* TypeAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeAViewController.swift; sourceTree = "<group>"; };
 		FD642C9921F8EEE30072C42B /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		FD642C9B21F8EF710072C42B /* ImpactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImpactViewController.swift; sourceTree = "<group>"; };
 		FD642C9D21F8EF800072C42B /* LoggingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggingViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				FD642C9D21F8EF800072C42B /* LoggingViewController.swift */,
+				FD5075582209E28300B7EC78 /* TypeAViewController.swift */,
 				FD94410722065C8700E6933F /* Categories */,
 				FDF1A0C02202108D00533592 /* RecentsFavorites.swift */,
 				FD642CAE21F8F94D0072C42B /* LoggingNavController.swift */,
@@ -244,6 +247,7 @@
 				FDF1A0C12202108D00533592 /* RecentsFavorites.swift in Sources */,
 				FDD89E4121FCDA5A00D287A4 /* EntriesTableVC.swift in Sources */,
 				FDD89E3E21FCD54B00D287A4 /* AllStatisticsVC.swift in Sources */,
+				FD5075592209E28300B7EC78 /* TypeAViewController.swift in Sources */,
 				FD642C9A21F8EEE30072C42B /* TabBarController.swift in Sources */,
 				FD642C9C21F8EF710072C42B /* ImpactViewController.swift in Sources */,
 				FD642C9E21F8EF800072C42B /* LoggingViewController.swift in Sources */,
