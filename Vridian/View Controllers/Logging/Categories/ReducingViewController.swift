@@ -43,7 +43,12 @@ class ReducingViewController: UIViewController, UICollectionViewDataSource, UICo
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let cell = collectionView.cellForItem(at: indexPath)
+        //let cell = collectionView.cellForItem(at: indexPath)
+        if (pageType[indexPath.row] == "a") {
+            let detailView = TypeAViewController()
+            detailView.titleLabelText = names[indexPath.row]
+            print("activity type a")
+        }
         print(names[indexPath.row])
     }
 

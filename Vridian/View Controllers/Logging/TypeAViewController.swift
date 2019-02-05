@@ -8,6 +8,8 @@
 import UIKit
 
 class TypeAViewController: UIViewController {
+    
+    var titleLabelText: String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,10 +22,10 @@ class TypeAViewController: UIViewController {
         back.addTarget(self, action: #selector(backAction), for: .touchUpInside)
         self.view.addSubview(back)
         
-        let title = UILabel(frame: CGRect(x: 55, y: 50, width: 220, height: 40))
-        title.font = UIFont(name: "Karla-Bold", size: 36)
-        title.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-        self.view.addSubview(title)
+        let titleLabel = UILabel(frame: CGRect(x: 55, y: 50, width: 220, height: 40))
+        titleLabel.font = UIFont(name: "Karla-Bold", size: 36)
+        titleLabel.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        self.view.addSubview(titleLabel)
     }
     
     @objc func backAction(sender: UIButton!) {
