@@ -9,17 +9,20 @@ import UIKit
 
 class ReducingViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate {
     
-    let activities = ["Air-dried laundry"]
+    let names = ["Air-dried laundry"]
+    let activities = [Activity(id: 1, catID: 1, name: "Air-dried laundry", pts: 37479, kWh: 3.0, mi: nil, paper: nil, plastic: nil, water: nil)]
     let images = [#imageLiteral(resourceName: "air-dried")]
+    let pageType = ["a"]
+    let multi = [true]
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-      //  return activities.count
-        return 4
+        return names.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "coll", for: indexPath)
-        cell.backgroundColor = .red
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "coll", for: indexPath) as! CategoryCollectionViewCell
+        cell.picture.image = images[indexPath.row]
+        cell.label.text = names[indexPath.row]
         
         return cell
     }
@@ -37,6 +40,11 @@ class ReducingViewController: UIViewController, UICollectionViewDataSource, UICo
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets
     {
         return UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath)
+        print(names[indexPath.row])
     }
 
     
@@ -66,7 +74,7 @@ class ReducingViewController: UIViewController, UICollectionViewDataSource, UICo
         collection.backgroundColor = nil
         collection.dataSource = self
         collection.delegate = self
-        collection.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "coll")
+        collection.register(CategoryCollectionViewCell.self, forCellWithReuseIdentifier: "coll")
         
         self.view.addSubview(collection)
     }
