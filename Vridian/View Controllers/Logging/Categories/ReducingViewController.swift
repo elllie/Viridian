@@ -9,20 +9,18 @@ import UIKit
 
 class ReducingViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate {
     
-    let names = ["Air-dried laundry"]
-    let activities = [Activity(id: 1, catID: 1, name: "Air-dried laundry", pts: 37479, kWh: 3.0, mi: nil, paper: nil, plastic: nil, water: nil)]
+    let activities = [Activity.a1]
     let images = [#imageLiteral(resourceName: "air-dried")]
     let pageType = ["a"]
-    let multi = [true]
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return names.count
+        return activities.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "coll", for: indexPath) as! CategoryCollectionViewCell
         cell.picture.image = images[indexPath.row]
-        cell.label.text = names[indexPath.row]
+        cell.label.text = activities[indexPath.row].name
         
         return cell
     }
@@ -46,10 +44,13 @@ class ReducingViewController: UIViewController, UICollectionViewDataSource, UICo
         //let cell = collectionView.cellForItem(at: indexPath)
         if (pageType[indexPath.row] == "a") {
             let detailView = TypeAViewController()
-            detailView.titleLabelText = names[indexPath.row]
-            print("activity type a")
+            detailView.titleLabelText = activities[indexPath.row].name
+            detailView.iconViewImage = images[indexPath.row]
+            self.navigationController?.pushViewController(detailView, animated: true)
+//            CurrentActivity.sharedInstance.activity = activities[indexPath.row]
+            Activity.CurrentActivity = activities[indexPath.row]
         }
-        print(names[indexPath.row])
+        print(activities[indexPath.row].name)
     }
 
     

@@ -25,7 +25,7 @@ final class LogController {
         let appDelegate = UIApplication.shared.delegate as? AppDelegate
         moc = appDelegate?.persistentContainer.viewContext
         
-        let activity: Activity = CurrentActivity.sharedInstance.activity!
+        let activity: Activity = Activity.CurrentActivity!
 
         print(activity.name)
         
@@ -35,8 +35,7 @@ final class LogController {
         // switch for singular items vs plural items
         // (multi-entry True makes many entries)
         // (multi-entry False makes one big entry)
-        switch multi {
-        case true:
+        if multi {
             print("Multi-add")
             for _ in Range(1...amount) {
                 let entry = NSEntityDescription.insertNewObject(forEntityName: "Diary", into: moc) as! Diary
@@ -54,7 +53,8 @@ final class LogController {
                 
                 appDelegate?.saveContext()
             }
-        default:
+        }
+        else {
             print("Massive add")
             let entry = Diary(context: moc)
 
@@ -70,7 +70,6 @@ final class LogController {
             entry.water = Float(activity.water ?? 0 * Float(amount))
 
             appDelegate?.saveContext()
-            
         }
     }
 }
