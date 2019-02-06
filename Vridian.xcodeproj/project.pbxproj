@@ -111,7 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				FD642C9D21F8EF800072C42B /* LoggingViewController.swift */,
-				FD5075582209E28300B7EC78 /* TypeAViewController.swift */,
+				FDAE931E2209EDDB00FB70FC /* Detail View Controllers */,
 				FD94410722065C8700E6933F /* Categories */,
 				FDF1A0C02202108D00533592 /* RecentsFavorites.swift */,
 				FD642CAE21F8F94D0072C42B /* LoggingNavController.swift */,
@@ -136,6 +136,14 @@
 				FD28843221FCCEF300CC455F /* IdentifyDevice.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		FDAE931E2209EDDB00FB70FC /* Detail View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FD5075582209E28300B7EC78 /* TypeAViewController.swift */,
+			);
+			path = "Detail View Controllers";
 			sourceTree = "<group>";
 		};
 		FDECAC0D21F8EBA0009D91EE = {
