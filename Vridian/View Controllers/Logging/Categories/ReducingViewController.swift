@@ -9,8 +9,7 @@ import UIKit
 
 class ReducingViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate {
     
-    let activities = [Activity.a1]
-    let images = [#imageLiteral(resourceName: "air-dried")]
+    let activities = [Activity.a1, Activity.a6, Activity.a7]
     let pageType = ["a"]
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -19,7 +18,7 @@ class ReducingViewController: UIViewController, UICollectionViewDataSource, UICo
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "coll", for: indexPath) as! CategoryCollectionViewCell
-        cell.picture.image = images[indexPath.row]
+        cell.picture.image = activities[indexPath.row].image
         cell.label.text = activities[indexPath.row].name
         
         return cell
@@ -45,7 +44,7 @@ class ReducingViewController: UIViewController, UICollectionViewDataSource, UICo
         if (pageType[indexPath.row] == "a") {
             let detailView = TypeAViewController()
             detailView.titleLabelText = activities[indexPath.row].name
-            detailView.iconViewImage = images[indexPath.row]
+            detailView.iconViewImage = activities[indexPath.row].image
             self.navigationController?.pushViewController(detailView, animated: true)
 //            CurrentActivity.sharedInstance.activity = activities[indexPath.row]
             Activity.CurrentActivity = activities[indexPath.row]
