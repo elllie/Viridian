@@ -31,7 +31,7 @@ class TypeAViewController: UIViewController {
         titleLabel.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         self.view.addSubview(titleLabel)
         
-        let iconView = UIImageView(frame: CGRect(x: 20, y: 150, width: 100, height: 100))
+        let iconView = UIImageView(frame: CGRect(x: 20, y: (titleLabel.frame.height + 75), width: 100, height: 100))
         iconView.image = iconViewImage
         iconView.contentMode = .scaleAspectFit
         iconView.isUserInteractionEnabled = false

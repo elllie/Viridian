@@ -7,8 +7,11 @@
 
 import Foundation
 import UIKit
+import CoreData
 
 class Activity {
+    var moc: NSManagedObjectContext!
+    
     var id: Int
     var catID: Int
     var name: String

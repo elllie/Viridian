@@ -248,8 +248,6 @@ class LoggingViewController: UIViewController {
     }
 
     @objc func reduce(sender: UIButton!) {
-//        CurrentActivity.sharedInstance.activity = Activity(id: 1, catID: 1, name: "Air-dried laundry", pts: 37479, kWh: 3.0, mi: nil, paper: nil, plastic: nil, water: nil)
-//        LogController().logActivity(multi: true, amount: 1)
         self.navigationController?.pushViewController(ReducingViewController(), animated: true)
         
     }

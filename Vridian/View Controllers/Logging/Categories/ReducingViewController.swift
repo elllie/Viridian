@@ -9,8 +9,8 @@ import UIKit
 
 class ReducingViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate {
     
-    let activities = [Activity.a1, Activity.a6, Activity.a7]
-    let pageType = ["a"]
+    let activities = [Activity.a1, Activity.a2, Activity.a6, Activity.a7, Activity.a11, Activity.a12, Activity.a13, Activity.a14]
+    let pageType = ["a", nil, nil, "a", nil, "a", "a", nil]
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return activities.count
@@ -28,9 +28,9 @@ class ReducingViewController: UIViewController, UICollectionViewDataSource, UICo
     {
         switch UIDevice().type {
         case .iPhone5, .iPhoneSE:
-            return CGSize(width: 100, height: 225)
+            return CGSize(width: 80, height: 225)
         default:
-            return CGSize(width: 125, height: 200)
+            return CGSize(width: 100, height: 200)
         }
     }
     
@@ -48,6 +48,10 @@ class ReducingViewController: UIViewController, UICollectionViewDataSource, UICo
             self.navigationController?.pushViewController(detailView, animated: true)
 //            CurrentActivity.sharedInstance.activity = activities[indexPath.row]
             Activity.CurrentActivity = activities[indexPath.row]
+        }
+        else {
+            print("Couldn't load activity data :(")
+            // in future, tell user there was a problem loading the activity data, and ask if they still want to try to log it (knowing that it may be broken)
         }
         print(activities[indexPath.row].name)
     }

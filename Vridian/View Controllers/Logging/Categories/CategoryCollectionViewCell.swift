@@ -19,18 +19,17 @@ class CategoryCollectionViewCell: UICollectionViewCell {
     override init(frame: CGRect) {
         switch UIDevice().type {
         case .iPhone5, .iPhoneSE:
-            picture = UIImageView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+            picture = UIImageView(frame: CGRect(x: 0, y: 0, width: 80, height: 80))
         default:
-            picture = UIImageView(frame: CGRect(x: 0, y: 0, width: 125, height: 125))
+            picture = UIImageView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
         }
         switch UIDevice().type {
         case .iPhone5, .iPhoneSE:
-            label = UILabel(frame: CGRect(x: 0, y: picture.frame.size.height, width: frame.size.width, height: 125))
+            label = UILabel(frame: CGRect(x: 0, y: picture.frame.size.height, width: frame.size.width, height: 150))
         default:
-            label = UILabel(frame: CGRect(x: 0, y: picture.frame.size.height, width: frame.size.width, height: 75))
+            label = UILabel(frame: CGRect(x: 0, y: picture.frame.size.height, width: frame.size.width, height: 100))
         }
         super.init(frame: frame)
-        // ... and then the rest of the code
         
         picture.contentMode = .scaleAspectFit
         contentView.addSubview(picture)
