@@ -29,4 +29,12 @@ extension Activity {
     static let a20 = Activity(id: 20, catID: 3, name: "Recycled glass container", multiAdd: true, image: #imageLiteral(resourceName: "recycled-glass"), pts: 3150, kWh: nil, mi: nil, paper: nil, plastic: nil, water: nil)
     static let a21 = Activity(id: 21, catID: 3, name: "Recycled plastic bag", multiAdd: true, image: #imageLiteral(resourceName: "plastic-bag"), pts: 3150, kWh: nil, mi: nil, paper: nil, plastic: 4, water: nil)
     static let a22 = Activity(id: 22, catID: 3, name: "Recycled plastic container", multiAdd: true, image: #imageLiteral(resourceName: "plastic-small"), pts: 3150, kWh: nil, mi: nil, paper: nil, plastic: 15, water: nil)
+    static let a23 = Activity(id: 23, catID: 1, name: "Wore a reusable menstrual product", multiAdd: true, image: #imageLiteral(resourceName: "tampon"), pts: 10000, kWh: nil, mi: nil, paper: nil, plastic: nil, water: nil)
+    static let a24 = Activity(id: 24, catID: 2, name: "Reused cardboard", multiAdd: true, image: #imageLiteral(resourceName: "paper-large"), pts: 10000, kWh: nil, mi: nil, paper: 28, plastic: nil, water: nil)
+    static let a25 = Activity(id: 31, catID: 2, name: "Reused plastic bag", multiAdd: true, image: #imageLiteral(resourceName: "plastic-bag"), pts: 10000, kWh: nil, mi: nil, paper: nil, plastic: 4, water: nil)
+    // plastic razor weighs 8 grams
+    static let a26 = Activity(id: 26, catID: 1, name: "Shaved with a reusable razor", multiAdd: true, image: #imageLiteral(resourceName: "razor"), pts: 10000, kWh: nil, mi: nil, paper: nil, plastic: 8, water: nil)
+    static let a27 = Activity(id: 27, catID: 1, name: "Switched to e-statements/billing", multiAdd: true, image: #imageLiteral(resourceName: "e-statements"), pts: 10000, kWh: nil, mi: nil, paper: 28, plastic: nil, water: nil)
+    static let a28 = Activity(id: 28, catID: 1, name: "Traveled on foot or bicycle", multiAdd: false, image: #imageLiteral(resourceName: "bicycle"), pts: 6526, kWh: nil, mi: 1, paper: nil, plastic: nil, water: nil)
+    static let a29 = Activity(id: 29, catID: 1, name: "Traveled via public transportation", multiAdd: false, image: #imageLiteral(resourceName: "public-transport"), pts: 1345, kWh: nil, mi: 1, paper: nil, plastic: nil, water: nil)
 }
