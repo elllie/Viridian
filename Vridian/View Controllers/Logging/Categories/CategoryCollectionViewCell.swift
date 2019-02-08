@@ -19,13 +19,13 @@ class CategoryCollectionViewCell: UICollectionViewCell {
     override init(frame: CGRect) {
         switch UIDevice().type {
         case .iPhone5, .iPhoneSE:
-            picture = UIImageView(frame: CGRect(x: 0, y: 0, width: 80, height: 80))
+            picture = UIImageView(frame: CGRect(x: 0, y: 0, width: 95, height: 85))
         default:
             picture = UIImageView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
         }
         switch UIDevice().type {
         case .iPhone5, .iPhoneSE:
-            label = UILabel(frame: CGRect(x: 0, y: picture.frame.size.height, width: frame.size.width, height: 150))
+            label = UILabel(frame: CGRect(x: 0, y: picture.frame.size.height, width: frame.size.width, height: 145))
         default:
             label = UILabel(frame: CGRect(x: 0, y: picture.frame.size.height, width: frame.size.width, height: 100))
         }

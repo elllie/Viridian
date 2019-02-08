@@ -9,8 +9,8 @@ import UIKit
 
 class ReducingViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate {
     
-    let activities = [Activity.a1, Activity.a2, Activity.a6, Activity.a7, Activity.a11, Activity.a12, Activity.a13, Activity.a14]
-    let pageType = ["a", nil, nil, "a", nil, "a", "a", nil]
+    let activities = [Activity.a1, Activity.a2, Activity.a6, Activity.a7, Activity.a11, Activity.a12, Activity.a13, Activity.a14, Activity.a23, Activity.a26, Activity.a27, Activity.a28, Activity.a29]
+    let pageType = ["a", nil, nil, "a", nil, "a", "a", nil, nil, nil, nil, "a", "a"]
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return activities.count
@@ -28,7 +28,7 @@ class ReducingViewController: UIViewController, UICollectionViewDataSource, UICo
     {
         switch UIDevice().type {
         case .iPhone5, .iPhoneSE:
-            return CGSize(width: 80, height: 225)
+            return CGSize(width: 95, height: 225)
         default:
             return CGSize(width: 100, height: 200)
         }
@@ -36,7 +36,12 @@ class ReducingViewController: UIViewController, UICollectionViewDataSource, UICo
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets
     {
-        return UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
+        switch UIDevice().type {
+        case .iPhoneSE, .iPhone5S, .iPhone6plus, .iPhone6Splus, .iPhone7plus, .iPhone8plus:
+            return UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
+        default:
+            return UIEdgeInsets(top: 5, left: 10, bottom: 5, right: 10)
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -76,7 +81,6 @@ class ReducingViewController: UIViewController, UICollectionViewDataSource, UICo
         reducingLabel.font = UIFont(name: "Karla-Bold", size: 36)
         reducingLabel.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         self.view.addSubview(reducingLabel)
-        
         
         let collection = UICollectionView(frame: CGRect(x: 40, y: 100, width: (UIScreen.main.bounds.width - 80), height: UIScreen.main.bounds.height), collectionViewLayout: UICollectionViewFlowLayout())
         collection.contentInset = UIEdgeInsets(top: 0.0, left: 0.0, bottom: 150, right: 0.0)
