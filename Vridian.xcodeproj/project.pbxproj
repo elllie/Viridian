@@ -24,7 +24,7 @@
 		FD7CC7D121FD33E200F60562 /* AllStatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7CC7D021FD33E200F60562 /* AllStatCell.swift */; };
 		FD94410622065C7E00E6933F /* ReducingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD94410522065C7E00E6933F /* ReducingViewController.swift */; };
 		FDACF00721FEEEC9005365B9 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDACF00621FEEEC9005365B9 /* Activity.swift */; };
-		FDACF00D21FF8F75005365B9 /* LogController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDACF00C21FF8F75005365B9 /* LogController.swift */; };
+		FDACF00D21FF8F75005365B9 /* LogActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDACF00C21FF8F75005365B9 /* LogActivity.swift */; };
 		FDD89E3E21FCD54B00D287A4 /* AllStatisticsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD89E3D21FCD54B00D287A4 /* AllStatisticsVC.swift */; };
 		FDD89E4121FCDA5A00D287A4 /* EntriesTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD89E4021FCDA5A00D287A4 /* EntriesTableVC.swift */; };
 		FDECAC1A21F8EBA1009D91EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDECAC1921F8EBA1009D91EE /* AppDelegate.swift */; };
@@ -52,7 +52,7 @@
 		FD7CC7D021FD33E200F60562 /* AllStatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllStatCell.swift; sourceTree = "<group>"; };
 		FD94410522065C7E00E6933F /* ReducingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReducingViewController.swift; sourceTree = "<group>"; };
 		FDACF00621FEEEC9005365B9 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
-		FDACF00C21FF8F75005365B9 /* LogController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogController.swift; sourceTree = "<group>"; };
+		FDACF00C21FF8F75005365B9 /* LogActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogActivity.swift; sourceTree = "<group>"; };
 		FDD89E3D21FCD54B00D287A4 /* AllStatisticsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllStatisticsVC.swift; sourceTree = "<group>"; };
 		FDD89E4021FCDA5A00D287A4 /* EntriesTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntriesTableVC.swift; sourceTree = "<group>"; };
 		FDECAC1621F8EBA1009D91EE /* Vridian.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vridian.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -136,6 +136,7 @@
 				FDECAC2021F8EBA1009D91EE /* Vridian.xcdatamodeld */,
 				FDACF00621FEEEC9005365B9 /* Activity.swift */,
 				FD28E407220BC23000BEDB78 /* ActivityData.swift */,
+				FDACF00C21FF8F75005365B9 /* LogActivity.swift */,
 				FD28843221FCCEF300CC455F /* IdentifyDevice.swift */,
 			);
 			path = Models;
@@ -169,7 +170,6 @@
 			isa = PBXGroup;
 			children = (
 				FDECAC1921F8EBA1009D91EE /* AppDelegate.swift */,
-				FDACF00C21FF8F75005365B9 /* LogController.swift */,
 				FDACF00921FF8DCB005365B9 /* Models */,
 				FD642CB021F8F9960072C42B /* View Controllers */,
 				FDECAC2321F8EBA3009D91EE /* Assets.xcassets */,
@@ -263,7 +263,7 @@
 				FD642C9A21F8EEE30072C42B /* TabBarController.swift in Sources */,
 				FD642C9C21F8EF710072C42B /* ImpactViewController.swift in Sources */,
 				FD642C9E21F8EF800072C42B /* LoggingViewController.swift in Sources */,
-				FDACF00D21FF8F75005365B9 /* LogController.swift in Sources */,
+				FDACF00D21FF8F75005365B9 /* LogActivity.swift in Sources */,
 				FD28843321FCCEF300CC455F /* IdentifyDevice.swift in Sources */,
 				FDECAC1A21F8EBA1009D91EE /* AppDelegate.swift in Sources */,
 				FD94410622065C7E00E6933F /* ReducingViewController.swift in Sources */,
