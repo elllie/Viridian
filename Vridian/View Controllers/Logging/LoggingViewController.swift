@@ -243,10 +243,6 @@ class LoggingViewController: UIViewController {
         self.view.addSubview(pageScroll)
     }
 
-    @objc func recycle(sender: UIButton!) {
-//        self.navigationController?.pushViewController(AllStatisticsViewController(), animated: true)
-    }
-
     @objc func reduce(sender: UIButton!) {
         self.navigationController?.pushViewController(ReducingViewController(), animated: true)
         
@@ -254,6 +250,10 @@ class LoggingViewController: UIViewController {
     
     @objc func reuse(sender: UIButton!) {
         
+    }
+    
+    @objc func recycle(sender: UIButton!) {
+        self.navigationController?.pushViewController(RecyclingViewController(), animated: true)
     }
     
     @objc func foodAction(sender: UIButton!) {
