@@ -23,6 +23,7 @@
 		FD642CAF21F8F94D0072C42B /* LoggingNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD642CAE21F8F94D0072C42B /* LoggingNavController.swift */; };
 		FD7CC7D121FD33E200F60562 /* AllStatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7CC7D021FD33E200F60562 /* AllStatCell.swift */; };
 		FD7DA791220E734D00747F2E /* Tips.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7DA790220E734D00747F2E /* Tips.swift */; };
+		FD7DA793220E7BDA00747F2E /* RecyclingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7DA792220E7BDA00747F2E /* RecyclingViewController.swift */; };
 		FD94410622065C7E00E6933F /* ReducingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD94410522065C7E00E6933F /* ReducingViewController.swift */; };
 		FDACF00721FEEEC9005365B9 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDACF00621FEEEC9005365B9 /* Activity.swift */; };
 		FDACF00D21FF8F75005365B9 /* LogActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDACF00C21FF8F75005365B9 /* LogActivity.swift */; };
@@ -52,6 +53,7 @@
 		FD642CAE21F8F94D0072C42B /* LoggingNavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggingNavController.swift; sourceTree = "<group>"; };
 		FD7CC7D021FD33E200F60562 /* AllStatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllStatCell.swift; sourceTree = "<group>"; };
 		FD7DA790220E734D00747F2E /* Tips.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tips.swift; sourceTree = "<group>"; };
+		FD7DA792220E7BDA00747F2E /* RecyclingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecyclingViewController.swift; sourceTree = "<group>"; };
 		FD94410522065C7E00E6933F /* ReducingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReducingViewController.swift; sourceTree = "<group>"; };
 		FDACF00621FEEEC9005365B9 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		FDACF00C21FF8F75005365B9 /* LogActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogActivity.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				FD94410522065C7E00E6933F /* ReducingViewController.swift */,
+				FD7DA792220E7BDA00747F2E /* RecyclingViewController.swift */,
 				FD0196E72207ECD20032A3BD /* CategoryCollectionViewCell.swift */,
 			);
 			path = Categories;
@@ -272,6 +275,7 @@
 				FDECAC1A21F8EBA1009D91EE /* AppDelegate.swift in Sources */,
 				FD94410622065C7E00E6933F /* ReducingViewController.swift in Sources */,
 				FDACF00721FEEEC9005365B9 /* Activity.swift in Sources */,
+				FD7DA793220E7BDA00747F2E /* RecyclingViewController.swift in Sources */,
 				FD642CAF21F8F94D0072C42B /* LoggingNavController.swift in Sources */,
 				FDECAC2221F8EBA1009D91EE /* Vridian.xcdatamodeld in Sources */,
 				FD7CC7D121FD33E200F60562 /* AllStatCell.swift in Sources */,
