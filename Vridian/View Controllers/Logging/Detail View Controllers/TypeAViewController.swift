@@ -7,10 +7,21 @@
 
 import UIKit
 
-class TypeAViewController: UIViewController {
+class TypeAViewController: UIViewController, UITextFieldDelegate {
     
     var titleLabelText: String?
     var iconViewImage: UIImage?
+    let twentyFive = (UIScreen.main.bounds.width) / 2.5 // this used to be /4 hence 25 but im too lazy to change the variable name
+ 
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        print(textField.text ?? "ooo")
+        return true
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,29 +42,32 @@ class TypeAViewController: UIViewController {
         titleLabel.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         self.view.addSubview(titleLabel)
         
-        let iconView = UIImageView(frame: CGRect(x: 20, y: (titleLabel.frame.height + 75), width: 100, height: 100))
+        let iconView = UIImageView(frame: CGRect(x: 20, y: (titleLabel.frame.height + 75), width: twentyFive, height: 100))
         iconView.image = iconViewImage
         iconView.contentMode = .scaleAspectFit
         iconView.isUserInteractionEnabled = false
         self.view.addSubview(iconView)
         
+        let howManyInput = UITextField(frame: CGRect(x: (twentyFive * 1.5), y: (titleLabel.frame.height + 125), width: 50, height: 40))
+        howManyInput.drawPlaceholder(in: CGRect(x: (twentyFive * 1.5), y: (titleLabel.frame.height + 125), width: 50, height: 40))
+        howManyInput.placeholder = "#"
+        howManyInput.text = "1"
+        howManyInput.textAlignment = .center
+        howManyInput.font = UIFont(name: "Karla-Bold", size: 36)
+        howManyInput.borderStyle = .roundedRect
+        howManyInput.delegate = self
+        howManyInput.keyboardType = .numberPad
+        self.view.addSubview(howManyInput)
+        
+        
+        
         print(Activity.CurrentActivity?.multiAdd ?? true) // assumes multi adder bc more common
     }
-    
-    
     
     @objc func backAction(sender: UIButton!) {
         self.navigationController?.popViewController(animated: true)
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
+
