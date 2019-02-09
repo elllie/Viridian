@@ -11,12 +11,22 @@ class TypeAViewController: UIViewController, UITextFieldDelegate {
     
     var titleLabelText: String?
     var iconViewImage: UIImage?
+    var howManyLabelText: String?
+    var tipLabelText: String?
     let twentyFive = (UIScreen.main.bounds.width) / 2.5 // this used to be /4 hence 25 but im too lazy to change the variable name
  
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         print(textField.text ?? "ooo")
         return true
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        let maxLength = 2
+        let currentString: NSString = textField.text! as NSString
+        let newString: NSString =
+            currentString.replacingCharacters(in: range, with: string) as NSString
+        return newString.length <= maxLength
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -48,8 +58,9 @@ class TypeAViewController: UIViewController, UITextFieldDelegate {
         iconView.isUserInteractionEnabled = false
         self.view.addSubview(iconView)
         
-        let howManyInput = UITextField(frame: CGRect(x: (twentyFive * 1.5), y: (titleLabel.frame.height + 125), width: 50, height: 40))
-        howManyInput.drawPlaceholder(in: CGRect(x: (twentyFive * 1.5), y: (titleLabel.frame.height + 125), width: 50, height: 40))
+        
+        let howManyInput = UITextField(frame: CGRect(x: (twentyFive * 1.5), y: (titleLabel.frame.height + 125), width: 75, height: 50))
+        howManyInput.drawPlaceholder(in: CGRect(x: (twentyFive * 1.5), y: (titleLabel.frame.height + 125), width: 75, height: 50))
         howManyInput.placeholder = "#"
         howManyInput.text = "1"
         howManyInput.textAlignment = .center
@@ -59,7 +70,14 @@ class TypeAViewController: UIViewController, UITextFieldDelegate {
         howManyInput.keyboardType = .numberPad
         self.view.addSubview(howManyInput)
         
+        let howManyLabel = UILabel(frame: CGRect(x: (howManyInput.frame.origin.x - 22.5), y: (titleLabel.frame.height + 75), width: 125, height: 50))
+        howManyLabel.font = UIFont(name: "Karla-Bold", size: 14)
+        howManyLabel.textAlignment = .center
+        howManyLabel.numberOfLines = 0
+        howManyLabel.text = howManyLabelText
+        self.view.addSubview(howManyLabel)
         
+        //tips
         
         print(Activity.CurrentActivity?.multiAdd ?? true) // assumes multi adder bc more common
     }
