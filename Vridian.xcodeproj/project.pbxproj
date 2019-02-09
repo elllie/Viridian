@@ -22,6 +22,7 @@
 		FD642CAD21F8F71C0072C42B /* ImpactNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD642CAC21F8F71C0072C42B /* ImpactNavController.swift */; };
 		FD642CAF21F8F94D0072C42B /* LoggingNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD642CAE21F8F94D0072C42B /* LoggingNavController.swift */; };
 		FD7CC7D121FD33E200F60562 /* AllStatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7CC7D021FD33E200F60562 /* AllStatCell.swift */; };
+		FD7DA791220E734D00747F2E /* Tips.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7DA790220E734D00747F2E /* Tips.swift */; };
 		FD94410622065C7E00E6933F /* ReducingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD94410522065C7E00E6933F /* ReducingViewController.swift */; };
 		FDACF00721FEEEC9005365B9 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDACF00621FEEEC9005365B9 /* Activity.swift */; };
 		FDACF00D21FF8F75005365B9 /* LogActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDACF00C21FF8F75005365B9 /* LogActivity.swift */; };
@@ -50,6 +51,7 @@
 		FD642CAC21F8F71C0072C42B /* ImpactNavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImpactNavController.swift; sourceTree = "<group>"; };
 		FD642CAE21F8F94D0072C42B /* LoggingNavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggingNavController.swift; sourceTree = "<group>"; };
 		FD7CC7D021FD33E200F60562 /* AllStatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllStatCell.swift; sourceTree = "<group>"; };
+		FD7DA790220E734D00747F2E /* Tips.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tips.swift; sourceTree = "<group>"; };
 		FD94410522065C7E00E6933F /* ReducingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReducingViewController.swift; sourceTree = "<group>"; };
 		FDACF00621FEEEC9005365B9 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		FDACF00C21FF8F75005365B9 /* LogActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogActivity.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				FDECAC2021F8EBA1009D91EE /* Vridian.xcdatamodeld */,
 				FDACF00621FEEEC9005365B9 /* Activity.swift */,
 				FD28E407220BC23000BEDB78 /* ActivityData.swift */,
+				FD7DA790220E734D00747F2E /* Tips.swift */,
 				FDACF00C21FF8F75005365B9 /* LogActivity.swift */,
 				FD28843221FCCEF300CC455F /* IdentifyDevice.swift */,
 			);
@@ -257,6 +260,7 @@
 				FD28E408220BC23000BEDB78 /* ActivityData.swift in Sources */,
 				FD0196E82207ECD20032A3BD /* CategoryCollectionViewCell.swift in Sources */,
 				FDF1A0C12202108D00533592 /* RecentsFavorites.swift in Sources */,
+				FD7DA791220E734D00747F2E /* Tips.swift in Sources */,
 				FDD89E4121FCDA5A00D287A4 /* EntriesTableVC.swift in Sources */,
 				FDD89E3E21FCD54B00D287A4 /* AllStatisticsVC.swift in Sources */,
 				FD5075592209E28300B7EC78 /* TypeAViewController.swift in Sources */,
