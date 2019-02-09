@@ -12,6 +12,7 @@ class TypeAViewController: UIViewController, UITextFieldDelegate {
     var titleLabelText: String?
     var iconViewImage: UIImage?
     var howManyLabelText: String?
+    let tipLabelIndent: String = "          "
     var tipLabelText: String?
     let twentyFive = (UIScreen.main.bounds.width) / 2.5 // this used to be /4 hence 25 but im too lazy to change the variable name
  
@@ -44,7 +45,14 @@ class TypeAViewController: UIViewController, UITextFieldDelegate {
         back.addTarget(self, action: #selector(backAction), for: .touchUpInside)
         self.view.addSubview(back)
         
-        let titleLabel = UILabel(frame: CGRect(x: 55, y: 50, width: (UIScreen.main.bounds.width - 100), height: 100))
+        let done = UIButton(frame: CGRect(x: UIScreen.main.bounds.width - 100, y: 55, width: 60, height: 40))
+        done.setTitle("Done", for: .normal)
+        done.titleLabel?.font = UIFont(name: "Karla-Regular", size: 24)
+        done.setTitleColor(UIColor(named: "darkTint"), for: .normal)
+        done.addTarget(self, action: #selector(doneButtonTapped), for: .touchUpInside)
+        self.view.addSubview(done)
+        
+        let titleLabel = UILabel(frame: CGRect(x: 55, y: 50, width: (UIScreen.main.bounds.width - 150), height: 100))
         titleLabel.font = UIFont(name: "Karla-Bold", size: 36)
         titleLabel.text = titleLabelText
         titleLabel.numberOfLines = 0
@@ -77,12 +85,26 @@ class TypeAViewController: UIViewController, UITextFieldDelegate {
         howManyLabel.text = howManyLabelText
         self.view.addSubview(howManyLabel)
         
-        //tips
+        let tip = UILabel(frame: CGRect(x: 55, y: (titleLabel.frame.height + 225), width: 25, height: 25))
+        tip.font = UIFont(name: "Karla-Bold", size: 14)
+        tip.text = "Tip:"
+        tip.sizeToFit()
+        self.view.addSubview(tip)
         
-        print(Activity.CurrentActivity?.multiAdd ?? true) // assumes multi adder bc more common
+        let tipLabel = UILabel(frame: CGRect(x: 55, y: (titleLabel.frame.height + 225), width: UIScreen.main.bounds.width - 110, height: UIScreen.main.bounds.height - 475))
+        tipLabel.text = String(tipLabelIndent + (tipLabelText ?? ""))
+        tipLabel.font = UIFont(name: "Karla-Regular", size: 14)
+        tipLabel.numberOfLines = 0
+        tipLabel.sizeToFit()
+        self.view.addSubview(tipLabel)
     }
     
     @objc func backAction(sender: UIButton!) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    @objc func doneButtonTapped(sender: UIButton!) {
+        print(Activity.CurrentActivity?.name)
         self.navigationController?.popViewController(animated: true)
     }
 
