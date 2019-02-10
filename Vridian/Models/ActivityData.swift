@@ -14,7 +14,7 @@ extension Activity {
     static let a6 = Activity(id: 6, catID: 1, name: "Obtained a refurbished or used device", multiAdd: true, image: #imageLiteral(resourceName: "refurbished-used"), pts: 1216952, kWh: nil, mi: nil, paper: nil, plastic: nil, water: nil)
     static let a7 = Activity(id: 7, catID: 1, name: "Obtained an item without packaging", multiAdd: true, image: #imageLiteral(resourceName: "no-package"), pts: 10000, kWh: nil, mi: nil, paper: 10, plastic: 10, water: nil)
     static let a8 = Activity(id: 8, catID: 4, name: "Bought local produce", multiAdd: true, image: #imageLiteral(resourceName: "harvested-food"), pts: 10000, kWh: nil, mi: nil, paper: nil, plastic: nil, water: nil)
-    static let a9 = Activity(id: 9, catID: 4, name: "Brewed own coffee or tea", multiAdd: true, image: #imageLiteral(resourceName: "home-brewed"), pts: 10000, kWh: nil, mi: nil, paper: nil, plastic: 15, water: nil)
+    static let a9 = Activity(id: 9, catID: 4, name: "Brewed own coffee or tea", multiAdd: true, image: #imageLiteral(resourceName: "home-brewed"), pts: 1000, kWh: nil, mi: nil, paper: nil, plastic: 15, water: nil)
     static let a10 = Activity(id: 10, catID: 4, name: "Brought a reusable mug to buy coffee", multiAdd: true, image: #imageLiteral(resourceName: "mug"), pts: 10000, kWh: nil, mi: nil, paper: nil, plastic: nil, water: nil)
     static let a11 = Activity(id: 11, catID: 1, name: "Carried groceries in a reusable bag", multiAdd: true, image: #imageLiteral(resourceName: "reusable-bag"), pts: 794, kWh: nil, mi: nil, paper: nil, plastic: 6, water: nil)
     static let a12 = Activity(id: 12, catID: 1, name: "Composted", multiAdd: true, image: #imageLiteral(resourceName: "compost"), pts: 100000, kWh: nil, mi: nil, paper: nil, plastic: nil, water: nil)
@@ -31,7 +31,7 @@ extension Activity {
     static let a22 = Activity(id: 22, catID: 3, name: "Plastic container", multiAdd: true, image: #imageLiteral(resourceName: "plastic-large"), pts: 3150, kWh: nil, mi: nil, paper: nil, plastic: 15, water: nil)
     static let a23 = Activity(id: 23, catID: 1, name: "Wore a reusable menstrual product", multiAdd: true, image: #imageLiteral(resourceName: "tampon"), pts: 10000, kWh: nil, mi: nil, paper: nil, plastic: nil, water: nil)
     static let a24 = Activity(id: 24, catID: 2, name: "Reused cardboard", multiAdd: true, image: #imageLiteral(resourceName: "paper-large"), pts: 10000, kWh: nil, mi: nil, paper: 28, plastic: nil, water: nil)
-    static let a25 = Activity(id: 31, catID: 2, name: "Reused plastic bag", multiAdd: true, image: #imageLiteral(resourceName: "plastic-bag"), pts: 10000, kWh: nil, mi: nil, paper: nil, plastic: 4, water: nil)
+    static let a25 = Activity(id: 25, catID: 2, name: "Reused plastic bag", multiAdd: true, image: #imageLiteral(resourceName: "plastic-bag"), pts: 10000, kWh: nil, mi: nil, paper: nil, plastic: 4, water: nil)
     // plastic razor weighs 8 grams
     static let a26 = Activity(id: 26, catID: 1, name: "Shaved with a reusable razor", multiAdd: true, image: #imageLiteral(resourceName: "razor"), pts: 10000, kWh: nil, mi: nil, paper: nil, plastic: 8, water: nil)
     static let a27 = Activity(id: 27, catID: 1, name: "Switched to e-statements/billing", multiAdd: true, image: #imageLiteral(resourceName: "e-statements"), pts: 10000, kWh: nil, mi: nil, paper: 28, plastic: nil, water: nil)
