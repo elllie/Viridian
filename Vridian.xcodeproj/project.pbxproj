@@ -30,6 +30,7 @@
 		FDD89E3E21FCD54B00D287A4 /* AllStatisticsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD89E3D21FCD54B00D287A4 /* AllStatisticsVC.swift */; };
 		FDD89E4121FCDA5A00D287A4 /* EntriesTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD89E4021FCDA5A00D287A4 /* EntriesTableVC.swift */; };
 		FDE26014221116F90032BC5D /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE26013221116F90032BC5D /* SearchTableViewController.swift */; };
+		FDE26016221140BB0032BC5D /* SearchBarCustomizations.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE26015221140BB0032BC5D /* SearchBarCustomizations.swift */; };
 		FDECAC1A21F8EBA1009D91EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDECAC1921F8EBA1009D91EE /* AppDelegate.swift */; };
 		FDECAC2221F8EBA1009D91EE /* Vridian.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FDECAC2021F8EBA1009D91EE /* Vridian.xcdatamodeld */; };
 		FDECAC2421F8EBA3009D91EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDECAC2321F8EBA3009D91EE /* Assets.xcassets */; };
@@ -61,6 +62,7 @@
 		FDD89E3D21FCD54B00D287A4 /* AllStatisticsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllStatisticsVC.swift; sourceTree = "<group>"; };
 		FDD89E4021FCDA5A00D287A4 /* EntriesTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntriesTableVC.swift; sourceTree = "<group>"; };
 		FDE26013221116F90032BC5D /* SearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
+		FDE26015221140BB0032BC5D /* SearchBarCustomizations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarCustomizations.swift; sourceTree = "<group>"; };
 		FDECAC1621F8EBA1009D91EE /* Vridian.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vridian.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDECAC1921F8EBA1009D91EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDECAC2121F8EBA1009D91EE /* Vridian.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Vridian.xcdatamodel; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 			children = (
 				FD642C9D21F8EF800072C42B /* LoggingViewController.swift */,
 				FDE26013221116F90032BC5D /* SearchTableViewController.swift */,
+				FDE26015221140BB0032BC5D /* SearchBarCustomizations.swift */,
 				FDAE931E2209EDDB00FB70FC /* Detail View Controllers */,
 				FD94410722065C8700E6933F /* Categories */,
 				FDF1A0C02202108D00533592 /* RecentsFavorites.swift */,
@@ -282,6 +285,7 @@
 				FD7DA793220E7BDA00747F2E /* RecyclingViewController.swift in Sources */,
 				FD642CAF21F8F94D0072C42B /* LoggingNavController.swift in Sources */,
 				FDECAC2221F8EBA1009D91EE /* Vridian.xcdatamodeld in Sources */,
+				FDE26016221140BB0032BC5D /* SearchBarCustomizations.swift in Sources */,
 				FD7CC7D121FD33E200F60562 /* AllStatCell.swift in Sources */,
 				FD642CAD21F8F71C0072C42B /* ImpactNavController.swift in Sources */,
 			);
