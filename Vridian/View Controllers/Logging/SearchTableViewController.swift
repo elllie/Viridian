@@ -9,10 +9,11 @@ import UIKit
 
 class SearchTableViewController: UITableViewController {
     
-    let activities = [Activity.a1, Activity.a2, Activity.a3, Activity.a4, Activity.a5, Activity.a6, Activity.a7, Activity.a8, Activity.a9, Activity.a10]
+    let activities = [Activity.a1, Activity.a2, Activity.a3, Activity.a4, Activity.a5, Activity.a6, Activity.a7, Activity.a8, Activity.a9, Activity.a10, Activity.a11, Activity.a12, Activity.a13, Activity.a14, Activity.a15, Activity.a16, Activity.a17, Activity.a18, Activity.a19, Activity.a20, Activity.a21, Activity.a22, Activity.a23, Activity.a24, Activity.a25, Activity.a26, Activity.a27, Activity.a28, Activity.a29]
     var filteredActivities = [Activity]()
     
     let searchController = UISearchController(searchResultsController: nil)
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +22,15 @@ class SearchTableViewController: UITableViewController {
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = "Search for an activity..."
+        searchController.searchBar.barTintColor = .white
         tableView.tableHeaderView = searchController.searchBar
+        
+//        let sBar: SearchBar = searchController.searchBar as! SearchBar
+//        sBar.placeholder = "Search for an activity..."
+//        sBar.showsCancelButton = true
+//        sBar.cancelButtonColor = UIColor(named: "darkTint")
+//        sBar.barTintColor = .white
+//        tableView.tableHeaderView = sBar
         
         definesPresentationContext = true
 
@@ -55,9 +64,26 @@ class SearchTableViewController: UITableViewController {
             activity = activities[indexPath.row]
         }
         // Configure the cell...
+        if activity.catID == 3 {
+            if !(activity.name.hasPrefix("Recycled")) {
+                activity.name = "Recycled " + activity.name.lowercased()
+            }
+        }
         cell.textLabel?.text = activity.name
+        cell.textLabel?.font = UIFont(name: "Karla-Bold", size: 16)
 
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+            let activity: Activity
+            if isFiltering() {
+                activity = filteredActivities[indexPath.row]
+            } else {
+                activity = activities[indexPath.row]
+            }
+        //if activity.detailview = a, pushvc typeavc, title = activity.name etc
+        // currentactivity = activity
     }
     
     // MARK: - Private instance methods
@@ -78,52 +104,6 @@ class SearchTableViewController: UITableViewController {
     func isFiltering() -> Bool {
         return searchController.isActive && !searchBarIsEmpty()
     }
- 
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
 

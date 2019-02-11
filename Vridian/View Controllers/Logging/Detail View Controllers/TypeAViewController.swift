@@ -104,7 +104,7 @@ class TypeAViewController: UIViewController, UITextFieldDelegate {
     }
     
     @objc func doneButtonTapped(sender: UIButton!) {
-        print(Activity.CurrentActivity?.name)
+        print(Activity.CurrentActivity?.name as Any)
         self.navigationController?.popViewController(animated: true)
     }
 
