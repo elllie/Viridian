@@ -21,11 +21,14 @@ class LoggingViewController: UIViewController {
         welcome.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         self.view.addSubview(welcome)
         
-        let searchPlaceholder = UILabel(frame: CGRect(x: 30, y: 115, width: 250, height: 40))
-        searchPlaceholder.text = "Search for an activity..."
-        searchPlaceholder.font = UIFont(name: "Karla-Regular", size: 18)
-        searchPlaceholder.textColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
+        let searchPlaceholder = UIButton(frame: CGRect(x: 30, y: 115, width: 250, height: 40))
+        searchPlaceholder.setTitle("Search for an activity...", for: .normal)
+        searchPlaceholder.titleLabel?.font = UIFont(name: "Karla-Regular", size: 18)
+        searchPlaceholder.setTitleColor(#colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1), for: .normal)
+        searchPlaceholder.addTarget(self, action: #selector(searchAction), for: .touchUpInside)
         self.view.addSubview(searchPlaceholder)
+        
+        
         
         let pageScroll: UIScrollView!
         switch UIDevice().type {
@@ -242,6 +245,10 @@ class LoggingViewController: UIViewController {
         
         self.view.addSubview(pageScroll)
     }
+    
+    @objc func searchAction(sender: UIButton!) {
+        self.navigationController?.pushViewController(SearchTableViewController(), animated: true)
+    }
 
     @objc func reduce(sender: UIButton!) {
         self.navigationController?.pushViewController(ReducingViewController(), animated: true)
@@ -259,6 +266,7 @@ class LoggingViewController: UIViewController {
     @objc func foodAction(sender: UIButton!) {
         
     }
+    
     
     /*
     // MARK: - Navigation

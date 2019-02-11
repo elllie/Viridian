@@ -84,6 +84,7 @@ class RecyclingViewController: UIViewController, UICollectionViewDataSource, UIC
         reducingLabel.text = "Recycling"
         reducingLabel.font = UIFont(name: "Karla-Bold", size: 36)
         reducingLabel.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        reducingLabel.sizeToFit()
         self.view.addSubview(reducingLabel)
         
         let collection = UICollectionView(frame: CGRect(x: 40, y: 100, width: (UIScreen.main.bounds.width - 80), height: UIScreen.main.bounds.height), collectionViewLayout: UICollectionViewFlowLayout())

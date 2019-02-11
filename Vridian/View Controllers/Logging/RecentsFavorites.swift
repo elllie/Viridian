@@ -10,11 +10,11 @@ import UIKit
 extension LoggingViewController {
 
     func loadRecents() {
-        print("recents")
+//        print("recents")
     }
     
     func loadFavorites() {
-        print("favorites")
+//        print("favorites")
     }
     /*
     // MARK: - Navigation
