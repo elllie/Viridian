@@ -6,4 +6,5 @@
 * Initialized all 29 available activities!
 * Check out these cool screenshots (all real): 
 
-![search](ncf/screenshots/Search.png?raw=true "Search") ![Alt text](ncf/screenshots/Category.png?raw=true "Category")
+![category](ncf/screenshots/Category.png?raw=true "Category") ![Activity detail](ncf/screenshots/ActivityDetail.png?raw=true "Activity Detail")
+![all statistics](ncf/screenshots/AllStats.png?raw=true "All Statistics")
