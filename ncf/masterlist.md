@@ -20,16 +20,16 @@
 #### Logging Pages
 * **Logging 1: Created** but not completed 🔶
 * **Logging 2a (search): Created** but not completed 🔶
-* **Logging 2b (reducing): Created** but not completed 🔶
+* **Logging 2b (reducing): Completed** ✅
 * Logging 2c (reusing): No work done yet ‼️
-* Logging 2d (recycling): No work done yet ‼️
+* **Logging 2d (recycling): Created** but not completed 🔶
 * Logging 2e (food): No work done yet ‼️
-* Logging 3a (A-type activity pages): No work done yet ‼️
+* **Logging 3a (A-type activity pages): Completed** ✅
 * Logging 3b (B-type activity pages): No work done yet ‼️
 * Logging 3c (C-type activity pages): No work done yet ‼️
 
 #### Logging Functionality
-* **Activity storage: Created** but not filled 🔶
+* **Activity storage: Filled** (not perfect, covered in Issues) ✅
 * **Log activities: Created and finished** ✅
 * Delete diary entries: No work done yet ‼️
 
