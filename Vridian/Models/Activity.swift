@@ -17,6 +17,7 @@ class Activity {
     var name: String
     var image: UIImage
     var multiAdd: Bool
+    var viewType: String?
     var pts: Int
     var kWh: Float?
     var mi: Float?
@@ -25,12 +26,13 @@ class Activity {
     var water: Float?
     
     
-    init(id: Int, catID: Int, name: String, multiAdd: Bool, image: UIImage, pts: Int, kWh: Float?, mi: Float?, paper: Int?, plastic: Int?, water: Float?){
+    init(id: Int, catID: Int, name: String, multiAdd: Bool, image: UIImage, viewType: String?, pts: Int, kWh: Float?, mi: Float?, paper: Int?, plastic: Int?, water: Float?){
         self.id = id
         self.catID = catID
         self.name = name
         self.image = image
         self.multiAdd = multiAdd
+        self.viewType = viewType
         self.pts = pts
         self.kWh = kWh ?? 0.0
         self.mi = mi ?? 0.0
