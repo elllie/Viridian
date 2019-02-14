@@ -48,7 +48,7 @@ class ReducingViewController: UIViewController, UICollectionViewDataSource, UICo
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         //let cell = collectionView.cellForItem(at: indexPath)
-        if (pageType[indexPath.row] == "a") {
+        if (activities[indexPath.row].viewType == "a") {
             let detailView = TypeAViewController()
             detailView.titleLabelText = activities[indexPath.row].name
             detailView.iconViewImage = activities[indexPath.row].image
