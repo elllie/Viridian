@@ -82,8 +82,31 @@ class SearchTableViewController: UITableViewController {
             } else {
                 activity = activities[indexPath.row]
             }
-        //if activity.detailview = a, pushvc typeavc, title = activity.name etc
-        // currentactivity = activity
+        if (activity.viewType == "a") {
+            let detailView = TypeAViewController()
+            detailView.titleLabelText = activities[indexPath.row].name
+            detailView.iconViewImage = activities[indexPath.row].image
+//            detailView.howManyLabelText = howMany[indexPath.row]
+//            detailView.tipLabelText = tips[indexPath.row].map { $0.rawValue }
+            self.navigationController?.pushViewController(detailView, animated: true)
+            //            CurrentActivity.sharedInstance.activity = activities[indexPath.row]
+            Activity.CurrentActivity = activities[indexPath.row]
+        }
+        else if (activity.viewType == "b") {
+            let detailView = TypeBViewController()
+            detailView.titleLabelText = activities[indexPath.row].name
+            detailView.iconViewImage = activities[indexPath.row].image
+                        detailView.howManyLabelText = "Thanks for doing your part"
+            //            detailView.tipLabelText = tips[indexPath.row].map { $0.rawValue }
+            self.navigationController?.pushViewController(detailView, animated: true)
+            //            CurrentActivity.sharedInstance.activity = activities[indexPath.row]
+            Activity.CurrentActivity = activities[indexPath.row]
+        }
+        else {
+            print("Couldn't load activity data :(")
+            // in future, tell user there was a problem loading the activity data, and ask if they still want to try to log it (knowing that it may be broken)
+        }
+        print(activities[indexPath.row].name)
     }
     
     // MARK: - Private instance methods

@@ -71,7 +71,6 @@ class ImpactViewController: UIViewController {
     @objc func buttonAction(sender: UIButton!) {
         self.navigationController?.pushViewController(AllStatisticsViewController(), animated: true)
     }
-
     /*
     // MARK: - Navigation
 

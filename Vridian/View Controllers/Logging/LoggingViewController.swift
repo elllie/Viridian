@@ -256,7 +256,7 @@ class LoggingViewController: UIViewController {
     }
     
     @objc func reuse(sender: UIButton!) {
-        
+        self.navigationController?.pushViewController(ReusingViewController(), animated: true)
     }
     
     @objc func recycle(sender: UIButton!) {
@@ -264,7 +264,7 @@ class LoggingViewController: UIViewController {
     }
     
     @objc func foodAction(sender: UIButton!) {
-        
+        self.navigationController?.pushViewController(FoodViewController(), animated: true)
     }
     
     

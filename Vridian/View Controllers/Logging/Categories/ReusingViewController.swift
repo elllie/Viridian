@@ -7,11 +7,11 @@
 
 import UIKit
 
-class RecyclingViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate {
+class ReusingViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate {
     
-    let activities = [Activity.a15, Activity.a16, Activity.a17, Activity.a18, Activity.a19, Activity.a20, Activity.a21, Activity.a22]
-    let howMany = ["How many?", "How many cans?", nil, "How many?", nil, "How many?", "How many?", "How many?"]
-    let tips = [nil, nil, nil, nil, Tips.reusableBagsAvailable, Tips.glassNotRecyclable, Tips.plasticBagsNotRecyclable, nil]
+    let activities = [Activity.a24, Activity.a25]
+    let howMany = ["", "How many?"]
+    let tips = [nil, Tips.plasticBagsBetterThanPaper]
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return activities.count
@@ -54,7 +54,7 @@ class RecyclingViewController: UIViewController, UICollectionViewDataSource, UIC
             detailView.howManyLabelText = howMany[indexPath.row]
             detailView.tipLabelText = tips[indexPath.row].map { $0.rawValue }
             self.navigationController?.pushViewController(detailView, animated: true)
-            //            CurrentActivity.sharedInstance.activity = activities[indexPath.row]
+//            CurrentActivity.sharedInstance.activity = activities[indexPath.row]
             Activity.CurrentActivity = activities[indexPath.row]
         }
         else if (activities[indexPath.row].viewType == "b") {
@@ -87,11 +87,10 @@ class RecyclingViewController: UIViewController, UICollectionViewDataSource, UIC
         back.addTarget(self, action: #selector(backAction), for: .touchUpInside)
         self.view.addSubview(back)
         
-        let reducingLabel = UILabel(frame: CGRect(x: 55, y: 50, width: 220, height: 45))
-        reducingLabel.text = "Recycling"
+        let reducingLabel = UILabel(frame: CGRect(x: 55, y: 50, width: 220, height: 40))
+        reducingLabel.text = "Reusing"
         reducingLabel.font = UIFont(name: "Karla-Bold", size: 36)
         reducingLabel.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-        reducingLabel.sizeToFit()
         self.view.addSubview(reducingLabel)
         
         let collection = UICollectionView(frame: CGRect(x: 40, y: 100, width: (UIScreen.main.bounds.width - 80), height: UIScreen.main.bounds.height), collectionViewLayout: UICollectionViewFlowLayout())

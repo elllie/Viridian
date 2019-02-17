@@ -10,7 +10,6 @@ import UIKit
 class ReducingViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate {
     
     let activities = [Activity.a1, Activity.a2, Activity.a6, Activity.a7, Activity.a11, Activity.a12, Activity.a13, Activity.a14, Activity.a23, Activity.a26, Activity.a27, Activity.a28, Activity.a29]
-    let pageType = ["a", "a", nil, "a", "a", nil, nil, nil, nil, nil, nil, "a", "a"]
     let howMany = ["How many loads?", "How many loads?", "How many?", "Quantity", "How many bags?", "", "Size (oz)", "", "", "", "", "Miles traveled", "Miles traveled"]
     let tips = [Tips.airDryingGentler, Tips.handWashingGentler, nil, nil, Tips.reusableBagsAvailable, nil, Tips.reusableBottlesMaterial, nil, nil, nil, Tips.eStatementsFasterSaferEasier, Tips.walkingHealthy, Tips.publicTransportAvailable]
     
@@ -56,6 +55,14 @@ class ReducingViewController: UIViewController, UICollectionViewDataSource, UICo
             detailView.tipLabelText = tips[indexPath.row].map { $0.rawValue }
             self.navigationController?.pushViewController(detailView, animated: true)
 //            CurrentActivity.sharedInstance.activity = activities[indexPath.row]
+            Activity.CurrentActivity = activities[indexPath.row]
+        }
+        else if (activities[indexPath.row].viewType == "b") {
+            let detailView = TypeBViewController()
+            detailView.titleLabelText = activities[indexPath.row].name
+            detailView.iconViewImage = activities[indexPath.row].image
+            //            detailView.tipLabelText = tips[indexPath.row].map { $0.rawValue }
+            self.navigationController?.pushViewController(detailView, animated: true)
             Activity.CurrentActivity = activities[indexPath.row]
         }
         else {
