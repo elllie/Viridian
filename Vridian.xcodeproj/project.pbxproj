@@ -27,6 +27,7 @@
 		FD7CC7D121FD33E200F60562 /* AllStatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7CC7D021FD33E200F60562 /* AllStatCell.swift */; };
 		FD7DA791220E734D00747F2E /* Tips.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7DA790220E734D00747F2E /* Tips.swift */; };
 		FD7DA793220E7BDA00747F2E /* RecyclingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7DA792220E7BDA00747F2E /* RecyclingViewController.swift */; };
+		FD93F2FD221C906700BFFE80 /* HowMany.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD93F2FC221C906700BFFE80 /* HowMany.swift */; };
 		FD94410622065C7E00E6933F /* ReducingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD94410522065C7E00E6933F /* ReducingViewController.swift */; };
 		FDACF00721FEEEC9005365B9 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDACF00621FEEEC9005365B9 /* Activity.swift */; };
 		FDACF00D21FF8F75005365B9 /* LogActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDACF00C21FF8F75005365B9 /* LogActivity.swift */; };
@@ -62,6 +63,7 @@
 		FD7CC7D021FD33E200F60562 /* AllStatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllStatCell.swift; sourceTree = "<group>"; };
 		FD7DA790220E734D00747F2E /* Tips.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tips.swift; sourceTree = "<group>"; };
 		FD7DA792220E7BDA00747F2E /* RecyclingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecyclingViewController.swift; sourceTree = "<group>"; };
+		FD93F2FC221C906700BFFE80 /* HowMany.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowMany.swift; sourceTree = "<group>"; };
 		FD94410522065C7E00E6933F /* ReducingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReducingViewController.swift; sourceTree = "<group>"; };
 		FDACF00621FEEEC9005365B9 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		FDACF00C21FF8F75005365B9 /* LogActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogActivity.swift; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 				FDACF00621FEEEC9005365B9 /* Activity.swift */,
 				FD28E407220BC23000BEDB78 /* ActivityData.swift */,
 				FD7DA790220E734D00747F2E /* Tips.swift */,
+				FD93F2FC221C906700BFFE80 /* HowMany.swift */,
 				FDACF00C21FF8F75005365B9 /* LogActivity.swift */,
 				FD28843221FCCEF300CC455F /* IdentifyDevice.swift */,
 			);
@@ -300,6 +303,7 @@
 				FD11677A2218C78E0010885D /* TypeBViewController.swift in Sources */,
 				FD7CC7D121FD33E200F60562 /* AllStatCell.swift in Sources */,
 				FD642CAD21F8F71C0072C42B /* ImpactNavController.swift in Sources */,
+				FD93F2FD221C906700BFFE80 /* HowMany.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
