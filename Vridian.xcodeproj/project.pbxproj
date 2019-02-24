@@ -32,6 +32,7 @@
 		FDB8691A22220FBF0076F7F9 /* XActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB8691922220FBF0076F7F9 /* XActivity.swift */; };
 		FDB8691C22221D920076F7F9 /* Tip.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB8691B22221D920076F7F9 /* Tip.swift */; };
 		FDB8691E222220C50076F7F9 /* TipData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB8691D222220C50076F7F9 /* TipData.swift */; };
+		FDB86922222324CB0076F7F9 /* EntryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB86921222324CB0076F7F9 /* EntryCell.swift */; };
 		FDD89E3E21FCD54B00D287A4 /* AllStatisticsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD89E3D21FCD54B00D287A4 /* AllStatisticsVC.swift */; };
 		FDD89E4121FCDA5A00D287A4 /* EntriesTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD89E4021FCDA5A00D287A4 /* EntriesTableVC.swift */; };
 		FDE26014221116F90032BC5D /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE26013221116F90032BC5D /* SearchTableViewController.swift */; };
@@ -69,6 +70,7 @@
 		FDB8691922220FBF0076F7F9 /* XActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XActivity.swift; sourceTree = "<group>"; };
 		FDB8691B22221D920076F7F9 /* Tip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tip.swift; sourceTree = "<group>"; };
 		FDB8691D222220C50076F7F9 /* TipData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipData.swift; sourceTree = "<group>"; };
+		FDB86921222324CB0076F7F9 /* EntryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryCell.swift; sourceTree = "<group>"; };
 		FDD89E3D21FCD54B00D287A4 /* AllStatisticsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllStatisticsVC.swift; sourceTree = "<group>"; };
 		FDD89E4021FCDA5A00D287A4 /* EntriesTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntriesTableVC.swift; sourceTree = "<group>"; };
 		FDE26013221116F90032BC5D /* SearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				FD642C9B21F8EF710072C42B /* ImpactViewController.swift */,
 				FDD89E3D21FCD54B00D287A4 /* AllStatisticsVC.swift */,
 				FD7CC7D021FD33E200F60562 /* AllStatCell.swift */,
+				FDB86921222324CB0076F7F9 /* EntryCell.swift */,
 				FDD89E4021FCDA5A00D287A4 /* EntriesTableVC.swift */,
 				FD642CAC21F8F71C0072C42B /* ImpactNavController.swift */,
 			);
@@ -302,6 +305,7 @@
 				FDACF00721FEEEC9005365B9 /* Activity.swift in Sources */,
 				FD7DA793220E7BDA00747F2E /* RecyclingViewController.swift in Sources */,
 				FD642CAF21F8F94D0072C42B /* LoggingNavController.swift in Sources */,
+				FDB86922222324CB0076F7F9 /* EntryCell.swift in Sources */,
 				FDECAC2221F8EBA1009D91EE /* Vridian.xcdatamodeld in Sources */,
 				FDE26016221140BB0032BC5D /* SearchBarCustomizations.swift in Sources */,
 				FD11677A2218C78E0010885D /* TypeBViewController.swift in Sources */,
