@@ -27,10 +27,10 @@
 		FD7CC7D121FD33E200F60562 /* AllStatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7CC7D021FD33E200F60562 /* AllStatCell.swift */; };
 		FD7DA791220E734D00747F2E /* Tips.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7DA790220E734D00747F2E /* Tips.swift */; };
 		FD7DA793220E7BDA00747F2E /* RecyclingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7DA792220E7BDA00747F2E /* RecyclingViewController.swift */; };
-		FD93F2FD221C906700BFFE80 /* HowMany.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD93F2FC221C906700BFFE80 /* HowMany.swift */; };
 		FD94410622065C7E00E6933F /* ReducingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD94410522065C7E00E6933F /* ReducingViewController.swift */; };
 		FDACF00721FEEEC9005365B9 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDACF00621FEEEC9005365B9 /* Activity.swift */; };
 		FDACF00D21FF8F75005365B9 /* LogActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDACF00C21FF8F75005365B9 /* LogActivity.swift */; };
+		FDB8691A22220FBF0076F7F9 /* XActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB8691922220FBF0076F7F9 /* XActivity.swift */; };
 		FDD89E3E21FCD54B00D287A4 /* AllStatisticsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD89E3D21FCD54B00D287A4 /* AllStatisticsVC.swift */; };
 		FDD89E4121FCDA5A00D287A4 /* EntriesTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD89E4021FCDA5A00D287A4 /* EntriesTableVC.swift */; };
 		FDE26014221116F90032BC5D /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE26013221116F90032BC5D /* SearchTableViewController.swift */; };
@@ -63,10 +63,10 @@
 		FD7CC7D021FD33E200F60562 /* AllStatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllStatCell.swift; sourceTree = "<group>"; };
 		FD7DA790220E734D00747F2E /* Tips.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tips.swift; sourceTree = "<group>"; };
 		FD7DA792220E7BDA00747F2E /* RecyclingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecyclingViewController.swift; sourceTree = "<group>"; };
-		FD93F2FC221C906700BFFE80 /* HowMany.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowMany.swift; sourceTree = "<group>"; };
 		FD94410522065C7E00E6933F /* ReducingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReducingViewController.swift; sourceTree = "<group>"; };
 		FDACF00621FEEEC9005365B9 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		FDACF00C21FF8F75005365B9 /* LogActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogActivity.swift; sourceTree = "<group>"; };
+		FDB8691922220FBF0076F7F9 /* XActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XActivity.swift; sourceTree = "<group>"; };
 		FDD89E3D21FCD54B00D287A4 /* AllStatisticsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllStatisticsVC.swift; sourceTree = "<group>"; };
 		FDD89E4021FCDA5A00D287A4 /* EntriesTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntriesTableVC.swift; sourceTree = "<group>"; };
 		FDE26013221116F90032BC5D /* SearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
@@ -157,8 +157,8 @@
 				FDECAC2021F8EBA1009D91EE /* Vridian.xcdatamodeld */,
 				FDACF00621FEEEC9005365B9 /* Activity.swift */,
 				FD28E407220BC23000BEDB78 /* ActivityData.swift */,
+				FDB8691922220FBF0076F7F9 /* XActivity.swift */,
 				FD7DA790220E734D00747F2E /* Tips.swift */,
-				FD93F2FC221C906700BFFE80 /* HowMany.swift */,
 				FDACF00C21FF8F75005365B9 /* LogActivity.swift */,
 				FD28843221FCCEF300CC455F /* IdentifyDevice.swift */,
 			);
@@ -303,7 +303,7 @@
 				FD11677A2218C78E0010885D /* TypeBViewController.swift in Sources */,
 				FD7CC7D121FD33E200F60562 /* AllStatCell.swift in Sources */,
 				FD642CAD21F8F71C0072C42B /* ImpactNavController.swift in Sources */,
-				FD93F2FD221C906700BFFE80 /* HowMany.swift in Sources */,
+				FDB8691A22220FBF0076F7F9 /* XActivity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
