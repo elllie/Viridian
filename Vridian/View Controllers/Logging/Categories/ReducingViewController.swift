@@ -10,7 +10,6 @@ import UIKit
 class ReducingViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate {
     
     let activities = [Activity.a1, Activity.a2, Activity.a6, Activity.a7, Activity.a11, Activity.a12, Activity.a13, Activity.a14, Activity.a23, Activity.a26, Activity.a27, Activity.a28, Activity.a29]
-    let howMany = ["How many loads?", "How many loads?", "How many?", "Quantity", "How many bags?", "", "Size (oz)", "", "", "", "", "Miles traveled", "Miles traveled"]
     let tips = [Tips.airDryingGentler, Tips.handWashingGentler, nil, nil, Tips.reusableBagsAvailable, nil, Tips.reusableBottlesMaterial, nil, nil, nil, Tips.eStatementsFasterSaferEasier, Tips.walkingHealthy, Tips.publicTransportAvailable]
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -47,27 +46,22 @@ class ReducingViewController: UIViewController, UICollectionViewDataSource, UICo
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         //let cell = collectionView.cellForItem(at: indexPath)
-        if (activities[indexPath.row].viewType == "a") {
+        if (activities[indexPath.row] is XActivity) {
             let detailView = TypeAViewController()
             detailView.titleLabelText = activities[indexPath.row].name
             detailView.iconViewImage = activities[indexPath.row].image
-            detailView.howManyLabelText = howMany[indexPath.row]
-            detailView.tipLabelText = tips[indexPath.row].map { $0.rawValue }
+            detailView.howManyLabelText = (activities[indexPath.row] as! XActivity).howMany
+            detailView.tipLabelText = tips[indexPath.row]?.rawValue
             self.navigationController?.pushViewController(detailView, animated: true)
-//            CurrentActivity.sharedInstance.activity = activities[indexPath.row]
             Activity.CurrentActivity = activities[indexPath.row]
         }
-        else if (activities[indexPath.row].viewType == "b") {
+        else {
             let detailView = TypeBViewController()
             detailView.titleLabelText = activities[indexPath.row].name
             detailView.iconViewImage = activities[indexPath.row].image
             //            detailView.tipLabelText = tips[indexPath.row].map { $0.rawValue }
             self.navigationController?.pushViewController(detailView, animated: true)
             Activity.CurrentActivity = activities[indexPath.row]
-        }
-        else {
-            print("Couldn't load activity data :(")
-            // in future, tell user there was a problem loading the activity data, and ask if they still want to try to log it (knowing that it may be broken)
         }
         print(activities[indexPath.row].name)
     }

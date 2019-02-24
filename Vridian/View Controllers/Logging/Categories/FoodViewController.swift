@@ -10,7 +10,6 @@ import UIKit
 class FoodViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate {
     
     let activities = [Activity.a3, Activity.a4, Activity.a5, Activity.a8, Activity.a9, Activity.a10]
-    let howMany = ["", "", "", "", "", "How many?"]
     let tips = [nil, Tips.plasticBagsBetterThanPaper, nil, nil, nil, nil]
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -47,27 +46,22 @@ class FoodViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         //let cell = collectionView.cellForItem(at: indexPath)
-        if (activities[indexPath.row].viewType == "a") {
+        if (activities[indexPath.row] is XActivity) {
             let detailView = TypeAViewController()
             detailView.titleLabelText = activities[indexPath.row].name
             detailView.iconViewImage = activities[indexPath.row].image
-            detailView.howManyLabelText = howMany[indexPath.row]
-            detailView.tipLabelText = tips[indexPath.row].map { $0.rawValue }
+            detailView.howManyLabelText = (activities[indexPath.row] as! XActivity).howMany
+            detailView.tipLabelText = tips[indexPath.row]?.rawValue
             self.navigationController?.pushViewController(detailView, animated: true)
-//            CurrentActivity.sharedInstance.activity = activities[indexPath.row]
             Activity.CurrentActivity = activities[indexPath.row]
         }
-        else if (activities[indexPath.row].viewType == "b") {
+        else {
             let detailView = TypeBViewController()
             detailView.titleLabelText = activities[indexPath.row].name
             detailView.iconViewImage = activities[indexPath.row].image
             //            detailView.tipLabelText = tips[indexPath.row].map { $0.rawValue }
             self.navigationController?.pushViewController(detailView, animated: true)
             Activity.CurrentActivity = activities[indexPath.row]
-        }
-        else {
-            print("Couldn't load activity data :(")
-            // in future, tell user there was a problem loading the activity data, and ask if they still want to try to log it (knowing that it may be broken)
         }
         print(activities[indexPath.row].name)
     }

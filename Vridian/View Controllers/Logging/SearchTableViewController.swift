@@ -82,31 +82,24 @@ class SearchTableViewController: UITableViewController {
             } else {
                 activity = activities[indexPath.row]
             }
-        if (activity.viewType == "a") {
+        if (activities[indexPath.row] is XActivity) {
             let detailView = TypeAViewController()
-            detailView.titleLabelText = activities[indexPath.row].name
-            detailView.iconViewImage = activities[indexPath.row].image
-//            detailView.howManyLabelText = howMany[indexPath.row]
-//            detailView.tipLabelText = tips[indexPath.row].map { $0.rawValue }
+            detailView.titleLabelText = activity.name
+            detailView.iconViewImage = activity.image
+            detailView.howManyLabelText = (activity as! XActivity).howMany
+//            detailView.tipLabelText = tips[indexPath.row]?.rawValue
             self.navigationController?.pushViewController(detailView, animated: true)
-            //            CurrentActivity.sharedInstance.activity = activities[indexPath.row]
-            Activity.CurrentActivity = activities[indexPath.row]
-        }
-        else if (activity.viewType == "b") {
-            let detailView = TypeBViewController()
-            detailView.titleLabelText = activities[indexPath.row].name
-            detailView.iconViewImage = activities[indexPath.row].image
-                        detailView.howManyLabelText = "Thanks for doing your part"
-            //            detailView.tipLabelText = tips[indexPath.row].map { $0.rawValue }
-            self.navigationController?.pushViewController(detailView, animated: true)
-            //            CurrentActivity.sharedInstance.activity = activities[indexPath.row]
-            Activity.CurrentActivity = activities[indexPath.row]
+            Activity.CurrentActivity = activity
         }
         else {
-            print("Couldn't load activity data :(")
-            // in future, tell user there was a problem loading the activity data, and ask if they still want to try to log it (knowing that it may be broken)
+            let detailView = TypeBViewController()
+            detailView.titleLabelText = activity.name
+            detailView.iconViewImage = activity.image
+            //            detailView.tipLabelText = tips[indexPath.row].map { $0.rawValue }
+            self.navigationController?.pushViewController(detailView, animated: true)
+            Activity.CurrentActivity = activity
         }
-        print(activities[indexPath.row].name)
+        print(activity.name)
     }
     
     // MARK: - Private instance methods

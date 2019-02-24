@@ -34,7 +34,7 @@ extension Activity {
         
         // switch for singular items vs plural items
         // (multi-entry True makes many entries whereas False makes one big entry)
-        if activity.multiAdd {
+        if (activity as! XActivity).multiAdd {
             print("Multi-add")
             for _ in Range(1...amount) {
                 let entry = NSEntityDescription.insertNewObject(forEntityName: "Diary", into: moc) as! Diary
@@ -54,8 +54,7 @@ extension Activity {
             }
         }
         else {
-            print("Massive add")
-            let entry = Diary(context: moc)
+            let entry = NSEntityDescription.insertNewObject(forEntityName: "Diary", into: moc) as! Diary
 
             entry.actID = Int32(activity.id)
             entry.catID = Int16(activity.catID)
