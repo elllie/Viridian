@@ -25,12 +25,13 @@
 		FD7A1B7E2219FC0C00D7C36B /* ReusingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7A1B7D2219FC0C00D7C36B /* ReusingViewController.swift */; };
 		FD7A1B80221A257300D7C36B /* FoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7A1B7F221A257300D7C36B /* FoodViewController.swift */; };
 		FD7CC7D121FD33E200F60562 /* AllStatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7CC7D021FD33E200F60562 /* AllStatCell.swift */; };
-		FD7DA791220E734D00747F2E /* Tips.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7DA790220E734D00747F2E /* Tips.swift */; };
 		FD7DA793220E7BDA00747F2E /* RecyclingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7DA792220E7BDA00747F2E /* RecyclingViewController.swift */; };
 		FD94410622065C7E00E6933F /* ReducingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD94410522065C7E00E6933F /* ReducingViewController.swift */; };
 		FDACF00721FEEEC9005365B9 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDACF00621FEEEC9005365B9 /* Activity.swift */; };
 		FDACF00D21FF8F75005365B9 /* LogActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDACF00C21FF8F75005365B9 /* LogActivity.swift */; };
 		FDB8691A22220FBF0076F7F9 /* XActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB8691922220FBF0076F7F9 /* XActivity.swift */; };
+		FDB8691C22221D920076F7F9 /* Tip.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB8691B22221D920076F7F9 /* Tip.swift */; };
+		FDB8691E222220C50076F7F9 /* TipData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB8691D222220C50076F7F9 /* TipData.swift */; };
 		FDD89E3E21FCD54B00D287A4 /* AllStatisticsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD89E3D21FCD54B00D287A4 /* AllStatisticsVC.swift */; };
 		FDD89E4121FCDA5A00D287A4 /* EntriesTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD89E4021FCDA5A00D287A4 /* EntriesTableVC.swift */; };
 		FDE26014221116F90032BC5D /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE26013221116F90032BC5D /* SearchTableViewController.swift */; };
@@ -61,12 +62,13 @@
 		FD7A1B7D2219FC0C00D7C36B /* ReusingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusingViewController.swift; sourceTree = "<group>"; };
 		FD7A1B7F221A257300D7C36B /* FoodViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodViewController.swift; sourceTree = "<group>"; };
 		FD7CC7D021FD33E200F60562 /* AllStatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllStatCell.swift; sourceTree = "<group>"; };
-		FD7DA790220E734D00747F2E /* Tips.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tips.swift; sourceTree = "<group>"; };
 		FD7DA792220E7BDA00747F2E /* RecyclingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecyclingViewController.swift; sourceTree = "<group>"; };
 		FD94410522065C7E00E6933F /* ReducingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReducingViewController.swift; sourceTree = "<group>"; };
 		FDACF00621FEEEC9005365B9 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		FDACF00C21FF8F75005365B9 /* LogActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogActivity.swift; sourceTree = "<group>"; };
 		FDB8691922220FBF0076F7F9 /* XActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XActivity.swift; sourceTree = "<group>"; };
+		FDB8691B22221D920076F7F9 /* Tip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tip.swift; sourceTree = "<group>"; };
+		FDB8691D222220C50076F7F9 /* TipData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipData.swift; sourceTree = "<group>"; };
 		FDD89E3D21FCD54B00D287A4 /* AllStatisticsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllStatisticsVC.swift; sourceTree = "<group>"; };
 		FDD89E4021FCDA5A00D287A4 /* EntriesTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntriesTableVC.swift; sourceTree = "<group>"; };
 		FDE26013221116F90032BC5D /* SearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
@@ -158,7 +160,8 @@
 				FDACF00621FEEEC9005365B9 /* Activity.swift */,
 				FD28E407220BC23000BEDB78 /* ActivityData.swift */,
 				FDB8691922220FBF0076F7F9 /* XActivity.swift */,
-				FD7DA790220E734D00747F2E /* Tips.swift */,
+				FDB8691B22221D920076F7F9 /* Tip.swift */,
+				FDB8691D222220C50076F7F9 /* TipData.swift */,
 				FDACF00C21FF8F75005365B9 /* LogActivity.swift */,
 				FD28843221FCCEF300CC455F /* IdentifyDevice.swift */,
 			);
@@ -282,8 +285,8 @@
 				FD0196E82207ECD20032A3BD /* CategoryCollectionViewCell.swift in Sources */,
 				FD7A1B7E2219FC0C00D7C36B /* ReusingViewController.swift in Sources */,
 				FDF1A0C12202108D00533592 /* RecentsFavorites.swift in Sources */,
-				FD7DA791220E734D00747F2E /* Tips.swift in Sources */,
 				FDD89E4121FCDA5A00D287A4 /* EntriesTableVC.swift in Sources */,
+				FDB8691E222220C50076F7F9 /* TipData.swift in Sources */,
 				FDD89E3E21FCD54B00D287A4 /* AllStatisticsVC.swift in Sources */,
 				FD5075592209E28300B7EC78 /* TypeAViewController.swift in Sources */,
 				FD642C9A21F8EEE30072C42B /* TabBarController.swift in Sources */,
@@ -295,6 +298,7 @@
 				FDECAC1A21F8EBA1009D91EE /* AppDelegate.swift in Sources */,
 				FD94410622065C7E00E6933F /* ReducingViewController.swift in Sources */,
 				FD7A1B80221A257300D7C36B /* FoodViewController.swift in Sources */,
+				FDB8691C22221D920076F7F9 /* Tip.swift in Sources */,
 				FDACF00721FEEEC9005365B9 /* Activity.swift in Sources */,
 				FD7DA793220E7BDA00747F2E /* RecyclingViewController.swift in Sources */,
 				FD642CAF21F8F94D0072C42B /* LoggingNavController.swift in Sources */,
