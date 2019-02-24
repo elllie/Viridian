@@ -34,23 +34,26 @@ extension Activity {
         
         // switch for singular items vs plural items
         // (multi-entry True makes many entries whereas False makes one big entry)
-        if (activity as! XActivity).multiAdd {
-            print("Multi-add")
-            for _ in Range(1...amount) {
-                let entry = NSEntityDescription.insertNewObject(forEntityName: "Diary", into: moc) as! Diary
-                
-                entry.actID = Int32(activity.id)
-                entry.catID = Int16(activity.catID)
-                entry.name = activity.name
-                entry.logged = NSDate() as Date
-                entry.pts = Int32(activity.pts)
-                entry.kWh = activity.kWh ?? 0
-                entry.mi = activity.mi ?? 0
-                entry.paper = Int32(activity.paper ?? 0)
-                entry.plastic = Int32(activity.plastic ?? 0)
-                entry.water = activity.water ?? 0
-                
-                appDelegate?.saveContext()
+        if (activity is XActivity) {
+            if (activity as! XActivity).multiAdd {
+                print("Multi-add")
+                for _ in Range(1...amount) {
+                    let entry = NSEntityDescription.insertNewObject(forEntityName: "Diary", into: moc) as! Diary
+                    
+                    entry.actID = Int32(activity.id)
+                    entry.catID = Int16(activity.catID)
+                    entry.name = activity.name
+                    entry.logged = NSDate() as Date
+                    entry.pts = Int32(activity.pts)
+                    entry.kWh = activity.kWh ?? 0
+                    entry.mi = activity.mi ?? 0
+                    entry.paper = Int32(activity.paper ?? 0)
+                    entry.plastic = Int32(activity.plastic ?? 0)
+                    entry.water = activity.water ?? 0
+                    
+                    appDelegate?.saveContext()
+                    print("Saved")
+                }
             }
         }
         else {
@@ -68,6 +71,7 @@ extension Activity {
             entry.water = Float(activity.water ?? 0 * Float(amount))
 
             appDelegate?.saveContext()
+            print("saved")
         }
     }
 }

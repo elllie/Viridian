@@ -6,11 +6,20 @@
 //
 
 import UIKit
+import CoreData
 
-class EntriesTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-
+class EntriesTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFetchedResultsControllerDelegate {
+    
+    let appDelegate = UIApplication.shared.delegate as? AppDelegate
+    var moc: NSManagedObjectContext!
+    // moc = appDelegate?.persistentContainer.viewContext
+    let persistentContainer = NSPersistentContainer(name: "Vridian")
+    let fetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Diary")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setupView()
         
         view.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         
@@ -35,7 +44,7 @@ class EntriesTableViewController: UIViewController, UITableViewDataSource, UITab
         tableView.backgroundColor = nil
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "reuseIdentifier")
+        tableView.register(EntryCell.self, forCellReuseIdentifier: "entry")
         
         self.view.addSubview(tableView)
         // Uncomment the following line to preserve selection between presentations
@@ -60,20 +69,78 @@ class EntriesTableViewController: UIViewController, UITableViewDataSource, UITab
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return numbers.count
+        guard let entries = fetchedResultsController.fetchedObjects else { return 0 }
+        return entries.count
     }
 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "entry", for: indexPath)
         // Configure the cell...
-        cell.textLabel?.text = numbers[indexPath.row]
+        let entry = fetchedResultsController.object(at: indexPath)
+        
+        cell.textLabel?.text = entry.name
+        
+        let df = DateFormatter()
+        df.dateStyle = .medium
+        df.timeStyle = .short
+        let date = df.string(from: entry.logged!)
+        
+        cell.detailTextLabel?.text = date
         cell.isUserInteractionEnabled = false
 
         return cell
     }
- 
+
+    fileprivate lazy var fetchedResultsController: NSFetchedResultsController<Diary> = {
+        // Create Fetch Request
+        let fetchRequest = NSFetchRequest<Diary>(entityName: "Diary")
+        
+        // Configure Fetch Request
+        fetchRequest.sortDescriptors = [NSSortDescriptor(key: "logged", ascending: false)]
+        
+        // Create Fetched Results Controller
+        let fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: (appDelegate?.persistentContainer.viewContext)!, sectionNameKeyPath: nil, cacheName: nil)
+        
+        // Configure Fetched Results Controller
+        fetchedResultsController.delegate = self as NSFetchedResultsControllerDelegate
+        
+        return fetchedResultsController
+    }()
+    
+    func setupView() {
+        // let entries = fetchedResultsController.fetchedObjects
+        persistentContainer.loadPersistentStores { (persistentStoreDescription, error) in
+            if let error = error {
+                print("Unable to Load Persistent Store")
+                print("\(error), \(error.localizedDescription)")
+                
+            } else {
+                self.setupView()
+                
+                do {
+                    try self.fetchedResultsController.performFetch()
+                } catch {
+                    let fetchError = error as NSError
+                    print("Unable to Perform Fetch Request")
+                    print("\(fetchError), \(fetchError.localizedDescription)")
+                }
+                
+                 self.updateView()
+            }
+        }
+    }
+    
+    func updateView() {
+        do {
+            try self.fetchedResultsController.performFetch()
+        } catch {
+            let fetchError = error as NSError
+            print("Unable to Perform Fetch Request")
+            print("\(fetchError), \(fetchError.localizedDescription)")
+        }
+    }
+    
 
     /*
     // Override to support conditional editing of the table view.
