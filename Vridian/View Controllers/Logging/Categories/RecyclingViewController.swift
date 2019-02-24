@@ -10,7 +10,6 @@ import UIKit
 class RecyclingViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate {
     
     let activities = [Activity.a15, Activity.a16, Activity.a17, Activity.a18, Activity.a19, Activity.a20, Activity.a21, Activity.a22]
-    let tips = [nil, nil, nil, nil, Tips.reusableBagsAvailable, Tips.glassNotRecyclable, Tips.plasticBagsNotRecyclable, nil]
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return activities.count
@@ -48,20 +47,26 @@ class RecyclingViewController: UIViewController, UICollectionViewDataSource, UIC
         //let cell = collectionView.cellForItem(at: indexPath)
         if (activities[indexPath.row] is XActivity) {
             let detailView = TypeAViewController()
+            
+            Activity.CurrentActivity = activities[indexPath.row]
+            
             detailView.titleLabelText = activities[indexPath.row].name
             detailView.iconViewImage = activities[indexPath.row].image
             detailView.howManyLabelText = (activities[indexPath.row] as! XActivity).howMany
-            detailView.tipLabelText = tips[indexPath.row]?.rawValue
+            detailView.tipLabelText = Tip.pick(activity: Activity.CurrentActivity!)
+            
             self.navigationController?.pushViewController(detailView, animated: true)
-            Activity.CurrentActivity = activities[indexPath.row]
         }
         else {
             let detailView = TypeBViewController()
+            
+            Activity.CurrentActivity = activities[indexPath.row]
+            
             detailView.titleLabelText = activities[indexPath.row].name
             detailView.iconViewImage = activities[indexPath.row].image
-            //            detailView.tipLabelText = tips[indexPath.row].map { $0.rawValue }
+            detailView.tipLabelText = Tip.pick(activity: Activity.CurrentActivity!)
+            
             self.navigationController?.pushViewController(detailView, animated: true)
-            Activity.CurrentActivity = activities[indexPath.row]
         }
         print(activities[indexPath.row].name)
     }

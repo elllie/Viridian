@@ -10,7 +10,6 @@ import UIKit
 class ReducingViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate {
     
     let activities = [Activity.a1, Activity.a2, Activity.a6, Activity.a7, Activity.a11, Activity.a12, Activity.a13, Activity.a14, Activity.a23, Activity.a26, Activity.a27, Activity.a28, Activity.a29]
-    let tips = [Tips.airDryingGentler, Tips.handWashingGentler, nil, nil, Tips.reusableBagsAvailable, nil, Tips.reusableBottlesMaterial, nil, nil, nil, Tips.eStatementsFasterSaferEasier, Tips.walkingHealthy, Tips.publicTransportAvailable]
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return activities.count
@@ -47,21 +46,21 @@ class ReducingViewController: UIViewController, UICollectionViewDataSource, UICo
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         //let cell = collectionView.cellForItem(at: indexPath)
         if (activities[indexPath.row] is XActivity) {
+            Activity.CurrentActivity = activities[indexPath.row]
             let detailView = TypeAViewController()
             detailView.titleLabelText = activities[indexPath.row].name
             detailView.iconViewImage = activities[indexPath.row].image
             detailView.howManyLabelText = (activities[indexPath.row] as! XActivity).howMany
-            detailView.tipLabelText = tips[indexPath.row]?.rawValue
+            detailView.tipLabelText = Tip.pick(activity: Activity.CurrentActivity!)
             self.navigationController?.pushViewController(detailView, animated: true)
-            Activity.CurrentActivity = activities[indexPath.row]
         }
         else {
             let detailView = TypeBViewController()
+            Activity.CurrentActivity = activities[indexPath.row]
             detailView.titleLabelText = activities[indexPath.row].name
             detailView.iconViewImage = activities[indexPath.row].image
-            //            detailView.tipLabelText = tips[indexPath.row].map { $0.rawValue }
+            detailView.tipLabelText = Tip.pick(activity: Activity.CurrentActivity!)
             self.navigationController?.pushViewController(detailView, animated: true)
-            Activity.CurrentActivity = activities[indexPath.row]
         }
         print(activities[indexPath.row].name)
     }

@@ -84,20 +84,26 @@ class SearchTableViewController: UITableViewController {
             }
         if (activities[indexPath.row] is XActivity) {
             let detailView = TypeAViewController()
+            
+            Activity.CurrentActivity = activity
+            
             detailView.titleLabelText = activity.name
             detailView.iconViewImage = activity.image
             detailView.howManyLabelText = (activity as! XActivity).howMany
-//            detailView.tipLabelText = tips[indexPath.row]?.rawValue
+            detailView.tipLabelText = Tip.pick(activity: Activity.CurrentActivity!)
+            
             self.navigationController?.pushViewController(detailView, animated: true)
-            Activity.CurrentActivity = activity
         }
         else {
             let detailView = TypeBViewController()
+            
+            Activity.CurrentActivity = activity
+            
             detailView.titleLabelText = activity.name
             detailView.iconViewImage = activity.image
-            //            detailView.tipLabelText = tips[indexPath.row].map { $0.rawValue }
+            detailView.tipLabelText = Tip.pick(activity: Activity.CurrentActivity!)
+            
             self.navigationController?.pushViewController(detailView, animated: true)
-            Activity.CurrentActivity = activity
         }
         print(activity.name)
     }
