@@ -15,10 +15,10 @@ class TypeAViewController: UIViewController, UITextFieldDelegate {
     let tipLabelIndent: String = "          "
     var tipLabelText: String?
     let twentyFive = (UIScreen.main.bounds.width) / 2.5 // this used to be /4 hence 25 but im too lazy to change the variable name
+    var amt: Int = 1
  
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
-        print(textField.text ?? "ooo")
         return true
     }
     
@@ -27,6 +27,7 @@ class TypeAViewController: UIViewController, UITextFieldDelegate {
         let currentString: NSString = textField.text! as NSString
         let newString: NSString =
             currentString.replacingCharacters(in: range, with: string) as NSString
+        amt = Int(newString as String) ?? 0
         return newString.length <= maxLength
     }
     
@@ -104,7 +105,7 @@ class TypeAViewController: UIViewController, UITextFieldDelegate {
     }
     
     @objc func doneButtonTapped(sender: UIButton!) {
-        print(Activity.CurrentActivity?.name as Any)
+        Activity.CurrentActivity?.logActivity(amount: amt)
         self.navigationController?.popViewController(animated: true)
     }
 

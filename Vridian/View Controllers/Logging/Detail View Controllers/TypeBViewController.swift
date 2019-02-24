@@ -71,7 +71,7 @@ class TypeBViewController: UIViewController {
     }
     
     @objc func doneButtonTapped(sender: UIButton!) {
-        print(Activity.CurrentActivity?.name as Any)
+        Activity.CurrentActivity?.logActivity(amount: 1)
         self.navigationController?.popViewController(animated: true)
     }
 
