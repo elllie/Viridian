@@ -21,10 +21,17 @@ class LoggingViewController: UIViewController {
         welcome.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         self.view.addSubview(welcome)
         
-        let searchPlaceholder = UIButton(frame: CGRect(x: 30, y: 115, width: 250, height: 40))
+        let searchPlaceholder = UIButton(type: UIButton.ButtonType.system)
+        searchPlaceholder.frame = CGRect(x: 30, y: 115, width: UIScreen.main.bounds.width - 60, height: 40)
         searchPlaceholder.setTitle("Search for an activity...", for: .normal)
-        searchPlaceholder.titleLabel?.font = UIFont(name: "Karla-Regular", size: 18)
-        searchPlaceholder.setTitleColor(#colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1), for: .normal)
+        searchPlaceholder.titleLabel?.font = UIFont(name: "Karla-Bold", size: 18)
+        searchPlaceholder.titleLabel?.textAlignment = .left
+        searchPlaceholder.setTitleColor(UIColor(named: "viridian"), for: .normal)
+        searchPlaceholder.setImage(UIImage(named: "search"), for: .normal)
+        searchPlaceholder.imageView?.contentMode = .scaleAspectFit
+        searchPlaceholder.imageEdgeInsets = UIEdgeInsets(top: 0, left: -60, bottom: 0, right: 0)
+        searchPlaceholder.tintColor = UIColor(named: "viridian")
+        searchPlaceholder.backgroundColor = #colorLiteral(red: 0.8274509804, green: 0.9058823529, blue: 0.5764705882, alpha: 0.1028467465)
         searchPlaceholder.addTarget(self, action: #selector(searchAction), for: .touchUpInside)
         self.view.addSubview(searchPlaceholder)
         
