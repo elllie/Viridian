@@ -4,6 +4,12 @@
 
 ### Weeks 3 & 4 (February 11, 2019 - February 25, 2019)
 
+#### Statistics Pages
+* **Statistics 3: Completed** ✅
+
+#### Statistics Functionality
+* **Fetch all entries: Completed** ✅
+
 #### Logging Pages
 * **Logging 2c (reusing): Completed** ✅
 * **Logging 2d (recycling): Completed** ✅
