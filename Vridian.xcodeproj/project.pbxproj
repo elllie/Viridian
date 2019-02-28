@@ -33,6 +33,8 @@
 		FDB8691C22221D920076F7F9 /* Tip.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB8691B22221D920076F7F9 /* Tip.swift */; };
 		FDB8691E222220C50076F7F9 /* TipData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB8691D222220C50076F7F9 /* TipData.swift */; };
 		FDB86922222324CB0076F7F9 /* EntryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB86921222324CB0076F7F9 /* EntryCell.swift */; };
+		FDB86924222363A80076F7F9 /* Statistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB86923222363A80076F7F9 /* Statistics.swift */; };
+		FDB86926222369760076F7F9 /* PullStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB86925222369760076F7F9 /* PullStats.swift */; };
 		FDD89E3E21FCD54B00D287A4 /* AllStatisticsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD89E3D21FCD54B00D287A4 /* AllStatisticsVC.swift */; };
 		FDD89E4121FCDA5A00D287A4 /* EntriesTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD89E4021FCDA5A00D287A4 /* EntriesTableVC.swift */; };
 		FDE26014221116F90032BC5D /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE26013221116F90032BC5D /* SearchTableViewController.swift */; };
@@ -71,6 +73,8 @@
 		FDB8691B22221D920076F7F9 /* Tip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tip.swift; sourceTree = "<group>"; };
 		FDB8691D222220C50076F7F9 /* TipData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipData.swift; sourceTree = "<group>"; };
 		FDB86921222324CB0076F7F9 /* EntryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryCell.swift; sourceTree = "<group>"; };
+		FDB86923222363A80076F7F9 /* Statistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Statistics.swift; sourceTree = "<group>"; };
+		FDB86925222369760076F7F9 /* PullStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullStats.swift; sourceTree = "<group>"; };
 		FDD89E3D21FCD54B00D287A4 /* AllStatisticsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllStatisticsVC.swift; sourceTree = "<group>"; };
 		FDD89E4021FCDA5A00D287A4 /* EntriesTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntriesTableVC.swift; sourceTree = "<group>"; };
 		FDE26013221116F90032BC5D /* SearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
@@ -161,12 +165,14 @@
 			children = (
 				FDECAC2021F8EBA1009D91EE /* Vridian.xcdatamodeld */,
 				FDACF00621FEEEC9005365B9 /* Activity.swift */,
-				FD28E407220BC23000BEDB78 /* ActivityData.swift */,
 				FDB8691922220FBF0076F7F9 /* XActivity.swift */,
+				FD28E407220BC23000BEDB78 /* ActivityData.swift */,
 				FDB8691B22221D920076F7F9 /* Tip.swift */,
 				FDB8691D222220C50076F7F9 /* TipData.swift */,
 				FDACF00C21FF8F75005365B9 /* LogActivity.swift */,
 				FD28843221FCCEF300CC455F /* IdentifyDevice.swift */,
+				FDB86923222363A80076F7F9 /* Statistics.swift */,
+				FDB86925222369760076F7F9 /* PullStats.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -298,6 +304,7 @@
 				FDE26014221116F90032BC5D /* SearchTableViewController.swift in Sources */,
 				FDACF00D21FF8F75005365B9 /* LogActivity.swift in Sources */,
 				FD28843321FCCEF300CC455F /* IdentifyDevice.swift in Sources */,
+				FDB86926222369760076F7F9 /* PullStats.swift in Sources */,
 				FDECAC1A21F8EBA1009D91EE /* AppDelegate.swift in Sources */,
 				FD94410622065C7E00E6933F /* ReducingViewController.swift in Sources */,
 				FD7A1B80221A257300D7C36B /* FoodViewController.swift in Sources */,
@@ -308,6 +315,7 @@
 				FDB86922222324CB0076F7F9 /* EntryCell.swift in Sources */,
 				FDECAC2221F8EBA1009D91EE /* Vridian.xcdatamodeld in Sources */,
 				FDE26016221140BB0032BC5D /* SearchBarCustomizations.swift in Sources */,
+				FDB86924222363A80076F7F9 /* Statistics.swift in Sources */,
 				FD11677A2218C78E0010885D /* TypeBViewController.swift in Sources */,
 				FD7CC7D121FD33E200F60562 /* AllStatCell.swift in Sources */,
 				FD642CAD21F8F71C0072C42B /* ImpactNavController.swift in Sources */,
