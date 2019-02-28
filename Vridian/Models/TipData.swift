@@ -19,4 +19,7 @@ extension Tip {
     static let t9 = Tip(content: "Plastic grocery bags take longer to decompose than paper ones, but they are significantly sturdier and take much less energy to produce, making their overall impact smaller (especially if you reuse them!)", activities: [21, 25])
     static let t10 = Tip(content: "It takes more resources to recycle glass than it does to produce it. Some municipalities claim to accept glass and then end up throwing it away. Make sure to check with your local waste collection department to see if you are wasting your time.", activities: [20])
     static let t11 = Tip(content: "The plastic found in grocery bags (PET) requires a special procedure to recycle. Some collection sites throw these bags in the garbage. Make sure you are recycling your plastic at a reputable location.", activities: [25])
+    
+    
+    static let blank = Tip(content: " ", activities: [0])
 }

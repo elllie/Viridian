@@ -20,10 +20,12 @@ class Tip {
     
     static func pick(activity: Activity) -> String {
         let a = activity.id
+//        var newTips = Tip.tips
         var t = Tip.tips.randomElement()
         
         while !(t!.activities.contains(a)) {
             t = Tip.tips.randomElement()
+//            newTips = newTips.filter( {$0.content != t!.content })
         }
         return (t?.content)!
     }

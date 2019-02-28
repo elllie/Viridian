@@ -46,11 +46,12 @@ class AllStatisticsViewController: UIViewController, UITableViewDataSource, UITa
     
 //    let numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18"]
     
-    let numbers = ["376", "21.0", "6.07", "150", "90", "40", "10", "71", "18", "18", "10", "10", "3", "2", "1.68", "1.85", "0.63", "0.32", "15"]
+    var numbers: [String] = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18"]
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        numbers = Statistics().calculateTable()
         
         view.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
        // self.navigationController?.navigationBar.isHidden = true

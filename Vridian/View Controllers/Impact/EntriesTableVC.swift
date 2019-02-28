@@ -80,6 +80,7 @@ class EntriesTableViewController: UIViewController, UITableViewDataSource, UITab
         let entry = fetchedResultsController.object(at: indexPath)
         
         cell.textLabel?.text = entry.name
+        cell.textLabel?.font = UIFont(name: "Karla-Regular", size: 18)
         
         let df = DateFormatter()
         df.dateStyle = .medium
@@ -87,6 +88,7 @@ class EntriesTableViewController: UIViewController, UITableViewDataSource, UITab
         let date = df.string(from: entry.logged!)
         
         cell.detailTextLabel?.text = date
+        cell.detailTextLabel?.font = UIFont(name: "Karla-Regular", size: 14)
         cell.isUserInteractionEnabled = false
 
         return cell
@@ -108,30 +110,19 @@ class EntriesTableViewController: UIViewController, UITableViewDataSource, UITab
         return fetchedResultsController
     }()
     
-    func setupView() {
-        // let entries = fetchedResultsController.fetchedObjects
+    fileprivate func setupView() {
         persistentContainer.loadPersistentStores { (persistentStoreDescription, error) in
             if let error = error {
                 print("Unable to Load Persistent Store")
                 print("\(error), \(error.localizedDescription)")
                 
             } else {
-                self.setupView()
-                
-                do {
-                    try self.fetchedResultsController.performFetch()
-                } catch {
-                    let fetchError = error as NSError
-                    print("Unable to Perform Fetch Request")
-                    print("\(fetchError), \(fetchError.localizedDescription)")
-                }
-                
-                 self.updateView()
+                self.updateView()
             }
         }
     }
     
-    func updateView() {
+   fileprivate func updateView() {
         do {
             try self.fetchedResultsController.performFetch()
         } catch {
