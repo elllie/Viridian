@@ -32,6 +32,22 @@ class ImpactViewController: UIViewController {
         viewAll.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
         self.view.addSubview(viewAll)
         
+        Top10().collect()
+        if (Top10().entries.count < 100) {
+            youShouldLogMore()
+            print(Top10().reduceStats())
+        } else {
+            print(Top10().statsCount())
+        }
+        // Do any additional setup after loading the view.
+    }
+    
+    
+    @objc func buttonAction(sender: UIButton!) {
+        self.navigationController?.pushViewController(AllStatisticsViewController(), animated: true)
+    }
+    
+    func youShouldLogMore() {
         let emptyIcon: UIImageView
         switch UIDevice().type {
         case .iPhone6plus, .iPhone6Splus, .iPhone7plus, .iPhone8plus:
@@ -59,17 +75,11 @@ class ImpactViewController: UIViewController {
             logMoreLabel = UILabel(frame: CGRect(x: 30, y: 350, width: (UIScreen.main.bounds.width - 60), height: 150))
             logMoreLabel.font = UIFont(name: "Karla-Regular", size: 18)
         }
-        logMoreLabel.text = "You haven't logged many activities yet!  Vridian will display your greenest achievements when it has enough data."
+        logMoreLabel.text = "You haven't logged many activities yet!  Viridian will display your greenest achievements when it has enough data."
         logMoreLabel.textColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
         logMoreLabel.textAlignment = .center
         logMoreLabel.numberOfLines = 0
         self.view.addSubview(logMoreLabel)
-        // Do any additional setup after loading the view.
-    }
-    
-    
-    @objc func buttonAction(sender: UIButton!) {
-        self.navigationController?.pushViewController(AllStatisticsViewController(), animated: true)
     }
     /*
     // MARK: - Navigation
