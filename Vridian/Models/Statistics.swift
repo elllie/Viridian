@@ -20,8 +20,8 @@ class Statistics {
         
         retrieve()
         
-        let emissions = entries.reduce(0) {(result, entry) -> Int32 in
-            return result + entry.pts
+        let emissions = entries.reduce(0) {(result, entry) -> Float in
+            return result + ( (Float(entry.pts)) / 10000 )
         }
         
         let energy = entries.reduce(0.0) {(result, entry) -> Float in
@@ -96,7 +96,7 @@ class Statistics {
             return result + entry.water
         }
         
-        return [String(emissions), String(energy), String(fuel), String(miles), String(publicTransport), String(onFoot), String(compost), String(totalRecycled), String(cansRecycled), String(paperRecycled), String(plasticRecycled), String(glassRecycled), String(batteriesRecycled), String(allOtherRecycling), String(totalPaper), String(totalPlastic), String(bottleLbs), String(bagLbs), String(water)]
+        return [String( (emissions * 10).rounded() / 10), String( (energy * 10).rounded() / 10), String( (fuel * 10).rounded() / 10), String( (miles * 10).rounded() / 10), String( (publicTransport * 10).rounded() / 10), String( (onFoot * 10).rounded() / 10), String(compost), String(totalRecycled), String(cansRecycled), String(paperRecycled), String(plasticRecycled), String(glassRecycled), String(batteriesRecycled), String(allOtherRecycling), String( (totalPaper * 10).rounded() / 10), String( (totalPlastic * 10).rounded() / 10), String( (bottleLbs * 10).rounded() / 10), String( (bagLbs * 10).rounded() / 10), String( (water * 10).rounded() / 10)]
     }
     
 
