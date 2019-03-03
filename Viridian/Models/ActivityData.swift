@@ -36,6 +36,6 @@ extension Activity {
     // plastic razor weighs 8 grams
     static let a26 = Activity(id: 26, catID: 1, name: "Shaved with a reusable razor", image: #imageLiteral(resourceName: "razor"), pts: 10000, kWh: nil, mi: nil, paper: nil, plastic: 8, water: nil)
     static let a27 = Activity(id: 27, catID: 1, name: "Switched to e-statements/billing", image: #imageLiteral(resourceName: "e-statements"), pts: 10000, kWh: nil, mi: nil, paper: 28, plastic: nil, water: nil)
-    static let a28 = XActivity(multiAdd: false, howMany: "Miles traveled", id: 28, catID: 1, name: "Traveled on foot or bicycle", image: #imageLiteral(resourceName: "bicycle"), pts: 6526, kWh: nil, mi: 1, paper: nil, plastic: nil, water: nil)
-    static let a29 = XActivity(multiAdd: false, howMany: "Miles traveled", id: 29, catID: 1, name: "Traveled via public transportation", image: #imageLiteral(resourceName: "public-transport"), pts: 1345, kWh: nil, mi: 1, paper: nil, plastic: nil, water: nil)
+    static let a28 = XActivity(multiAdd: false, howMany: "Miles traveled", id: 28, catID: 1, name: "Traveled on foot or bicycle", image: #imageLiteral(resourceName: "bicycle"), pts: 10000, kWh: nil, mi: 1, paper: nil, plastic: nil, water: nil)
+    static let a29 = XActivity(multiAdd: false, howMany: "Miles traveled", id: 29, catID: 1, name: "Traveled via public transportation", image: #imageLiteral(resourceName: "public-transport"), pts: 5000, kWh: nil, mi: 1, paper: nil, plastic: nil, water: nil)
 }

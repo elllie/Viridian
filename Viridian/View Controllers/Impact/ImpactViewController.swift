@@ -58,7 +58,11 @@ class ImpactViewController: UIViewController {
         
         let topStats = Top10().reduceStats()
         for i in 0...9 {
-            let third = UIView(frame: CGRect(x: 0, y: -50, width: UIScreen.main.bounds.width, height: 550))
+            var yOffset = 0
+            if (i > 0) {
+                yOffset = 150
+            }
+            let third = UIView(frame: CGRect(x: 0, y: yOffset, width: Int(UIScreen.main.bounds.width), height: 550))
             let picture = UIImageView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 550))
             let bigLabel: UILabel!
             let smallLabel: UILabel!
@@ -70,7 +74,13 @@ class ImpactViewController: UIViewController {
             var titleColor: UIColor
             
             switch (topStats[i]) {
-            case 11, 23:
+            case 1:
+                align = .rightHalf
+                picture.image = #imageLiteral(resourceName: "kWh")
+                title = (Statistics().calculateTable()[1] + " kWh saved in total")
+                subtitle = Statistics().kWhImportance()
+                titleColor = .white
+            case 11:
                 align = .rightThirdQuarter
                 picture.image = #imageLiteral(resourceName: "gallonsWater")
                 title = (Statistics().calculateTable()[18] + " gal of water saved")
@@ -85,8 +95,8 @@ class ImpactViewController: UIViewController {
             
             switch (align) {
             case .leftThirdQuarter:
-                bigLabel = UILabel(frame: CGRect(x: 30, y: 250, width: Int(UIScreen.main.bounds.width * 0.75) - 30, height: 100))
-                smallLabel = UILabel(frame: CGRect(x: 30, y: 300, width: Int(UIScreen.main.bounds.width * 0.75) - 30, height: 100))
+                bigLabel = UILabel(frame: CGRect(x: 30, y: 200, width: Int(UIScreen.main.bounds.width * 0.75) - 30, height: 100))
+                smallLabel = UILabel(frame: CGRect(x: 30, y: 250, width: Int(UIScreen.main.bounds.width * 0.75) - 30, height: 100))
             case .rightThirdQuarter:
                 bigLabel = UILabel(frame: CGRect(x: Int(UIScreen.main.bounds.width / 4) - 30, y: 215, width: Int(UIScreen.main.bounds.width * 0.75), height: 100))
                 smallLabel = UILabel(frame: CGRect(x: Int(UIScreen.main.bounds.width / 4), y: 255, width: Int(UIScreen.main.bounds.width * 0.75) - 30, height: 100))
@@ -97,8 +107,8 @@ class ImpactViewController: UIViewController {
                 bigLabel = UILabel(frame: CGRect(x: 30, y: 250, width: Int((UIScreen.main.bounds.width / 2) - 30), height: 100))
                 smallLabel = UILabel(frame: CGRect(x: 30, y: 300, width: Int((UIScreen.main.bounds.width / 2) - 30), height: 100))
             case .rightHalf:
-                bigLabel = UILabel(frame: CGRect(x: Int(UIScreen.main.bounds.midX), y: 250, width: Int((UIScreen.main.bounds.midX - 30)), height: 100))
-                smallLabel = UILabel(frame: CGRect(x: Int(UIScreen.main.bounds.midX), y: 300, width: Int((UIScreen.main.bounds.width / 2) - 30), height: 100))
+                bigLabel = UILabel(frame: CGRect(x: Int(UIScreen.main.bounds.midX), y: 215, width: Int((UIScreen.main.bounds.midX - 30)), height: 100))
+                smallLabel = UILabel(frame: CGRect(x: Int(UIScreen.main.bounds.midX), y: 255, width: Int((UIScreen.main.bounds.width / 2) - 30), height: 100))
             default:
                 bigLabel = UILabel(frame: CGRect(x: Int(UIScreen.main.bounds.midX), y: 250, width: Int((UIScreen.main.bounds.midX - 30)), height: 100))
                 smallLabel = UILabel(frame: CGRect(x: Int(UIScreen.main.bounds.midX), y: 300, width: Int((UIScreen.main.bounds.width / 2) - 30), height: 100))
@@ -120,7 +130,7 @@ class ImpactViewController: UIViewController {
             third.addSubview(bigLabel)
             third.addSubview(smallLabel)
             
-            statStack.addArrangedSubview(third)
+            statStack.addSubview(third)
         }
         
         scrollView.addSubview(statStack)

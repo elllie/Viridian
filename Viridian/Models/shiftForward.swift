@@ -10,7 +10,6 @@ import Foundation
 extension Array {
     mutating func shiftForward(idx: Int) {
         for i in (stride(from: self.count - 2, through: idx, by: -1)) {
-            print(i)
             self[i+1] = self[i];
         }
     }
