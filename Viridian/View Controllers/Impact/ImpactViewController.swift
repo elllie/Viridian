@@ -34,8 +34,9 @@ class ImpactViewController: UIViewController {
         
         Top10().collect()
         if (Top10().entries.count < 100) {
-            youShouldLogMore()
+//            youShouldLogMore()
             print(Top10().reduceStats())
+            stackTop10()
         } else {
             print(Top10().statsCount())
         }
@@ -45,6 +46,85 @@ class ImpactViewController: UIViewController {
     
     @objc func buttonAction(sender: UIButton!) {
         self.navigationController?.pushViewController(AllStatisticsViewController(), animated: true)
+    }
+    
+    func stackTop10() {
+        let scrollView = UIScrollView(frame: CGRect(x: 0, y: 110, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height - 175))
+        scrollView.contentSize = CGSize(width: UIScreen.main.bounds.width, height: 5000)
+        
+        let statStack = UIStackView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 5000))
+        
+ 
+        
+        let topStats = Top10().reduceStats()
+        for i in 0...9 {
+            let third = UIView(frame: CGRect(x: 0, y: -50, width: UIScreen.main.bounds.width, height: 550))
+            let picture = UIImageView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 550))
+            let bigLabel: UILabel!
+            let smallLabel: UILabel!
+            
+            var align: LabelAlignment
+            
+            var title: String
+            var subtitle: String?
+            var titleColor: UIColor
+            
+            switch (topStats[i]) {
+            case 11, 23:
+                align = .rightThirdQuarter
+                picture.image = #imageLiteral(resourceName: "gallonsWater")
+                title = (Statistics().calculateTable()[18] + " gal of water saved")
+                subtitle = Statistics().waterImportance()
+                titleColor = .white
+            default:
+                align = .center
+                title = ""
+                subtitle = ""
+                titleColor = .white
+            }
+            
+            switch (align) {
+            case .leftThirdQuarter:
+                bigLabel = UILabel(frame: CGRect(x: 30, y: 250, width: Int(UIScreen.main.bounds.width * 0.75) - 30, height: 100))
+                smallLabel = UILabel(frame: CGRect(x: 30, y: 300, width: Int(UIScreen.main.bounds.width * 0.75) - 30, height: 100))
+            case .rightThirdQuarter:
+                bigLabel = UILabel(frame: CGRect(x: Int(UIScreen.main.bounds.width / 4) - 30, y: 215, width: Int(UIScreen.main.bounds.width * 0.75), height: 100))
+                smallLabel = UILabel(frame: CGRect(x: Int(UIScreen.main.bounds.width / 4), y: 255, width: Int(UIScreen.main.bounds.width * 0.75) - 30, height: 100))
+                
+                bigLabel.textAlignment = .right
+                smallLabel.textAlignment = .right
+            case .leftHalf:
+                bigLabel = UILabel(frame: CGRect(x: 30, y: 250, width: Int((UIScreen.main.bounds.width / 2) - 30), height: 100))
+                smallLabel = UILabel(frame: CGRect(x: 30, y: 300, width: Int((UIScreen.main.bounds.width / 2) - 30), height: 100))
+            case .rightHalf:
+                bigLabel = UILabel(frame: CGRect(x: Int(UIScreen.main.bounds.midX), y: 250, width: Int((UIScreen.main.bounds.midX - 30)), height: 100))
+                smallLabel = UILabel(frame: CGRect(x: Int(UIScreen.main.bounds.midX), y: 300, width: Int((UIScreen.main.bounds.width / 2) - 30), height: 100))
+            default:
+                bigLabel = UILabel(frame: CGRect(x: Int(UIScreen.main.bounds.midX), y: 250, width: Int((UIScreen.main.bounds.midX - 30)), height: 100))
+                smallLabel = UILabel(frame: CGRect(x: Int(UIScreen.main.bounds.midX), y: 300, width: Int((UIScreen.main.bounds.width / 2) - 30), height: 100))
+            }
+            
+            picture.contentMode = .scaleAspectFit
+            
+            bigLabel.font = UIFont(name: "Karla-Bold", size: 24)
+            bigLabel.text = title
+            bigLabel.textColor = titleColor
+            bigLabel.numberOfLines = 0
+            
+            smallLabel.font = UIFont(name: "Karla-Regular", size: 16)
+            smallLabel.text = subtitle
+            smallLabel.textColor = titleColor
+            smallLabel.numberOfLines = 0
+            
+            third.addSubview(picture)
+            third.addSubview(bigLabel)
+            third.addSubview(smallLabel)
+            
+            statStack.addArrangedSubview(third)
+        }
+        
+        scrollView.addSubview(statStack)
+        self.view.addSubview(scrollView)
     }
     
     func youShouldLogMore() {
