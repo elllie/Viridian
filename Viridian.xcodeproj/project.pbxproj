@@ -13,6 +13,7 @@
 		FD28E408220BC23000BEDB78 /* ActivityData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD28E407220BC23000BEDB78 /* ActivityData.swift */; };
 		FD2E5C11222B60FB001DEA9E /* watercomparison.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2E5C10222B60FB001DEA9E /* watercomparison.swift */; };
 		FD2E5C13222B671F001DEA9E /* LabelAlignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2E5C12222B671F001DEA9E /* LabelAlignment.swift */; };
+		FD2E5C15222C563A001DEA9E /* kilowatthours.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2E5C14222C563A001DEA9E /* kilowatthours.swift */; };
 		FD5075592209E28300B7EC78 /* TypeAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5075582209E28300B7EC78 /* TypeAViewController.swift */; };
 		FD642C9A21F8EEE30072C42B /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD642C9921F8EEE30072C42B /* TabBarController.swift */; };
 		FD642C9C21F8EF710072C42B /* ImpactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD642C9B21F8EF710072C42B /* ImpactViewController.swift */; };
@@ -58,6 +59,7 @@
 		FD28E407220BC23000BEDB78 /* ActivityData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityData.swift; sourceTree = "<group>"; };
 		FD2E5C10222B60FB001DEA9E /* watercomparison.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = watercomparison.swift; sourceTree = "<group>"; };
 		FD2E5C12222B671F001DEA9E /* LabelAlignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelAlignment.swift; sourceTree = "<group>"; };
+		FD2E5C14222C563A001DEA9E /* kilowatthours.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kilowatthours.swift; sourceTree = "<group>"; };
 		FD5075582209E28300B7EC78 /* TypeAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeAViewController.swift; sourceTree = "<group>"; };
 		FD642C9921F8EEE30072C42B /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		FD642C9B21F8EF710072C42B /* ImpactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImpactViewController.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				FD2E5C10222B60FB001DEA9E /* watercomparison.swift */,
+				FD2E5C14222C563A001DEA9E /* kilowatthours.swift */,
 			);
 			path = Importance;
 			sourceTree = "<group>";
@@ -335,6 +338,7 @@
 				FDB86926222369760076F7F9 /* PullStats.swift in Sources */,
 				FDECAC1A21F8EBA1009D91EE /* AppDelegate.swift in Sources */,
 				FD94410622065C7E00E6933F /* ReducingViewController.swift in Sources */,
+				FD2E5C15222C563A001DEA9E /* kilowatthours.swift in Sources */,
 				FD7A1B80221A257300D7C36B /* FoodViewController.swift in Sources */,
 				FDB8691C22221D920076F7F9 /* Tip.swift in Sources */,
 				FDACF00721FEEEC9005365B9 /* Activity.swift in Sources */,
