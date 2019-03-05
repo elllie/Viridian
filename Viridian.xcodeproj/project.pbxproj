@@ -14,6 +14,9 @@
 		FD2E5C11222B60FB001DEA9E /* watercomparison.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2E5C10222B60FB001DEA9E /* watercomparison.swift */; };
 		FD2E5C13222B671F001DEA9E /* LabelAlignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2E5C12222B671F001DEA9E /* LabelAlignment.swift */; };
 		FD2E5C15222C563A001DEA9E /* kilowatthours.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2E5C14222C563A001DEA9E /* kilowatthours.swift */; };
+		FD2E5C17222C72F1001DEA9E /* paper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2E5C16222C72F1001DEA9E /* paper.swift */; };
+		FD2E5C19222C8ADB001DEA9E /* plastique.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2E5C18222C8ADB001DEA9E /* plastique.swift */; };
+		FD2E5C1B222CBB24001DEA9E /* StackTop10.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2E5C1A222CBB24001DEA9E /* StackTop10.swift */; };
 		FD5075592209E28300B7EC78 /* TypeAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5075582209E28300B7EC78 /* TypeAViewController.swift */; };
 		FD642C9A21F8EEE30072C42B /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD642C9921F8EEE30072C42B /* TabBarController.swift */; };
 		FD642C9C21F8EF710072C42B /* ImpactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD642C9B21F8EF710072C42B /* ImpactViewController.swift */; };
@@ -60,6 +63,9 @@
 		FD2E5C10222B60FB001DEA9E /* watercomparison.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = watercomparison.swift; sourceTree = "<group>"; };
 		FD2E5C12222B671F001DEA9E /* LabelAlignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelAlignment.swift; sourceTree = "<group>"; };
 		FD2E5C14222C563A001DEA9E /* kilowatthours.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kilowatthours.swift; sourceTree = "<group>"; };
+		FD2E5C16222C72F1001DEA9E /* paper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = paper.swift; sourceTree = "<group>"; };
+		FD2E5C18222C8ADB001DEA9E /* plastique.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = plastique.swift; sourceTree = "<group>"; };
+		FD2E5C1A222CBB24001DEA9E /* StackTop10.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackTop10.swift; sourceTree = "<group>"; };
 		FD5075582209E28300B7EC78 /* TypeAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeAViewController.swift; sourceTree = "<group>"; };
 		FD642C9921F8EEE30072C42B /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		FD642C9B21F8EF710072C42B /* ImpactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImpactViewController.swift; sourceTree = "<group>"; };
@@ -116,6 +122,8 @@
 			children = (
 				FD2E5C10222B60FB001DEA9E /* watercomparison.swift */,
 				FD2E5C14222C563A001DEA9E /* kilowatthours.swift */,
+				FD2E5C16222C72F1001DEA9E /* paper.swift */,
+				FD2E5C18222C8ADB001DEA9E /* plastique.swift */,
 			);
 			path = Importance;
 			sourceTree = "<group>";
@@ -146,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				FD642C9B21F8EF710072C42B /* ImpactViewController.swift */,
+				FD2E5C1A222CBB24001DEA9E /* StackTop10.swift */,
 				FD2E5C12222B671F001DEA9E /* LabelAlignment.swift */,
 				FDD89E3D21FCD54B00D287A4 /* AllStatisticsVC.swift */,
 				FD7CC7D021FD33E200F60562 /* AllStatCell.swift */,
@@ -316,6 +325,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD2E5C1B222CBB24001DEA9E /* StackTop10.swift in Sources */,
 				FD28E408220BC23000BEDB78 /* ActivityData.swift in Sources */,
 				FD0196E82207ECD20032A3BD /* CategoryCollectionViewCell.swift in Sources */,
 				FD702E90222B276B00BD8BB6 /* shiftForward.swift in Sources */,
@@ -323,6 +333,7 @@
 				FDF1A0C12202108D00533592 /* RecentsFavorites.swift in Sources */,
 				FDD89E4121FCDA5A00D287A4 /* EntriesTableVC.swift in Sources */,
 				FD2E5C11222B60FB001DEA9E /* watercomparison.swift in Sources */,
+				FD2E5C17222C72F1001DEA9E /* paper.swift in Sources */,
 				FD2E5C13222B671F001DEA9E /* LabelAlignment.swift in Sources */,
 				FDB8691E222220C50076F7F9 /* TipData.swift in Sources */,
 				FDD89E3E21FCD54B00D287A4 /* AllStatisticsVC.swift in Sources */,
@@ -341,6 +352,7 @@
 				FD2E5C15222C563A001DEA9E /* kilowatthours.swift in Sources */,
 				FD7A1B80221A257300D7C36B /* FoodViewController.swift in Sources */,
 				FDB8691C22221D920076F7F9 /* Tip.swift in Sources */,
+				FD2E5C19222C8ADB001DEA9E /* plastique.swift in Sources */,
 				FDACF00721FEEEC9005365B9 /* Activity.swift in Sources */,
 				FD7DA793220E7BDA00747F2E /* RecyclingViewController.swift in Sources */,
 				FD642CAF21F8F94D0072C42B /* LoggingNavController.swift in Sources */,
@@ -496,7 +508,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = eco.viridian.Viridian;
+				PRODUCT_BUNDLE_IDENTIFIER = eco.viridian;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -514,7 +526,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = eco.viridian.Viridian;
+				PRODUCT_BUNDLE_IDENTIFIER = eco.viridian;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
