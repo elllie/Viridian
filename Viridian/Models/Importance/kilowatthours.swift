@@ -32,7 +32,7 @@ extension Statistics {
         case 10000...10000000000:
             return "The average American home uses 10,950 kWh of energy per year."
         default:
-            return ""
+            return "Nice job!"
         }
     }
 }

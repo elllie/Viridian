@@ -22,39 +22,39 @@ class Statistics {
         
         let emissions = entries.reduce(0) {(result, entry) -> Float in
             return result + ( (Float(entry.pts)) / 10000 )
-        }
+        } //0
         
         let energy = entries.reduce(0.0) {(result, entry) -> Float in
             return result + entry.kWh
-        }
+        } //1
         
         let fuel = entries.reduce(0.0) {(result, entry) -> Float in
             return result + (entry.mi / 24.7)
-        }
+        } //2
         
         let miles = entries.reduce(0.0) {(result, entry) -> Float in
             return result + entry.mi
-        }
+        } // 3
         
         let publicTransport = entries.filter( {$0.actID == 29}).reduce(0.0) {(result, entry) -> Float in
             return result + entry.mi
-        }
+        } // 4
         
         let onFoot = entries.filter( {$0.actID == 28}).reduce(0.0) {(result, entry) -> Float in
             return result + entry.mi
-        }
+        } // 5
         
         let compost = entries.filter( {$0.actID == 12}).reduce(0) {(result, entry) -> Int in
             return result + 1
-        }
+        } // 6
         
         let totalRecycled = entries.filter( {$0.catID == 3}).reduce(0) {(result, entry) -> Int in
             return result + 1
-        }
+        } // 7
         
         let cansRecycled = entries.filter( {$0.actID == 16}).reduce(0) {(result, entry) -> Int in
             return result + 1
-        }
+        } // 8
         
         let paperRecycled = entries.filter( {$0.actID == 18}).reduce(0) {(result, entry) -> Int in
             return result + 1
@@ -96,6 +96,10 @@ class Statistics {
             return result + entry.water
         }
         
-        return [String( (emissions * 10).rounded() / 10), String( (energy * 10).rounded() / 10), String( (fuel * 10).rounded() / 10), String( (miles * 10).rounded() / 10), String( (publicTransport * 10).rounded() / 10), String( (onFoot * 10).rounded() / 10), String(compost), String(totalRecycled), String(cansRecycled), String(paperRecycled), String(plasticRecycled), String(glassRecycled), String(batteriesRecycled), String(allOtherRecycling), String( (totalPaper * 10).rounded() / 10), String( (totalPlastic * 10).rounded() / 10), String( (bottleLbs * 10).rounded() / 10), String( (bagLbs * 10).rounded() / 10), String( (water * 10).rounded() / 10)]
+        let meatlessMeals = entries.filter( {($0.actID == 3) || ($0.actID == 4)}).reduce(0) {(result, entry) -> Float in
+            return result + 1
+        }
+        
+        return [String( (emissions * 10).rounded() / 10), String( (energy * 10).rounded() / 10), String( (fuel * 10).rounded() / 10), String( (miles * 10).rounded() / 10), String( (publicTransport * 10).rounded() / 10), String( (onFoot * 10).rounded() / 10), String(compost), String(totalRecycled), String(cansRecycled), String(paperRecycled), String(plasticRecycled), String(glassRecycled), String(batteriesRecycled), String(allOtherRecycling), String( (totalPaper * 10).rounded() / 10), String( (totalPlastic * 10).rounded() / 10), String( (bottleLbs * 10).rounded() / 10), String( (bagLbs * 10).rounded() / 10), String( (water * 10).rounded() / 10), String(meatlessMeals)]
     }
 }
