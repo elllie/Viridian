@@ -52,7 +52,8 @@
 		FDECAC2221F8EBA1009D91EE /* Vridian.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FDECAC2021F8EBA1009D91EE /* Vridian.xcdatamodeld */; };
 		FDECAC2421F8EBA3009D91EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDECAC2321F8EBA3009D91EE /* Assets.xcassets */; };
 		FDECAC2721F8EBA3009D91EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDECAC2521F8EBA3009D91EE /* LaunchScreen.storyboard */; };
-		FDF1A0C12202108D00533592 /* RecentsFavorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF1A0C02202108D00533592 /* RecentsFavorites.swift */; };
+		FDED9B452232EA71009DFA32 /* CategoryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDED9B442232EA71009DFA32 /* CategoryData.swift */; };
+		FDF1A0C12202108D00533592 /* Recents.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF1A0C02202108D00533592 /* Recents.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -103,7 +104,8 @@
 		FDECAC2321F8EBA3009D91EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FDECAC2621F8EBA3009D91EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FDECAC2821F8EBA3009D91EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FDF1A0C02202108D00533592 /* RecentsFavorites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentsFavorites.swift; sourceTree = "<group>"; };
+		FDED9B442232EA71009DFA32 /* CategoryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryData.swift; sourceTree = "<group>"; };
+		FDF1A0C02202108D00533592 /* Recents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recents.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,7 +175,7 @@
 				FDE26015221140BB0032BC5D /* SearchBarCustomizations.swift */,
 				FDAE931E2209EDDB00FB70FC /* Detail View Controllers */,
 				FD94410722065C8700E6933F /* Categories */,
-				FDF1A0C02202108D00533592 /* RecentsFavorites.swift */,
+				FDF1A0C02202108D00533592 /* Recents.swift */,
 				FD642CAE21F8F94D0072C42B /* LoggingNavController.swift */,
 			);
 			path = Logging;
@@ -196,12 +198,7 @@
 			children = (
 				FD2E5C0F222B60DC001DEA9E /* Importance */,
 				FDECAC2021F8EBA1009D91EE /* Vridian.xcdatamodeld */,
-				FDACF00621FEEEC9005365B9 /* Activity.swift */,
-				FDB8691922220FBF0076F7F9 /* XActivity.swift */,
-				FD28E407220BC23000BEDB78 /* ActivityData.swift */,
-				FDB8691B22221D920076F7F9 /* Tip.swift */,
-				FDB8691D222220C50076F7F9 /* TipData.swift */,
-				FDACF00C21FF8F75005365B9 /* LogActivity.swift */,
+				FDED9B432232EA3E009DFA32 /* Activities */,
 				FD28843221FCCEF300CC455F /* IdentifyDevice.swift */,
 				FD702E8B222B155D00BD8BB6 /* Top10.swift */,
 				FD702E8F222B276B00BD8BB6 /* shiftForward.swift */,
@@ -249,6 +246,20 @@
 				FD642CA121F8F3D50072C42B /* Karla */,
 			);
 			path = Viridian;
+			sourceTree = "<group>";
+		};
+		FDED9B432232EA3E009DFA32 /* Activities */ = {
+			isa = PBXGroup;
+			children = (
+				FDB8691B22221D920076F7F9 /* Tip.swift */,
+				FDB8691D222220C50076F7F9 /* TipData.swift */,
+				FDACF00621FEEEC9005365B9 /* Activity.swift */,
+				FDB8691922220FBF0076F7F9 /* XActivity.swift */,
+				FD28E407220BC23000BEDB78 /* ActivityData.swift */,
+				FDED9B442232EA71009DFA32 /* CategoryData.swift */,
+				FDACF00C21FF8F75005365B9 /* LogActivity.swift */,
+			);
+			path = Activities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -330,7 +341,7 @@
 				FD0196E82207ECD20032A3BD /* CategoryCollectionViewCell.swift in Sources */,
 				FD702E90222B276B00BD8BB6 /* shiftForward.swift in Sources */,
 				FD7A1B7E2219FC0C00D7C36B /* ReusingViewController.swift in Sources */,
-				FDF1A0C12202108D00533592 /* RecentsFavorites.swift in Sources */,
+				FDF1A0C12202108D00533592 /* Recents.swift in Sources */,
 				FDD89E4121FCDA5A00D287A4 /* EntriesTableVC.swift in Sources */,
 				FD2E5C11222B60FB001DEA9E /* watercomparison.swift in Sources */,
 				FD2E5C17222C72F1001DEA9E /* paper.swift in Sources */,
@@ -346,6 +357,7 @@
 				FD702E8C222B155D00BD8BB6 /* Top10.swift in Sources */,
 				FDACF00D21FF8F75005365B9 /* LogActivity.swift in Sources */,
 				FD28843321FCCEF300CC455F /* IdentifyDevice.swift in Sources */,
+				FDED9B452232EA71009DFA32 /* CategoryData.swift in Sources */,
 				FDB86926222369760076F7F9 /* PullStats.swift in Sources */,
 				FDECAC1A21F8EBA1009D91EE /* AppDelegate.swift in Sources */,
 				FD94410622065C7E00E6933F /* ReducingViewController.swift in Sources */,
