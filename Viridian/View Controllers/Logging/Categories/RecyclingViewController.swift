@@ -9,7 +9,7 @@ import UIKit
 
 class RecyclingViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate {
     
-    let activities = [Activity.a15, Activity.a16, Activity.a17, Activity.a18, Activity.a19, Activity.a20, Activity.a21, Activity.a22]
+    let activities = Activity.recycling
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return activities.count

@@ -9,7 +9,7 @@ import UIKit
 
 class ReducingViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate {
     
-    let activities = [Activity.a1, Activity.a2, Activity.a6, Activity.a7, Activity.a11, Activity.a12, Activity.a13, Activity.a14, Activity.a23, Activity.a26, Activity.a27, Activity.a28, Activity.a29]
+    let activities = Activity.reducing
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return activities.count

@@ -9,7 +9,7 @@ import UIKit
 
 class FoodViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate {
     
-    let activities = [Activity.a3, Activity.a4, Activity.a5, Activity.a8, Activity.a9, Activity.a10]
+    let activities = Activity.food
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return activities.count

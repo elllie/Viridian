@@ -6,8 +6,30 @@
 //
 
 import UIKit
+import CoreData
 
-class LoggingViewController: UIViewController {
+class LoggingViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate {
+    
+    var activities: [Activity] = []
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        displayRecents()
+        return activities.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "coll", for: indexPath) as! CategoryCollectionViewCell
+        cell.picture.image = activities[indexPath.row].image
+        cell.label.text = activities[indexPath.row].name
+        
+        return cell
+    }
+    
+    
+    let appDelegate = UIApplication.shared.delegate as? AppDelegate
+    var moc: NSManagedObjectContext!
+    let persistentContainer = NSPersistentContainer(name: "Vridian")
+    var entries: [Diary] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -231,7 +253,8 @@ class LoggingViewController: UIViewController {
         recentsLabel.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         pageScroll.addSubview(recentsLabel)
         
-        loadRecents()
+        
+        displayRecents()
         // recents collection view height: 140
         
         
@@ -247,7 +270,7 @@ class LoggingViewController: UIViewController {
         favoritesLabel.text = "Favorites"
         favoritesLabel.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         pageScroll.addSubview(favoritesLabel)
-        loadFavorites()
+//        loadFavorites()
         //favorites collection view height: 140
         
         self.view.addSubview(pageScroll)

@@ -9,7 +9,7 @@ import UIKit
 
 class ReusingViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate {
     
-    let activities = [Activity.a24, Activity.a25]
+    let activities = Activity.reusing
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return activities.count
