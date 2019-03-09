@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  Vridian
 //
-//  Created by Eleanor on 1/23/19.
+//  Created by Eleanor on 1/23/19
 //
 
 import UIKit
