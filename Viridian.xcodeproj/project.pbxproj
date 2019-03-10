@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FD0196E82207ECD20032A3BD /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0196E72207ECD20032A3BD /* CategoryCollectionViewCell.swift */; };
+		FD0196E82207ECD20032A3BD /* CategoryCollctnVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0196E72207ECD20032A3BD /* CategoryCollctnVCell.swift */; };
 		FD11677A2218C78E0010885D /* TypeBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1167792218C78E0010885D /* TypeBViewController.swift */; };
 		FD28843321FCCEF300CC455F /* IdentifyDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD28843221FCCEF300CC455F /* IdentifyDevice.swift */; };
 		FD28E408220BC23000BEDB78 /* ActivityData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD28E407220BC23000BEDB78 /* ActivityData.swift */; };
@@ -52,12 +52,13 @@
 		FDECAC2221F8EBA1009D91EE /* Vridian.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FDECAC2021F8EBA1009D91EE /* Vridian.xcdatamodeld */; };
 		FDECAC2421F8EBA3009D91EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDECAC2321F8EBA3009D91EE /* Assets.xcassets */; };
 		FDECAC2721F8EBA3009D91EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDECAC2521F8EBA3009D91EE /* LaunchScreen.storyboard */; };
+		FDED73FB22342A0400210461 /* RecentsCollctnVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDED73FA22342A0400210461 /* RecentsCollctnVCell.swift */; };
 		FDED9B452232EA71009DFA32 /* CategoryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDED9B442232EA71009DFA32 /* CategoryData.swift */; };
 		FDF1A0C12202108D00533592 /* Recents.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF1A0C02202108D00533592 /* Recents.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		FD0196E72207ECD20032A3BD /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		FD0196E72207ECD20032A3BD /* CategoryCollctnVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollctnVCell.swift; sourceTree = "<group>"; };
 		FD1167792218C78E0010885D /* TypeBViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeBViewController.swift; sourceTree = "<group>"; };
 		FD28843221FCCEF300CC455F /* IdentifyDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentifyDevice.swift; sourceTree = "<group>"; };
 		FD28E407220BC23000BEDB78 /* ActivityData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityData.swift; sourceTree = "<group>"; };
@@ -104,6 +105,7 @@
 		FDECAC2321F8EBA3009D91EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FDECAC2621F8EBA3009D91EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FDECAC2821F8EBA3009D91EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDED73FA22342A0400210461 /* RecentsCollctnVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecentsCollctnVCell.swift; sourceTree = "<group>"; };
 		FDED9B442232EA71009DFA32 /* CategoryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryData.swift; sourceTree = "<group>"; };
 		FDF1A0C02202108D00533592 /* Recents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recents.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -188,7 +190,8 @@
 				FD7A1B7D2219FC0C00D7C36B /* ReusingViewController.swift */,
 				FD7DA792220E7BDA00747F2E /* RecyclingViewController.swift */,
 				FD7A1B7F221A257300D7C36B /* FoodViewController.swift */,
-				FD0196E72207ECD20032A3BD /* CategoryCollectionViewCell.swift */,
+				FD0196E72207ECD20032A3BD /* CategoryCollctnVCell.swift */,
+				FDED73FA22342A0400210461 /* RecentsCollctnVCell.swift */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -338,7 +341,7 @@
 			files = (
 				FD2E5C1B222CBB24001DEA9E /* StackTop10.swift in Sources */,
 				FD28E408220BC23000BEDB78 /* ActivityData.swift in Sources */,
-				FD0196E82207ECD20032A3BD /* CategoryCollectionViewCell.swift in Sources */,
+				FD0196E82207ECD20032A3BD /* CategoryCollctnVCell.swift in Sources */,
 				FD702E90222B276B00BD8BB6 /* shiftForward.swift in Sources */,
 				FD7A1B7E2219FC0C00D7C36B /* ReusingViewController.swift in Sources */,
 				FDF1A0C12202108D00533592 /* Recents.swift in Sources */,
@@ -368,6 +371,7 @@
 				FDACF00721FEEEC9005365B9 /* Activity.swift in Sources */,
 				FD7DA793220E7BDA00747F2E /* RecyclingViewController.swift in Sources */,
 				FD642CAF21F8F94D0072C42B /* LoggingNavController.swift in Sources */,
+				FDED73FB22342A0400210461 /* RecentsCollctnVCell.swift in Sources */,
 				FDB86922222324CB0076F7F9 /* EntryCell.swift in Sources */,
 				FDECAC2221F8EBA1009D91EE /* Vridian.xcdatamodeld in Sources */,
 				FDE26016221140BB0032BC5D /* SearchBarCustomizations.swift in Sources */,
