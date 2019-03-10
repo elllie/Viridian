@@ -12,24 +12,69 @@ class LoggingViewController: UIViewController, UICollectionViewDataSource, UICol
     
     var activities: [Activity] = []
     
+    let appDelegate = UIApplication.shared.delegate as? AppDelegate
+    var moc: NSManagedObjectContext!
+    let persistentContainer = NSPersistentContainer(name: "Vridian")
+    var entries: [Diary] = []
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        displayRecents()
-        return activities.count
+        if (activities.count <= 6) {
+            return activities.count
+        } else {
+            return 6
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "coll", for: indexPath) as! CategoryCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "coll", for: indexPath) as! RecentsCollectionViewCell
         cell.picture.image = activities[indexPath.row].image
         cell.label.text = activities[indexPath.row].name
         
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
+    {
+        switch UIDevice().type {
+        case .iPhone5, .iPhoneSE:
+            return CGSize(width: 75, height: 115)
+        default:
+            return CGSize(width: 90, height: 130)
+        }
+    }
     
-    let appDelegate = UIApplication.shared.delegate as? AppDelegate
-    var moc: NSManagedObjectContext!
-    let persistentContainer = NSPersistentContainer(name: "Vridian")
-    var entries: [Diary] = []
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets
+    {
+        switch UIDevice().type {
+        case .iPhoneSE, .iPhone5S://, .iPhone6plus, .iPhone6Splus, .iPhone7plus, .iPhone8plus:
+            return UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
+        default:
+            return UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        //let cell = collectionView.cellForItem(at: indexPath)
+        if (activities[indexPath.row] is XActivity) {
+            Activity.CurrentActivity = activities[indexPath.row]
+            let detailView = TypeAViewController()
+            detailView.titleLabelText = activities[indexPath.row].name
+            detailView.iconViewImage = activities[indexPath.row].image
+            detailView.howManyLabelText = (activities[indexPath.row] as! XActivity).howMany
+            detailView.tipLabelText = Tip.pick(activity: Activity.CurrentActivity!)
+            self.navigationController?.pushViewController(detailView, animated: true)
+        }
+        else {
+            let detailView = TypeBViewController()
+            Activity.CurrentActivity = activities[indexPath.row]
+            detailView.titleLabelText = activities[indexPath.row].name
+            detailView.iconViewImage = activities[indexPath.row].image
+            detailView.tipLabelText = Tip.pick(activity: Activity.CurrentActivity!)
+            self.navigationController?.pushViewController(detailView, animated: true)
+        }
+        print(activities[indexPath.row].name)
+    }
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -255,23 +300,28 @@ class LoggingViewController: UIViewController, UICollectionViewDataSource, UICol
         
         
         displayRecents()
-        // recents collection view height: 140
+        let recentsView = UICollectionView(frame: CGRect(x: 30, y: 275, width: UIScreen.main.bounds.width - 60, height: 300), collectionViewLayout: UICollectionViewFlowLayout())
+        recentsView.backgroundColor = nil
+        recentsView.dataSource = self
+        recentsView.delegate = self
+        recentsView.register(RecentsCollectionViewCell.self, forCellWithReuseIdentifier: "coll")
+        pageScroll.addSubview(recentsView)
         
         
-        let favoritesLabel: UILabel!
-        switch UIDevice().type {
-        case .iPhone5S, .iPhoneSE, .iPhone6, .iPhone7, .iPhone8:
-            favoritesLabel = UILabel(frame: CGRect(x: 30, y: 350, width: 150, height: 40))
-            favoritesLabel.font = UIFont(name: "Karla-Bold", size: 14)
-        default:
-            favoritesLabel = UILabel(frame: CGRect(x: 30, y: 400, width: 150, height: 40))
-            favoritesLabel.font = UIFont(name: "Karla-Bold", size: 16)
-        }
-        favoritesLabel.text = "Favorites"
-        favoritesLabel.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-        pageScroll.addSubview(favoritesLabel)
-//        loadFavorites()
-        //favorites collection view height: 140
+//        let favoritesLabel: UILabel!
+//        switch UIDevice().type {
+//        case .iPhone5S, .iPhoneSE, .iPhone6, .iPhone7, .iPhone8:
+//            favoritesLabel = UILabel(frame: CGRect(x: 30, y: 350, width: 150, height: 40))
+//            favoritesLabel.font = UIFont(name: "Karla-Bold", size: 14)
+//        default:
+//            favoritesLabel = UILabel(frame: CGRect(x: 30, y: 400, width: 150, height: 40))
+//            favoritesLabel.font = UIFont(name: "Karla-Bold", size: 16)
+//        }
+//        favoritesLabel.text = "Favorites"
+//        favoritesLabel.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+//        pageScroll.addSubview(favoritesLabel)
+////        loadFavorites()
+//        //favorites collection view height: 140
         
         self.view.addSubview(pageScroll)
     }

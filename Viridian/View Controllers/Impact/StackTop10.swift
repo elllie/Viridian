@@ -10,7 +10,14 @@ import UIKit
 extension ImpactViewController {
     
     func stackTop10() {
-        let scrollView = UIScrollView(frame: CGRect(x: 0, y: 110, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height - 175))
+        let scrollView: UIScrollView!
+        switch UIDevice().type {
+        case .iPhone5S, .iPhoneSE:
+            scrollView = UIScrollView(frame: CGRect(x: 0, y: 110, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height - 150))
+        default:
+            scrollView = UIScrollView(frame: CGRect(x: 0, y: 110, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height - 175))
+        }
+        
         scrollView.contentSize = CGSize(width: UIScreen.main.bounds.width, height: 1520)
         scrollView.showsVerticalScrollIndicator = false
         
