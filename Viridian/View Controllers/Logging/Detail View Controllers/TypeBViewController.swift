@@ -36,7 +36,12 @@ class TypeBViewController: UIViewController {
         self.view.addSubview(done)
         
         let titleLabel = UILabel(frame: CGRect(x: 55, y: 50, width: (UIScreen.main.bounds.width - 150), height: 100))
-        titleLabel.font = UIFont(name: "Karla-Bold", size: 36)
+        switch UIDevice().type {
+        case .iPhone5S, .iPhoneSE:
+            titleLabel.font = UIFont(name: "Karla-Bold", size: 30)
+        default:
+            titleLabel.font = UIFont(name: "Karla-Bold", size: 36)
+        }
         titleLabel.text = titleLabelText
         titleLabel.numberOfLines = 0
         titleLabel.sizeToFit()

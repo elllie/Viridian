@@ -25,7 +25,7 @@ class RecentsCollectionViewCell: UICollectionViewCell {
         }
         switch UIDevice().type {
         case .iPhone5, .iPhoneSE:
-            label = UILabel(frame: CGRect(x: 0, y: picture.frame.size.height, width: frame.size.width, height: 75))
+            label = UILabel(frame: CGRect(x: 0, y: picture.frame.size.height, width: frame.size.width, height: 65))
         default:
             label = UILabel(frame: CGRect(x: 0, y: picture.frame.size.height, width: frame.size.width, height: 65))
         }
@@ -34,10 +34,10 @@ class RecentsCollectionViewCell: UICollectionViewCell {
         picture.contentMode = .scaleAspectFit
         contentView.addSubview(picture)
         
-        
         label.font = UIFont(name: "Karla-Bold", size: 14)
+        
         label.textAlignment = .center
-        label.numberOfLines = 0
+        label.numberOfLines = 3
         contentView.addSubview(label)
     }
     

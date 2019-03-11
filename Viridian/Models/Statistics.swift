@@ -100,6 +100,9 @@ class Statistics {
             return result + 1
         }
         
+
+        moc.reset()
+        
         return [String( (emissions * 10).rounded() / 10), String( (energy * 10).rounded() / 10), String( (fuel * 10).rounded() / 10), String( (miles * 10).rounded() / 10), String( (publicTransport * 10).rounded() / 10), String( (onFoot * 10).rounded() / 10), String(compost), String(totalRecycled), String(cansRecycled), String(paperRecycled), String(plasticRecycled), String(glassRecycled), String(batteriesRecycled), String(allOtherRecycling), String( (totalPaper * 10).rounded() / 10), String( (totalPlastic * 10).rounded() / 10), String( (bottleLbs * 10).rounded() / 10), String( (bagLbs * 10).rounded() / 10), String( (water * 10).rounded() / 10), String(meatlessMeals)]
     }
 }

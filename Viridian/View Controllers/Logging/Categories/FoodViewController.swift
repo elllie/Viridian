@@ -88,7 +88,12 @@ class FoodViewController: UIViewController, UICollectionViewDataSource, UICollec
         
         let reducingLabel = UILabel(frame: CGRect(x: 55, y: 50, width: 220, height: 40))
         reducingLabel.text = "Diet"
-        reducingLabel.font = UIFont(name: "Karla-Bold", size: 36)
+        switch UIDevice().type {
+        case .iPhone5S, .iPhoneSE:
+            reducingLabel.font = UIFont(name: "Karla-Bold", size: 34)
+        default:
+            reducingLabel.font = UIFont(name: "Karla-Bold", size: 36)
+        }
         reducingLabel.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         self.view.addSubview(reducingLabel)
         

@@ -13,20 +13,34 @@ extension ImpactViewController {
         let scrollView: UIScrollView!
         switch UIDevice().type {
         case .iPhone5S, .iPhoneSE:
+            scrollView = UIScrollView(frame: CGRect(x: 0, y: 125, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height - 150))
+            scrollView.contentSize = CGSize(width: UIScreen.main.bounds.width, height: 1300)
+        case .iPhone6, .iPhone6S, .iPhone7, .iPhone8, .iPhone6plus, .iPhone6Splus, .iPhone7plus, .iPhone8plus:
             scrollView = UIScrollView(frame: CGRect(x: 0, y: 110, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height - 150))
+            scrollView.contentSize = CGSize(width: UIScreen.main.bounds.width, height: 1550)
         default:
             scrollView = UIScrollView(frame: CGRect(x: 0, y: 110, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height - 175))
+            scrollView.contentSize = CGSize(width: UIScreen.main.bounds.width, height: 1520)
         }
         
-        scrollView.contentSize = CGSize(width: UIScreen.main.bounds.width, height: 1520)
+        
         scrollView.showsVerticalScrollIndicator = false
         
         let statStack = UIStackView(frame: CGRect(x: 0, y: -190, width: UIScreen.main.bounds.width, height: 1520))
+        if (UIDevice().type == .iPhone6plus || UIDevice().type == .iPhone6Splus || UIDevice().type == .iPhone7plus || UIDevice().type == .iPhone8plus) {
+            statStack.frame = CGRect(x: 0, y: -180, width: UIScreen.main.bounds.width, height: 1550)
+        }
         
         
         let topStats = Top10().reduceStats()
         for i in 0...9 {
-            let yOffset = 150
+            let yOffset: Int
+            switch UIDevice().type {
+            case .iPhone5S, .iPhoneSE:
+                yOffset = 127
+            default:
+                yOffset = 150
+            }
             let third = UIView(frame: CGRect(x: 0, y: i * yOffset, width: Int(UIScreen.main.bounds.width), height: 550))
             let picture = UIImageView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 550))
             let bigLabel: UILabel!
@@ -40,7 +54,7 @@ extension ImpactViewController {
             
             switch (topStats[i]) {
             case 1, 6:
-                align = .rightHalf
+                align = .rightThirdQuarter
                 picture.image = #imageLiteral(resourceName: "kWh")
                 title = (Statistics().calculateTable()[1] + " kWh saved in total")
                 subtitle = Statistics().kWhImportance()
@@ -120,12 +134,20 @@ extension ImpactViewController {
             
             picture.contentMode = .scaleAspectFit
             
-            bigLabel.font = UIFont(name: "Karla-Bold", size: 24)
+            switch UIDevice().type {
+            case .iPhoneSE, .iPhone5S:
+                bigLabel.font = UIFont(name: "Karla-Bold", size: 22)
+                smallLabel.font = UIFont(name: "Karla-Regular", size: 14)
+            default:
+                bigLabel.font = UIFont(name: "Karla-Bold", size: 24)
+                smallLabel.font = UIFont(name: "Karla-Regular", size: 16)
+            }
+            
             bigLabel.text = title
             bigLabel.textColor = titleColor
             bigLabel.numberOfLines = 0
             
-            smallLabel.font = UIFont(name: "Karla-Regular", size: 16)
+            
             smallLabel.text = subtitle
             smallLabel.textColor = titleColor
             smallLabel.numberOfLines = 0

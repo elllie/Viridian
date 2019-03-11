@@ -19,7 +19,7 @@ class CategoryCollectionViewCell: UICollectionViewCell {
     override init(frame: CGRect) {
         switch UIDevice().type {
         case .iPhone5, .iPhoneSE:
-            picture = UIImageView(frame: CGRect(x: 0, y: 0, width: 95, height: 85))
+            picture = UIImageView(frame: CGRect(x: 0, y: 0, width: 85, height: 85))
         default:
             picture = UIImageView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
         }

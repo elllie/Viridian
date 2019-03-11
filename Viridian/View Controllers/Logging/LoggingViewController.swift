@@ -47,7 +47,7 @@ class LoggingViewController: UIViewController, UICollectionViewDataSource, UICol
     {
         switch UIDevice().type {
         case .iPhoneSE, .iPhone5S://, .iPhone6plus, .iPhone6Splus, .iPhone7plus, .iPhone8plus:
-            return UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
+            return UIEdgeInsets(top: 10, left: 5, bottom: 10, right: 5)
         default:
             return UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
         }
@@ -74,6 +74,10 @@ class LoggingViewController: UIViewController, UICollectionViewDataSource, UICol
         }
         print(activities[indexPath.row].name)
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        activities = displayRecents()
+    }
 
 
     override func viewDidLoad() {
@@ -84,14 +88,26 @@ class LoggingViewController: UIViewController, UICollectionViewDataSource, UICol
         
         let welcome = UILabel(frame: CGRect(x: 30, y: 50, width: 250, height: 45))
         welcome.text = "Log an activity"
-        welcome.font = UIFont(name: "Karla-Bold", size: 36)
+        switch UIDevice().type {
+        case .iPhoneSE, .iPhone5S:
+            welcome.font = UIFont(name: "Karla-Bold", size: 32)
+        default:
+            welcome.font = UIFont(name: "Karla-Bold", size: 36)
+        }
+        
         welcome.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         self.view.addSubview(welcome)
         
         let searchPlaceholder = UIButton(type: UIButton.ButtonType.system)
-        searchPlaceholder.frame = CGRect(x: 30, y: 115, width: UIScreen.main.bounds.width - 60, height: 40)
+        switch UIDevice().type {
+        case .iPhoneSE, .iPhone5S:
+            searchPlaceholder.frame = CGRect(x: 15, y: 110, width: UIScreen.main.bounds.width - 30, height: 30)
+            searchPlaceholder.titleLabel?.font = UIFont(name: "Karla-Bold", size: 16)
+        default:
+            searchPlaceholder.frame = CGRect(x: 30, y: 115, width: UIScreen.main.bounds.width - 60, height: 40)
+            searchPlaceholder.titleLabel?.font = UIFont(name: "Karla-Bold", size: 18)
+        }
         searchPlaceholder.setTitle("Search for an activity...", for: .normal)
-        searchPlaceholder.titleLabel?.font = UIFont(name: "Karla-Bold", size: 18)
         searchPlaceholder.titleLabel?.textAlignment = .left
         searchPlaceholder.setTitleColor(UIColor(named: "viridian"), for: .normal)
         searchPlaceholder.setImage(UIImage(named: "search"), for: .normal)
@@ -106,7 +122,7 @@ class LoggingViewController: UIViewController, UICollectionViewDataSource, UICol
         
         let pageScroll: UIScrollView!
         switch UIDevice().type {
-        case .iPhone5S, .iPhoneSE, .iPhone6, .iPhone7, .iPhone8:
+        case .iPhone5S, .iPhoneSE:
             pageScroll = UIScrollView(frame: CGRect(x: 0, y: 150, width: UIScreen.main.bounds.width, height: (UIScreen.main.bounds.height - 150)))
         default:
             pageScroll = UIScrollView(frame: CGRect(x: 0, y: 180, width: UIScreen.main.bounds.width, height: (UIScreen.main.bounds.height - 180)))
@@ -116,7 +132,7 @@ class LoggingViewController: UIViewController, UICollectionViewDataSource, UICol
         
         let browseByType: UILabel
         switch UIDevice().type {
-        case .iPhone5S, .iPhoneSE, .iPhone6, .iPhone7, .iPhone8:
+        case .iPhone5S, .iPhoneSE, .iPhone6, .iPhone6S, .iPhone7, .iPhone8:
             browseByType = UILabel(frame: CGRect(x: 30, y: 0, width: 250, height: 40))
             browseByType.font = UIFont(name: "Karla-Bold", size: 14)
         default:
@@ -257,7 +273,7 @@ class LoggingViewController: UIViewController, UICollectionViewDataSource, UICol
         
         let categoryStack: UIStackView
         switch UIDevice().type {
-        case .iPhoneSE,.iPhone5,.iPhone5S, .iPhone6, .iPhone7, .iPhone8:
+        case .iPhoneSE,.iPhone5,.iPhone5S, .iPhone6, .iPhone6S, .iPhone7, .iPhone8:
             categoryStack = UIStackView(frame: CGRect(x: 30, y: 0, width: 400, height: 100))
 //        case .iPhone6plus, .iPhone6Splus, .iPhone7plus, .iPhone8plus, .iPhoneXSMax:
 //            categoryStack = UIStackView(frame: CGRect(x: 30, y: 20, width: 400, height: 140))
@@ -287,8 +303,8 @@ class LoggingViewController: UIViewController, UICollectionViewDataSource, UICol
         
         let recentsLabel: UILabel!
         switch UIDevice().type {
-        case .iPhone5S, .iPhoneSE, .iPhone6, .iPhone7, .iPhone8:
-            recentsLabel = UILabel(frame: CGRect(x: 30, y: 200, width: 150, height: 40))
+        case .iPhone5S, .iPhoneSE, .iPhone6, .iPhone6S, .iPhone7, .iPhone8:
+            recentsLabel = UILabel(frame: CGRect(x: 30, y: 175, width: 150, height: 40))
             recentsLabel.font = UIFont(name: "Karla-Bold", size: 14)
         default:
             recentsLabel = UILabel(frame: CGRect(x: 30, y: 225, width: 150, height: 40))
@@ -299,8 +315,11 @@ class LoggingViewController: UIViewController, UICollectionViewDataSource, UICol
         pageScroll.addSubview(recentsLabel)
         
         
-        displayRecents()
         let recentsView = UICollectionView(frame: CGRect(x: 30, y: 275, width: UIScreen.main.bounds.width - 60, height: 300), collectionViewLayout: UICollectionViewFlowLayout())
+        if (UIDevice().type == .iPhone5S || UIDevice().type == .iPhoneSE || UIDevice().type == .iPhone6 || UIDevice().type == .iPhone6S || UIDevice().type == .iPhone7 || UIDevice().type == .iPhone8) {
+            recentsView.frame = CGRect(x: 30, y: 225, width: UIScreen.main.bounds.width - 60, height: 300)
+            pageScroll.contentSize = CGSize(width: UIScreen.main.bounds.width, height: 550)
+        }
         recentsView.backgroundColor = nil
         recentsView.dataSource = self
         recentsView.delegate = self

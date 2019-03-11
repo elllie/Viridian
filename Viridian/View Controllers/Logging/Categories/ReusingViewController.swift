@@ -27,7 +27,7 @@ class ReusingViewController: UIViewController, UICollectionViewDataSource, UICol
     {
         switch UIDevice().type {
         case .iPhone5, .iPhoneSE:
-            return CGSize(width: 95, height: 225)
+            return CGSize(width: 85, height: 210)
         default:
             return CGSize(width: 100, height: 200)
         }
@@ -88,7 +88,12 @@ class ReusingViewController: UIViewController, UICollectionViewDataSource, UICol
         
         let reducingLabel = UILabel(frame: CGRect(x: 55, y: 50, width: 220, height: 40))
         reducingLabel.text = "Reusing"
-        reducingLabel.font = UIFont(name: "Karla-Bold", size: 36)
+        switch UIDevice().type {
+        case .iPhone5S, .iPhoneSE:
+            reducingLabel.font = UIFont(name: "Karla-Bold", size: 34)
+        default:
+            reducingLabel.font = UIFont(name: "Karla-Bold", size: 36)
+        }
         reducingLabel.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         self.view.addSubview(reducingLabel)
         

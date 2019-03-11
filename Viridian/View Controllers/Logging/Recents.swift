@@ -33,15 +33,22 @@ extension LoggingViewController {
         }
     }
     
-    func displayRecents() {
+    func displayRecents() -> [Activity] {
         pullRecents()
         let ids = entries.map({$0.actID}) // int32
 
         for activity in Activity.allActivities {
             if ids.contains(Int32(activity.id)) {
-                activities.append(activity)
+                let used = activities.map({$0.id})
+                if !(used.contains(activity.id)) {
+                    activities.append(activity)
+                }
             }
         }
+        
+       
+        
+        return activities
     }
         
 

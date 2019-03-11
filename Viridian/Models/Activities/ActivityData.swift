@@ -8,7 +8,7 @@
 extension Activity {
     
     static let a1 = XActivity(multiAdd: true, howMany: "How many loads?", id: 1, catID: 1, name: "Air-dried laundry", image: #imageLiteral(resourceName: "air-dried"), pts: 37479, kWh: 3.0, mi: nil, paper: nil, plastic: nil, water: nil)
-    static let a2 = XActivity(multiAdd: true, howMany: "How many loads?", id: 1, catID: 1, name: "Hand-washed laundry", image: #imageLiteral(resourceName: "hand-washed"), pts: 15432, kWh: 0.5, mi: nil, paper: nil, plastic: nil, water: 2.5)
+    static let a2 = XActivity(multiAdd: true, howMany: "How many loads?", id: 2, catID: 1, name: "Hand-washed laundry", image: #imageLiteral(resourceName: "hand-washed"), pts: 15432, kWh: 0.5, mi: nil, paper: nil, plastic: nil, water: 2.5)
     static let a3 = Activity(id: 3, catID: 4, name: "Ate a vegan meal", image: #imageLiteral(resourceName: "vegan-meal"), pts: 14612, kWh: nil, mi: nil, paper: nil, plastic: nil, water: nil)
     static let a4 = Activity(id: 4, catID: 4, name: "Ate a vegetarian meal", image: #imageLiteral(resourceName: "vegetarian-meal"), pts: 18265, kWh: nil, mi: nil, paper: nil, plastic: nil, water: nil)
     static let a5 = Activity(id: 5, catID: 4, name: "Ate leftovers", image: #imageLiteral(resourceName: "ate-leftovers"), pts: 10000, kWh: nil, mi: nil, paper: nil, plastic: nil, water: nil)
