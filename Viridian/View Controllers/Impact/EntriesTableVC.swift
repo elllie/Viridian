@@ -11,10 +11,10 @@ import CoreData
 class EntriesTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFetchedResultsControllerDelegate {
     
     let appDelegate = UIApplication.shared.delegate as? AppDelegate
-    var moc: NSManagedObjectContext!
-    // moc = appDelegate?.persistentContainer.viewContext
+    var moc: NSManagedObjectContext! // = appDelegate?.persistentContainer.viewContext
     let persistentContainer = NSPersistentContainer(name: "Vridian")
     let fetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Diary")
+    var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +39,7 @@ class EntriesTableViewController: UIViewController, UITableViewDataSource, UITab
         self.view.addSubview(allRecordedEntries)
         
         // Do any additional setup after loading the view.
-        let tableView = UITableView(frame: CGRect(x: 0, y: 150, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height), style: .plain)
+        tableView = UITableView(frame: CGRect(x: 0, y: 150, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height), style: .plain)
         tableView.contentInset = UIEdgeInsets(top: 0.0, left: 0.0, bottom: 150, right: 0.0)
         tableView.backgroundColor = nil
         tableView.dataSource = self
@@ -89,9 +89,18 @@ class EntriesTableViewController: UIViewController, UITableViewDataSource, UITab
         
         cell.detailTextLabel?.text = date
         cell.detailTextLabel?.font = UIFont(name: "Karla-Regular", size: 14)
-        cell.isUserInteractionEnabled = false
+//        cell.isUserInteractionEnabled = false
 
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let entry = fetchedResultsController.object(at: indexPath)
+            fetchedResultsController.managedObjectContext.delete(entry)
+            appDelegate?.saveContext()
+            updateView()
+        }
     }
 
     fileprivate lazy var fetchedResultsController: NSFetchedResultsController<Diary> = {
@@ -131,7 +140,27 @@ class EntriesTableViewController: UIViewController, UITableViewDataSource, UITab
             print("\(fetchError), \(fetchError.localizedDescription)")
         }
     }
-    
+        func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
+            switch (type) {
+            case .delete:
+                if let indexPath = indexPath {
+                    tableView.deleteRows(at: [indexPath], with: .fade)
+                }
+                break;
+            default:
+                print("...")
+            }
+        }
+        
+        func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+            tableView.beginUpdates()
+        }
+        
+        func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+            tableView.endUpdates()
+            tableView.reloadData()
+            updateView()
+        }
 
     /*
     // Override to support conditional editing of the table view.

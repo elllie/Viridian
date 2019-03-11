@@ -18,6 +18,9 @@ extension ImpactViewController {
         case .iPhone6, .iPhone6S, .iPhone7, .iPhone8, .iPhone6plus, .iPhone6Splus, .iPhone7plus, .iPhone8plus:
             scrollView = UIScrollView(frame: CGRect(x: 0, y: 110, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height - 150))
             scrollView.contentSize = CGSize(width: UIScreen.main.bounds.width, height: 1550)
+        case .iPhoneXR, .iPhoneXSMax:
+            scrollView = UIScrollView(frame: CGRect(x: 0, y: 110, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height - 175))
+            scrollView.contentSize = CGSize(width: UIScreen.main.bounds.width, height: 1550)
         default:
             scrollView = UIScrollView(frame: CGRect(x: 0, y: 110, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height - 175))
             scrollView.contentSize = CGSize(width: UIScreen.main.bounds.width, height: 1520)
@@ -27,7 +30,7 @@ extension ImpactViewController {
         scrollView.showsVerticalScrollIndicator = false
         
         let statStack = UIStackView(frame: CGRect(x: 0, y: -190, width: UIScreen.main.bounds.width, height: 1520))
-        if (UIDevice().type == .iPhone6plus || UIDevice().type == .iPhone6Splus || UIDevice().type == .iPhone7plus || UIDevice().type == .iPhone8plus) {
+        if (UIDevice().type == .iPhone6plus || UIDevice().type == .iPhone6Splus || UIDevice().type == .iPhone7plus || UIDevice().type == .iPhone8plus || UIDevice().type == .iPhoneXR || UIDevice().type == .iPhoneXSMax) {
             statStack.frame = CGRect(x: 0, y: -180, width: UIScreen.main.bounds.width, height: 1550)
         }
         
