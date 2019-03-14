@@ -75,7 +75,7 @@ class Top10 {
                 top[9] = (a + 1)
             }
         }
-        //return top
-        return [1, 2, 3, 7, 8, 13, 16, 1, 2, 3]
+        // return top
+        return [1, 2, 3, 19, 6, 7, 8, 14, 16, 12]
     }
 }

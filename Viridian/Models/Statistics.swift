@@ -16,6 +16,8 @@ class Statistics {
     let persistentContainer = NSPersistentContainer(name: "Vridian")
     var entries: [Diary] = []
     
+    static var dataHasChanged: Bool = true
+    
     func calculateTable() -> [String] {
         
         retrieve()
@@ -96,13 +98,14 @@ class Statistics {
             return result + entry.water
         }
         
-        let meatlessMeals = entries.filter( {($0.actID == 3) || ($0.actID == 4)}).reduce(0) {(result, entry) -> Float in
+        let meatlessMeals = entries.filter( {($0.actID == 3) || ($0.actID == 4)}).reduce(0) {(result, entry) -> Int in
             return result + 1
         }
         
-
-        moc.reset()
+        let leftovers = entries.filter({$0.actID == 5}).reduce(0){(result, entry) -> Int in
+            return result + 1
+        }
         
-        return [String( (emissions * 10).rounded() / 10), String( (energy * 10).rounded() / 10), String( (fuel * 10).rounded() / 10), String( (miles * 10).rounded() / 10), String( (publicTransport * 10).rounded() / 10), String( (onFoot * 10).rounded() / 10), String(compost), String(totalRecycled), String(cansRecycled), String(paperRecycled), String(plasticRecycled), String(glassRecycled), String(batteriesRecycled), String(allOtherRecycling), String( (totalPaper * 10).rounded() / 10), String( (totalPlastic * 10).rounded() / 10), String( (bottleLbs * 10).rounded() / 10), String( (bagLbs * 10).rounded() / 10), String( (water * 10).rounded() / 10), String(meatlessMeals)]
+        return [String( (emissions * 10).rounded() / 10), String( (energy * 10).rounded() / 10), String( (fuel * 10).rounded() / 10), String( (miles * 10).rounded() / 10), String( (publicTransport * 10).rounded() / 10), String( (onFoot * 10).rounded() / 10), String(compost), String(totalRecycled), String(cansRecycled), String(paperRecycled), String(plasticRecycled), String(glassRecycled), String(batteriesRecycled), String(allOtherRecycling), String( (totalPaper * 10).rounded() / 10), String( (totalPlastic * 10).rounded() / 10), String( (bottleLbs * 10).rounded() / 10), String( (bagLbs * 10).rounded() / 10), String( (water * 10).rounded() / 10), String(meatlessMeals), String(leftovers)]
     }
 }

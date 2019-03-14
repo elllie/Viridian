@@ -15,13 +15,13 @@ extension LoggingViewController {
         let fetchRequest = NSFetchRequest<Diary>(entityName: "Diary")
         fetchRequest.sortDescriptors = [NSSortDescriptor(key: "logged", ascending: false)]
         fetchRequest.fetchLimit = 6 // one day this will evaluate to the user's average count per week.
-        
-        persistentContainer.loadPersistentStores { (persistentStoreDescription, error) in
-            if let error = error {
-                print("Unable to Load Persistent Store")
-                print("\(error), \(error.localizedDescription)")
-                
-            } else {
+    
+//        persistentContainer.loadPersistentStores { (persistentStoreDescription, error) in
+//            if let error = error {
+//                print("Unable to Load Persistent Store")
+//                print("\(error), \(error.localizedDescription)")
+//
+//            } else {
                 do {
                     try self.entries = self.moc.fetch(fetchRequest)
                 } catch {
@@ -30,9 +30,7 @@ extension LoggingViewController {
                     print("\(fetchError), \(fetchError.localizedDescription)")
                 }
             }
-        }
-    }
-    
+
     func displayRecents() -> [Activity] {
         pullRecents()
         let ids = entries.map({$0.actID}) // int32

@@ -15,13 +15,13 @@ extension Statistics {
         moc = appDelegate?.persistentContainer.viewContext
         let fetchRequest = NSFetchRequest<Diary>(entityName: "Diary")
         fetchRequest.sortDescriptors = [NSSortDescriptor(key: "logged", ascending: false)]
-        
-        persistentContainer.loadPersistentStores { (persistentStoreDescription, error) in
-            if let error = error {
-                print("Unable to Load Persistent Store")
-                print("\(error), \(error.localizedDescription)")
-                
-            } else {
+
+//        persistentContainer.loadPersistentStores { (persistentStoreDescription, error) in
+//            if let error = error {
+//                print("Unable to Load Persistent Store")
+//                print("\(error), \(error.localizedDescription)")
+//
+//            } else {
                 do {
                     try self.entries = self.moc.fetch(fetchRequest)
                 } catch {
@@ -30,6 +30,4 @@ extension Statistics {
                     print("\(fetchError), \(fetchError.localizedDescription)")
                 }
             }
-        }
     }
-}

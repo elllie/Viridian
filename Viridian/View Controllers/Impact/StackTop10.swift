@@ -11,6 +11,7 @@ extension ImpactViewController {
     
     func stackTop10() {
         let scrollView: UIScrollView!
+        
         switch UIDevice().type {
         case .iPhone5S, .iPhoneSE:
             scrollView = UIScrollView(frame: CGRect(x: 0, y: 125, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height - 150))
@@ -34,7 +35,6 @@ extension ImpactViewController {
             statStack.frame = CGRect(x: 0, y: -180, width: UIScreen.main.bounds.width, height: 1550)
         }
         
-        
         let topStats = Top10().reduceStats()
         for i in 0...9 {
             let yOffset: Int
@@ -56,7 +56,7 @@ extension ImpactViewController {
             var titleColor: UIColor
             
             switch (topStats[i]) {
-            case 1, 6:
+            case 1:
                 align = .rightThirdQuarter
                 picture.image = #imageLiteral(resourceName: "kWh")
                 title = (Statistics().calculateTable()[1] + " kWh saved in total")
@@ -68,21 +68,60 @@ extension ImpactViewController {
                 title = (Statistics().calculateTable()[18] + " gal of water saved")
                 subtitle = Statistics().waterImportance()
                 titleColor = .white
-            case 3, 4, 5:
+            case 3, 4:
                 align = .center
                 picture.image = #imageLiteral(resourceName: "food")
                 title = (Statistics().calculateTable()[19] + " meatless meals consumed")
-                subtitle = "Cutting meat and dairy is the biggest thing you can do for your carbon footprint!"
+                subtitle = "Cutting meat and dairy is the biggest thing you can do for your carbon footprint."
                 titleColor = UIColor(named: "darkTint") ?? .black
-//            case 6: refurbished or used device
-            //            case 17, 15: toxic waste statistics or recycling
+            case 5:
+                align = .center
+                picture.image = #imageLiteral(resourceName: "food")
+                title = Statistics().calculateTable()[20] + " leftover \n meals eaten"
+                subtitle = "Roughly 1/3 (over a billion tons) of all the food in the world gets lost or put to waste."
+                titleColor = UIColor(named: "darkTint") ?? .black
+            case 6, 15, 17:
+                align = .rightThirdQuarter
+                picture.image = #imageLiteral(resourceName: "vinesleft")
+                title = "Did you know?"
+                subtitle = "  Precious metals from e-waste can be up to 50 times richer than ores mined from the earth."
+                titleColor = UIColor(named: "blueTint") ?? .black
+            case 9, 10:
+                align = .rightThirdQuarter
+                picture.image = #imageLiteral(resourceName: "cafesign")
+                title = " disposable cups saved"
+                subtitle = "At $5 a drink, you've saved enough to start a retirement account..."
+                titleColor = .black
+                // plastic bags rescued from landfill
+            case 12: // fix this piiiccc
+                align = .rightThirdQuarter
+                picture.image = #imageLiteral(resourceName: "trees")
+                title = Statistics().calculateTable()[0] + " lbs carbon emissions reduced"
+                subtitle = "Equivalent to planting " + String(Int(Statistics().calculateTable()[0]) ?? 0 / 40) + " trees"
+                titleColor = .black
+            case 14:
+                align = .rightThirdQuarter
+                picture.image = #imageLiteral(resourceName: "vinesleft")
+                title = "#GreenFacts"
+                subtitle = "A 2017 CDP report found that 71% of global emissions come from just 100 companies."
+                titleColor = UIColor(named: "blueTint") ?? .black
+                // green miles traveled
+                // gallons of gas saved
+                // single-use drink cups saved
+                // times composted?
+            case 19, 20, 23, 26:
+                align = .rightThirdQuarter
+                picture.image = #imageLiteral(resourceName: "vinesleft")
+                title = ""
+                subtitle = "Many materials (specialty plastics, textiles, glass) are thrown away by local recycling plants. Make sure yours actually recycles them."
+                titleColor = UIColor(named: "blueTint") ?? .black
             case 7, 18, 24, 27:
                 align = .leftHalf
                 picture.image = #imageLiteral(resourceName: "paper1")
                 title = Statistics().paperMeasurement()
                 subtitle = Statistics().paperImportance()
                 titleColor = .black
-            case 8, 9, 11, 21, 25:
+            case 8, 11, 21, 25:
                 align = .leftThirdQuarter
                 picture.image = #imageLiteral(resourceName: "plastic")
                 title = (Statistics().calculateTable()[15] + " lbs of plastic saved")
@@ -100,6 +139,12 @@ extension ImpactViewController {
                 title = Statistics().calculateTable()[8] + " cans recycled"
                 subtitle = "It takes 90% less energy to manufacture a can from recycled aluminum!"
                 titleColor = UIColor(named: "darkTint") ?? .black
+            case 28, 29:
+                align = .center
+                picture.image = #imageLiteral(resourceName: "gradient")
+                title = Statistics().calculateTable()[3] + " green miles traveled"
+                subtitle = ""
+                titleColor = .white
             default:
                 align = .center
                 picture.image = #imageLiteral(resourceName: "kWh")

@@ -8,6 +8,7 @@
 import UIKit
 
 class ImpactViewController: UIViewController {
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,23 +34,31 @@ class ImpactViewController: UIViewController {
         self.view.addSubview(viewAll)
         
         Top10().collect()
-        if (Top10().entries.count < 100) {
-//            youShouldLogMore()
+        if (Top10().entries.count < 100 || Top10().reduceStats().contains(0)) {
+            //            youShouldLogMore()
             stackTop10()
-        } else if (Top10().reduceStats().contains(0)) {
-            youShouldLogMore()
         } else {
             stackTop10()
         }
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        if Statistics.dataHasChanged {
+//            Top10().collect()
+//            if (Top10().entries.count < 100 || Top10().reduceStats().contains(0)) {
+//                //            youShouldLogMore()
+//                stackTop10()
+//            } else {
+//                stackTop10()
+//            }
+            Statistics.dataHasChanged = false
+        }
+    }
     
     @objc func buttonAction(sender: UIButton!) {
         self.navigationController?.pushViewController(AllStatisticsViewController(), animated: true)
     }
-    
-
     /*
     // MARK: - Navigation
 

@@ -19,6 +19,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = TabBarController()
         window?.tintColor = UIColor(named: "darkTint")
         window?.makeKeyAndVisible()
+        
+//        persistentContainer.loadPersistentStores { (persistentStoreDescription, error) in
+//            if let error = error {
+//                print("Unable to Load Persistent Store")
+//                print("\(error), \(error.localizedDescription)")
+//                
+//            } else {
+//                print("Persistent Store Loaded")
+//            }
+//        }
         return true
     }
 

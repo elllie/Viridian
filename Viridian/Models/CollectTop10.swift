@@ -16,12 +16,12 @@ extension Top10 {
         fetchRequest.sortDescriptors = [NSSortDescriptor(key: "logged", ascending: false)]
         fetchRequest.fetchLimit = 100 // one day this will evaluate to the user's average count per week.
         
-        persistentContainer.loadPersistentStores { (persistentStoreDescription, error) in
-            if let error = error {
-                print("Unable to Load Persistent Store")
-                print("\(error), \(error.localizedDescription)")
-                
-            } else {
+//        persistentContainer.loadPersistentStores { (persistentStoreDescription, error) in
+//            if let error = error {
+//                print("Unable to Load Persistent Store")
+//                print("\(error), \(error.localizedDescription)")
+//
+//            } else {
                 do {
                     try self.entries = self.moc.fetch(fetchRequest)
                 } catch {
@@ -29,8 +29,6 @@ extension Top10 {
                     print("Unable to Perform Fetch Request")
                     print("\(fetchError), \(fetchError.localizedDescription)")
                 }
-            }
-        }
     }
     
 }

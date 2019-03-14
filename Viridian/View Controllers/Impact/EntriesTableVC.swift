@@ -120,15 +120,15 @@ class EntriesTableViewController: UIViewController, UITableViewDataSource, UITab
     }()
     
     fileprivate func setupView() {
-        persistentContainer.loadPersistentStores { (persistentStoreDescription, error) in
-            if let error = error {
-                print("Unable to Load Persistent Store")
-                print("\(error), \(error.localizedDescription)")
-                
-            } else {
+//        persistentContainer.loadPersistentStores { (persistentStoreDescription, error) in
+//            if let error = error {
+//                print("Unable to Load Persistent Store")
+//                print("\(error), \(error.localizedDescription)")
+//
+//            } else {
                 self.updateView()
-            }
-        }
+//            }
+//        }
     }
     
    fileprivate func updateView() {

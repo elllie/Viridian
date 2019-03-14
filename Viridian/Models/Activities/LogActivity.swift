@@ -74,5 +74,6 @@ extension Activity {
         
         appDelegate?.saveContext()
         print("saved")
+        Statistics.dataHasChanged = true
     }
 }
