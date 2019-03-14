@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FD0196E82207ECD20032A3BD /* CategoryCollctnVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0196E72207ECD20032A3BD /* CategoryCollctnVCell.swift */; };
+		FD0BC0522239D658008A751A /* mileage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0BC0512239D658008A751A /* mileage.swift */; };
 		FD11677A2218C78E0010885D /* TypeBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1167792218C78E0010885D /* TypeBViewController.swift */; };
 		FD28843321FCCEF300CC455F /* IdentifyDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD28843221FCCEF300CC455F /* IdentifyDevice.swift */; };
 		FD28E408220BC23000BEDB78 /* ActivityData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD28E407220BC23000BEDB78 /* ActivityData.swift */; };
@@ -59,6 +60,7 @@
 
 /* Begin PBXFileReference section */
 		FD0196E72207ECD20032A3BD /* CategoryCollctnVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollctnVCell.swift; sourceTree = "<group>"; };
+		FD0BC0512239D658008A751A /* mileage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mileage.swift; sourceTree = "<group>"; };
 		FD1167792218C78E0010885D /* TypeBViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeBViewController.swift; sourceTree = "<group>"; };
 		FD28843221FCCEF300CC455F /* IdentifyDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentifyDevice.swift; sourceTree = "<group>"; };
 		FD28E407220BC23000BEDB78 /* ActivityData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityData.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 				FD2E5C14222C563A001DEA9E /* kilowatthours.swift */,
 				FD2E5C16222C72F1001DEA9E /* paper.swift */,
 				FD2E5C18222C8ADB001DEA9E /* plastique.swift */,
+				FD0BC0512239D658008A751A /* mileage.swift */,
 			);
 			path = Importance;
 			sourceTree = "<group>";
@@ -359,6 +362,7 @@
 				FDE26014221116F90032BC5D /* SearchTableViewController.swift in Sources */,
 				FD702E8C222B155D00BD8BB6 /* Top10.swift in Sources */,
 				FDACF00D21FF8F75005365B9 /* LogActivity.swift in Sources */,
+				FD0BC0522239D658008A751A /* mileage.swift in Sources */,
 				FD28843321FCCEF300CC455F /* IdentifyDevice.swift in Sources */,
 				FDED9B452232EA71009DFA32 /* CategoryData.swift in Sources */,
 				FDB86926222369760076F7F9 /* PullStats.swift in Sources */,
