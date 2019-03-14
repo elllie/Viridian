@@ -33,10 +33,22 @@ class ImpactViewController: UIViewController {
         viewAll.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
         self.view.addSubview(viewAll)
         
+        let settings: UIButton
+        switch UIDevice().type {
+            case .iPhoneSE, .iPhone5, .iPhone5S:
+            settings = UIButton(frame: CGRect(x: UIScreen.main.bounds.width - 50, y: 60, width: 25, height: 25))
+            default:
+            settings = UIButton(frame: CGRect(x: UIScreen.main.bounds.width - 40, y: 60, width: 25, height: 25))
+        }
+        settings.setImage(UIImage(named: "settings"), for: .normal)
+        settings.tintColor = UIColor(named: "darkTint")
+        settings.addTarget(self, action: #selector(settingsAction), for: .touchUpInside)
+        self.view.addSubview(settings)
+        
         Top10().collect()
         if (Top10().entries.count < 100 || Top10().reduceStats().contains(0)) {
-            //            youShouldLogMore()
-            stackTop10()
+            youShouldLogMore()
+//            stackTop10()
         } else {
             stackTop10()
         }
@@ -58,6 +70,10 @@ class ImpactViewController: UIViewController {
     
     @objc func buttonAction(sender: UIButton!) {
         self.navigationController?.pushViewController(AllStatisticsViewController(), animated: true)
+    }
+    
+    @objc func settingsAction(sender: UIButton!) {
+        self.navigationController?.pushViewController(SettingsViewController(), animated: true)
     }
     /*
     // MARK: - Navigation
