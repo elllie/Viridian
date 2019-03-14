@@ -143,7 +143,7 @@ extension ImpactViewController {
                 align = .center
                 picture.image = #imageLiteral(resourceName: "gradient")
                 title = Statistics().calculateTable()[3] + " green miles traveled"
-                subtitle = ""
+                subtitle = Statistics().mileage()
                 titleColor = .white
             default:
                 align = .center
