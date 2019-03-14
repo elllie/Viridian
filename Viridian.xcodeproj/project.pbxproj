@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FD0196E82207ECD20032A3BD /* CategoryCollctnVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0196E72207ECD20032A3BD /* CategoryCollctnVCell.swift */; };
+		FD0A603D223AAB90006AF83E /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0A603C223AAB90006AF83E /* SettingsViewController.swift */; };
 		FD0BC0522239D658008A751A /* mileage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0BC0512239D658008A751A /* mileage.swift */; };
 		FD11677A2218C78E0010885D /* TypeBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1167792218C78E0010885D /* TypeBViewController.swift */; };
 		FD28843321FCCEF300CC455F /* IdentifyDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD28843221FCCEF300CC455F /* IdentifyDevice.swift */; };
@@ -60,6 +61,7 @@
 
 /* Begin PBXFileReference section */
 		FD0196E72207ECD20032A3BD /* CategoryCollctnVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollctnVCell.swift; sourceTree = "<group>"; };
+		FD0A603C223AAB90006AF83E /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		FD0BC0512239D658008A751A /* mileage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mileage.swift; sourceTree = "<group>"; };
 		FD1167792218C78E0010885D /* TypeBViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeBViewController.swift; sourceTree = "<group>"; };
 		FD28843221FCCEF300CC455F /* IdentifyDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentifyDevice.swift; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				FD642C9921F8EEE30072C42B /* TabBarController.swift */,
+				FD0A603C223AAB90006AF83E /* SettingsViewController.swift */,
 				FD642CB121F8F9AF0072C42B /* Impact */,
 				FD642CB221F8F9B80072C42B /* Logging */,
 			);
@@ -375,6 +378,7 @@
 				FDACF00721FEEEC9005365B9 /* Activity.swift in Sources */,
 				FD7DA793220E7BDA00747F2E /* RecyclingViewController.swift in Sources */,
 				FD642CAF21F8F94D0072C42B /* LoggingNavController.swift in Sources */,
+				FD0A603D223AAB90006AF83E /* SettingsViewController.swift in Sources */,
 				FDED73FB22342A0400210461 /* RecentsCollctnVCell.swift in Sources */,
 				FDB86922222324CB0076F7F9 /* EntryCell.swift in Sources */,
 				FDECAC2221F8EBA1009D91EE /* Vridian.xcdatamodeld in Sources */,
