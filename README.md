@@ -1,4 +1,4 @@
-### Viridian is an app designed to make it easy to be green.
+# Viridian is an app designed to make it easy to be green.
 
 ![happy kermit](https://images.pexels.com/photos/39005/kermit-frog-fun-snow-39005.jpeg?cs=srgb&dl=cold-frog-fun-39005.jpg&fm=jpg)
 
