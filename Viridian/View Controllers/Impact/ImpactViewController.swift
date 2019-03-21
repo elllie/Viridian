@@ -9,7 +9,6 @@ import UIKit
 
 class ImpactViewController: UIViewController {
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
@@ -43,7 +42,7 @@ class ImpactViewController: UIViewController {
         settings.setImage(UIImage(named: "settings"), for: .normal)
         settings.tintColor = UIColor(named: "darkTint")
         settings.addTarget(self, action: #selector(settingsAction), for: .touchUpInside)
-        self.view.addSubview(settings)
+//        self.view.addSubview(settings)
         
         Top10().collect()
         if (Top10().entries.count < 100 || Top10().reduceStats().contains(0)) {
