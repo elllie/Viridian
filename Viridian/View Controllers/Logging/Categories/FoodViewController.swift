@@ -68,6 +68,7 @@ class FoodViewController: UIViewController, UICollectionViewDataSource, UICollec
             
             self.navigationController?.pushViewController(detailView, animated: true)
         }
+        Amplitude.instance()?.logEvent("Browsed for activity", withEventProperties: ["Activity ID": Activity.CurrentActivity?.id ?? 0])
         print(activities[indexPath.row].name)
     }
 

@@ -72,6 +72,7 @@ class LoggingViewController: UIViewController, UICollectionViewDataSource, UICol
             detailView.tipLabelText = Tip.pick(activity: Activity.CurrentActivity!)
             self.navigationController?.pushViewController(detailView, animated: true)
         }
+        Amplitude.instance()?.logEvent("Picked recent activity", withEventProperties: ["Activity ID": Activity.CurrentActivity?.id ?? 0])
         print(activities[indexPath.row].name)
     }
     

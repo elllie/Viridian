@@ -50,6 +50,7 @@ class AllStatisticsViewController: UIViewController, UITableViewDataSource, UITa
     
     override func viewWillAppear(_ animated: Bool) {
         numbers = Statistics().calculateTable()
+        Amplitude.instance()?.logEvent("Viewed all statistics")
     }
 
     override func viewDidLoad() {

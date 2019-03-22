@@ -71,9 +71,49 @@ extension Activity {
                 entry.water = Float((activity.water ?? 0) * Float(amount))
                 
             }
+        let category: String
+        let timeOfDay: String
+        
+        switch activity.catID {
+        case 1: category = "Reduce"
+        case 2: category = "Reuse"
+        case 3: category = "Recycle"
+        case 4: category = "Food"
+        default: category = "null"
+        }
+        
+        switch Activity.currentHour() {
+        case 0...4: timeOfDay = "late night"
+        case 5...10: timeOfDay = "morning"
+        case 11...13: timeOfDay = "noon"
+        case 14...17: timeOfDay = "afternoon"
+        case 18...20: timeOfDay = "evening"
+        case 21...23: timeOfDay = "night"
+        default: timeOfDay = "null"
+        }
+        
+        Amplitude.instance().logEvent("Log activity", withEventProperties: ["Category": category, "Name": activity.name, "Time of day": timeOfDay])
+        Amplitude.instance().printEventsCount()
         
         appDelegate?.saveContext()
         print("saved")
         Statistics.dataHasChanged = true
+        
+        
+        
+//        let properties: NSDictionary = [
+//            "Category": category,
+//            "Name": activity.name,
+//            "Time of day": timeOfDay
+//        ]
+        
+
+    }
+    
+    static func currentHour() -> Int {
+        let date = Date()
+        let calendar = Calendar.current
+        let hour = calendar.component(.hour, from: date)
+        return hour
     }
 }

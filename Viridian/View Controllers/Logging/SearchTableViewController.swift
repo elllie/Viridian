@@ -105,6 +105,7 @@ class SearchTableViewController: UITableViewController {
             
             self.navigationController?.pushViewController(detailView, animated: true)
         }
+        Amplitude.instance()?.logEvent("Searched for activity", withEventProperties: ["Activity ID": Activity.CurrentActivity?.id ?? 0])
         print(activity.name)
     }
     

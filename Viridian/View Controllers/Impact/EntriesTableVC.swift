@@ -99,6 +99,7 @@ class EntriesTableViewController: UIViewController, UITableViewDataSource, UITab
             let entry = fetchedResultsController.object(at: indexPath)
             fetchedResultsController.managedObjectContext.delete(entry)
             appDelegate?.saveContext()
+            Amplitude.instance()?.logEvent("Deleted entry", withEventProperties: ["Activity ID": entry.actID])
             updateView()
         }
     }
