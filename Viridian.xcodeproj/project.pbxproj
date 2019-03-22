@@ -19,6 +19,44 @@
 		FD2E5C17222C72F1001DEA9E /* paper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2E5C16222C72F1001DEA9E /* paper.swift */; };
 		FD2E5C19222C8ADB001DEA9E /* plastique.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2E5C18222C8ADB001DEA9E /* plastique.swift */; };
 		FD2E5C1B222CBB24001DEA9E /* StackTop10.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2E5C1A222CBB24001DEA9E /* StackTop10.swift */; };
+		FD43F7D322436F3600D4140F /* AMPConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = FD43F73B22436F3600D4140F /* AMPConstants.m */; };
+		FD43F7D422436F3600D4140F /* AMPDatabaseHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = FD43F73D22436F3600D4140F /* AMPDatabaseHelper.m */; };
+		FD43F7D522436F3600D4140F /* AMPDeviceInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = FD43F73F22436F3600D4140F /* AMPDeviceInfo.m */; };
+		FD43F7D622436F3600D4140F /* AMPIdentify.m in Sources */ = {isa = PBXBuildFile; fileRef = FD43F74122436F3600D4140F /* AMPIdentify.m */; };
+		FD43F7D722436F3600D4140F /* AMPLocationManagerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FD43F74322436F3600D4140F /* AMPLocationManagerDelegate.m */; };
+		FD43F7D822436F3600D4140F /* AMPRevenue.m in Sources */ = {isa = PBXBuildFile; fileRef = FD43F74522436F3600D4140F /* AMPRevenue.m */; };
+		FD43F7D922436F3600D4140F /* AMPTrackingOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = FD43F74722436F3600D4140F /* AMPTrackingOptions.m */; };
+		FD43F7DA22436F3600D4140F /* AMPURLConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = FD43F74922436F3600D4140F /* AMPURLConnection.m */; };
+		FD43F7DB22436F3600D4140F /* AMPURLSession.m in Sources */ = {isa = PBXBuildFile; fileRef = FD43F74B22436F3600D4140F /* AMPURLSession.m */; };
+		FD43F7DC22436F3600D4140F /* AMPUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = FD43F74D22436F3600D4140F /* AMPUtils.m */; };
+		FD43F7DD22436F3600D4140F /* Amplitude.m in Sources */ = {isa = PBXBuildFile; fileRef = FD43F75022436F3600D4140F /* Amplitude.m */; };
+		FD43F7DF22436F3600D4140F /* ComodoCaLimitedRsaCertificationAuthority.der in Resources */ = {isa = PBXBuildFile; fileRef = FD43F75222436F3600D4140F /* ComodoCaLimitedRsaCertificationAuthority.der */; };
+		FD43F7E022436F3600D4140F /* ComodoRsaCA.der in Resources */ = {isa = PBXBuildFile; fileRef = FD43F75322436F3600D4140F /* ComodoRsaCA.der */; };
+		FD43F7E122436F3600D4140F /* ComodoRsaDomainValidationCA.der in Resources */ = {isa = PBXBuildFile; fileRef = FD43F75422436F3600D4140F /* ComodoRsaDomainValidationCA.der */; };
+		FD43F7E222436F3600D4140F /* ISPCertificatePinning.m in Sources */ = {isa = PBXBuildFile; fileRef = FD43F75722436F3600D4140F /* ISPCertificatePinning.m */; };
+		FD43F7E322436F3600D4140F /* ISPPinnedNSURLConnectionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FD43F75922436F3600D4140F /* ISPPinnedNSURLConnectionDelegate.m */; };
+		FD43F7E422436F3600D4140F /* ISPPinnedNSURLSessionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FD43F75B22436F3600D4140F /* ISPPinnedNSURLSessionDelegate.m */; };
+		FD43F7E522436F3600D4140F /* api.amplitude.com.der in Resources */ = {isa = PBXBuildFile; fileRef = FD43F75D22436F3600D4140F /* api.amplitude.com.der */; };
+		FD43F7E622436F3600D4140F /* Amplitude-iOS.podspec in Resources */ = {isa = PBXBuildFile; fileRef = FD43F75E22436F3600D4140F /* Amplitude-iOS.podspec */; };
+		FD43F7E722436F3600D4140F /* Amplitude.xcworkspace in Resources */ = {isa = PBXBuildFile; fileRef = FD43F76222436F3600D4140F /* Amplitude.xcworkspace */; };
+		FD43F7FC22436F3600D4140F /* CHANGELOG.md in Resources */ = {isa = PBXBuildFile; fileRef = FD43F77F22436F3600D4140F /* CHANGELOG.md */; };
+		FD43F7FF22436F3600D4140F /* Podfile.lock in Resources */ = {isa = PBXBuildFile; fileRef = FD43F78222436F3600D4140F /* Podfile.lock */; };
+		FD43F80122436F3600D4140F /* documents-template in Resources */ = {isa = PBXBuildFile; fileRef = FD43F78922436F3600D4140F /* documents-template */; };
+		FD43F80222436F3600D4140F /* nodes-template.xml in Resources */ = {isa = PBXBuildFile; fileRef = FD43F78A22436F3600D4140F /* nodes-template.xml */; };
+		FD43F80322436F3600D4140F /* tokens-template.xml in Resources */ = {isa = PBXBuildFile; fileRef = FD43F78B22436F3600D4140F /* tokens-template.xml */; };
+		FD43F80622436F3600D4140F /* _layout.scss in Resources */ = {isa = PBXBuildFile; fileRef = FD43F79122436F3600D4140F /* _layout.scss */; };
+		FD43F80922436F3600D4140F /* _print.scss in Resources */ = {isa = PBXBuildFile; fileRef = FD43F79422436F3600D4140F /* _print.scss */; };
+		FD43F81322436F3600D4140F /* document-template.html in Resources */ = {isa = PBXBuildFile; fileRef = FD43F79F22436F3600D4140F /* document-template.html */; };
+		FD43F81422436F3600D4140F /* hierarchy-template.html in Resources */ = {isa = PBXBuildFile; fileRef = FD43F7A022436F3600D4140F /* hierarchy-template.html */; };
+		FD43F81622436F3600D4140F /* index-template.html in Resources */ = {isa = PBXBuildFile; fileRef = FD43F7A322436F3600D4140F /* index-template.html */; };
+		FD43F81722436F3600D4140F /* object-template.html in Resources */ = {isa = PBXBuildFile; fileRef = FD43F7A422436F3600D4140F /* object-template.html */; };
+		FD43F81822436F3600D4140F /* xml-template.xml in Resources */ = {isa = PBXBuildFile; fileRef = FD43F7A622436F3600D4140F /* xml-template.xml */; };
+		FD43F81A22436F3600D4140F /* AMPIdentify.html in Resources */ = {isa = PBXBuildFile; fileRef = FD43F7AB22436F3600D4140F /* AMPIdentify.html */; };
+		FD43F81C22436F3600D4140F /* Amplitude.html in Resources */ = {isa = PBXBuildFile; fileRef = FD43F7AD22436F3600D4140F /* Amplitude.html */; };
+		FD43F81F22436F3600D4140F /* _normalize.scss in Resources */ = {isa = PBXBuildFile; fileRef = FD43F7B222436F3600D4140F /* _normalize.scss */; };
+		FD43F82022436F3600D4140F /* _object.scss in Resources */ = {isa = PBXBuildFile; fileRef = FD43F7B322436F3600D4140F /* _object.scss */; };
+		FD43F82B22436F3600D4140F /* hierarchy.html in Resources */ = {isa = PBXBuildFile; fileRef = FD43F7BF22436F3600D4140F /* hierarchy.html */; };
+		FD43F82C22436F3600D4140F /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = FD43F7C022436F3600D4140F /* index.html */; };
 		FD5075592209E28300B7EC78 /* TypeAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5075582209E28300B7EC78 /* TypeAViewController.swift */; };
 		FD642C9A21F8EEE30072C42B /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD642C9921F8EEE30072C42B /* TabBarController.swift */; };
 		FD642C9C21F8EF710072C42B /* ImpactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD642C9B21F8EF710072C42B /* ImpactViewController.swift */; };
@@ -59,6 +97,44 @@
 		FDF1A0C12202108D00533592 /* Recents.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF1A0C02202108D00533592 /* Recents.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		FD43F7C822436F3600D4140F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FD43F75F22436F3600D4140F /* Amplitude.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E98C05231A48E7FE00800C63;
+			remoteInfo = Amplitude;
+		};
+		FD43F7CA22436F3600D4140F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FD43F75F22436F3600D4140F /* Amplitude.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E98C052E1A48E7FE00800C63;
+			remoteInfo = AmplitudeTests;
+		};
+		FD43F7CC22436F3600D4140F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FD43F75F22436F3600D4140F /* Amplitude.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 343AB4171CC99F4F00962943;
+			remoteInfo = AmplitudeFramework;
+		};
+		FD43F7CE22436F3600D4140F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FD43F75F22436F3600D4140F /* Amplitude.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 37802BF31E86AF65003E5A8B;
+			remoteInfo = AmplitudeFrameworkTVOS;
+		};
+		FD43F7D022436F3600D4140F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FD43F75F22436F3600D4140F /* Amplitude.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 600CBC5C1E2EF5B0001F58A9;
+			remoteInfo = AmplitudeTVOSTests;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		FD0196E72207ECD20032A3BD /* CategoryCollctnVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollctnVCell.swift; sourceTree = "<group>"; };
 		FD0A603C223AAB90006AF83E /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +148,100 @@
 		FD2E5C16222C72F1001DEA9E /* paper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = paper.swift; sourceTree = "<group>"; };
 		FD2E5C18222C8ADB001DEA9E /* plastique.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = plastique.swift; sourceTree = "<group>"; };
 		FD2E5C1A222CBB24001DEA9E /* StackTop10.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackTop10.swift; sourceTree = "<group>"; };
+		FD43F73722436F3600D4140F /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		FD43F73922436F3600D4140F /* AMPARCMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMPARCMacros.h; sourceTree = "<group>"; };
+		FD43F73A22436F3600D4140F /* AMPConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMPConstants.h; sourceTree = "<group>"; };
+		FD43F73B22436F3600D4140F /* AMPConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMPConstants.m; sourceTree = "<group>"; };
+		FD43F73C22436F3600D4140F /* AMPDatabaseHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMPDatabaseHelper.h; sourceTree = "<group>"; };
+		FD43F73D22436F3600D4140F /* AMPDatabaseHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMPDatabaseHelper.m; sourceTree = "<group>"; };
+		FD43F73E22436F3600D4140F /* AMPDeviceInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMPDeviceInfo.h; sourceTree = "<group>"; };
+		FD43F73F22436F3600D4140F /* AMPDeviceInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMPDeviceInfo.m; sourceTree = "<group>"; };
+		FD43F74022436F3600D4140F /* AMPIdentify.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMPIdentify.h; sourceTree = "<group>"; };
+		FD43F74122436F3600D4140F /* AMPIdentify.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMPIdentify.m; sourceTree = "<group>"; };
+		FD43F74222436F3600D4140F /* AMPLocationManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMPLocationManagerDelegate.h; sourceTree = "<group>"; };
+		FD43F74322436F3600D4140F /* AMPLocationManagerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMPLocationManagerDelegate.m; sourceTree = "<group>"; };
+		FD43F74422436F3600D4140F /* AMPRevenue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMPRevenue.h; sourceTree = "<group>"; };
+		FD43F74522436F3600D4140F /* AMPRevenue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMPRevenue.m; sourceTree = "<group>"; };
+		FD43F74622436F3600D4140F /* AMPTrackingOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMPTrackingOptions.h; sourceTree = "<group>"; };
+		FD43F74722436F3600D4140F /* AMPTrackingOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMPTrackingOptions.m; sourceTree = "<group>"; };
+		FD43F74822436F3600D4140F /* AMPURLConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMPURLConnection.h; sourceTree = "<group>"; };
+		FD43F74922436F3600D4140F /* AMPURLConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMPURLConnection.m; sourceTree = "<group>"; };
+		FD43F74A22436F3600D4140F /* AMPURLSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMPURLSession.h; sourceTree = "<group>"; };
+		FD43F74B22436F3600D4140F /* AMPURLSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMPURLSession.m; sourceTree = "<group>"; };
+		FD43F74C22436F3600D4140F /* AMPUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMPUtils.h; sourceTree = "<group>"; };
+		FD43F74D22436F3600D4140F /* AMPUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMPUtils.m; sourceTree = "<group>"; };
+		FD43F74E22436F3600D4140F /* Amplitude+SSLPinning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Amplitude+SSLPinning.h"; sourceTree = "<group>"; };
+		FD43F74F22436F3600D4140F /* Amplitude.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Amplitude.h; sourceTree = "<group>"; };
+		FD43F75022436F3600D4140F /* Amplitude.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Amplitude.m; sourceTree = "<group>"; };
+		FD43F75122436F3600D4140F /* AppledocSettings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AppledocSettings.plist; sourceTree = "<group>"; };
+		FD43F75222436F3600D4140F /* ComodoCaLimitedRsaCertificationAuthority.der */ = {isa = PBXFileReference; lastKnownFileType = file; path = ComodoCaLimitedRsaCertificationAuthority.der; sourceTree = "<group>"; };
+		FD43F75322436F3600D4140F /* ComodoRsaCA.der */ = {isa = PBXFileReference; lastKnownFileType = file; path = ComodoRsaCA.der; sourceTree = "<group>"; };
+		FD43F75422436F3600D4140F /* ComodoRsaDomainValidationCA.der */ = {isa = PBXFileReference; lastKnownFileType = file; path = ComodoRsaDomainValidationCA.der; sourceTree = "<group>"; };
+		FD43F75622436F3600D4140F /* ISPCertificatePinning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISPCertificatePinning.h; sourceTree = "<group>"; };
+		FD43F75722436F3600D4140F /* ISPCertificatePinning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISPCertificatePinning.m; sourceTree = "<group>"; };
+		FD43F75822436F3600D4140F /* ISPPinnedNSURLConnectionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISPPinnedNSURLConnectionDelegate.h; sourceTree = "<group>"; };
+		FD43F75922436F3600D4140F /* ISPPinnedNSURLConnectionDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISPPinnedNSURLConnectionDelegate.m; sourceTree = "<group>"; };
+		FD43F75A22436F3600D4140F /* ISPPinnedNSURLSessionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISPPinnedNSURLSessionDelegate.h; sourceTree = "<group>"; };
+		FD43F75B22436F3600D4140F /* ISPPinnedNSURLSessionDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISPPinnedNSURLSessionDelegate.m; sourceTree = "<group>"; };
+		FD43F75C22436F3600D4140F /* SSLCertificatePinning-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SSLCertificatePinning-Prefix.pch"; sourceTree = "<group>"; };
+		FD43F75D22436F3600D4140F /* api.amplitude.com.der */ = {isa = PBXFileReference; lastKnownFileType = file; path = api.amplitude.com.der; sourceTree = "<group>"; };
+		FD43F75E22436F3600D4140F /* Amplitude-iOS.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Amplitude-iOS.podspec"; sourceTree = "<group>"; };
+		FD43F75F22436F3600D4140F /* Amplitude.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Amplitude.xcodeproj; sourceTree = "<group>"; };
+		FD43F76222436F3600D4140F /* Amplitude.xcworkspace */ = {isa = PBXFileReference; lastKnownFileType = wrapper.workspace; path = Amplitude.xcworkspace; sourceTree = "<group>"; };
+		FD43F76422436F3600D4140F /* Amplitude.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = Amplitude.modulemap; sourceTree = "<group>"; };
+		FD43F76522436F3600D4140F /* AmplitudeFramework.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AmplitudeFramework.h; sourceTree = "<group>"; };
+		FD43F76622436F3600D4140F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD43F77E22436F3600D4140F /* AppledocSettings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AppledocSettings.plist; sourceTree = "<group>"; };
+		FD43F77F22436F3600D4140F /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
+		FD43F78022436F3600D4140F /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		FD43F78122436F3600D4140F /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		FD43F78222436F3600D4140F /* Podfile.lock */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile.lock; sourceTree = "<group>"; };
+		FD43F78322436F3600D4140F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		FD43F78922436F3600D4140F /* documents-template */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "documents-template"; sourceTree = "<group>"; };
+		FD43F78A22436F3600D4140F /* nodes-template.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "nodes-template.xml"; sourceTree = "<group>"; };
+		FD43F78B22436F3600D4140F /* tokens-template.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "tokens-template.xml"; sourceTree = "<group>"; };
+		FD43F79022436F3600D4140F /* _index.scss */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = _index.scss; sourceTree = "<group>"; };
+		FD43F79122436F3600D4140F /* _layout.scss */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = _layout.scss; sourceTree = "<group>"; };
+		FD43F79222436F3600D4140F /* _normalize.scss */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = _normalize.scss; sourceTree = "<group>"; };
+		FD43F79322436F3600D4140F /* _object.scss */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = _object.scss; sourceTree = "<group>"; };
+		FD43F79422436F3600D4140F /* _print.scss */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = _print.scss; sourceTree = "<group>"; };
+		FD43F79522436F3600D4140F /* _variables.scss */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = _variables.scss; sourceTree = "<group>"; };
+		FD43F79622436F3600D4140F /* _xcode.scss */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = _xcode.scss; sourceTree = "<group>"; };
+		FD43F79722436F3600D4140F /* style.scss */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = style.scss; sourceTree = "<group>"; };
+		FD43F79822436F3600D4140F /* style.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = style.css; sourceTree = "<group>"; };
+		FD43F79A22436F3600D4140F /* button_bar_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_bar_background.png; sourceTree = "<group>"; };
+		FD43F79B22436F3600D4140F /* disclosure.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = disclosure.png; sourceTree = "<group>"; };
+		FD43F79C22436F3600D4140F /* disclosure_open.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = disclosure_open.png; sourceTree = "<group>"; };
+		FD43F79D22436F3600D4140F /* library_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = library_background.png; sourceTree = "<group>"; };
+		FD43F79E22436F3600D4140F /* title_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = title_background.png; sourceTree = "<group>"; };
+		FD43F79F22436F3600D4140F /* document-template.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "document-template.html"; sourceTree = "<group>"; };
+		FD43F7A022436F3600D4140F /* hierarchy-template.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "hierarchy-template.html"; sourceTree = "<group>"; };
+		FD43F7A222436F3600D4140F /* script.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = script.js; sourceTree = "<group>"; };
+		FD43F7A322436F3600D4140F /* index-template.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "index-template.html"; sourceTree = "<group>"; };
+		FD43F7A422436F3600D4140F /* object-template.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "object-template.html"; sourceTree = "<group>"; };
+		FD43F7A622436F3600D4140F /* xml-template.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "xml-template.xml"; sourceTree = "<group>"; };
+		FD43F7A722436F3600D4140F /* circle.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = circle.yml; sourceTree = "<group>"; };
+		FD43F7AB22436F3600D4140F /* AMPIdentify.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html.documentation; path = AMPIdentify.html; sourceTree = "<group>"; };
+		FD43F7AC22436F3600D4140F /* AMPRevenue.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html.documentation; path = AMPRevenue.html; sourceTree = "<group>"; };
+		FD43F7AD22436F3600D4140F /* Amplitude.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html.documentation; path = Amplitude.html; sourceTree = "<group>"; };
+		FD43F7B022436F3600D4140F /* _index.scss */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = _index.scss; sourceTree = "<group>"; };
+		FD43F7B122436F3600D4140F /* _layout.scss */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = _layout.scss; sourceTree = "<group>"; };
+		FD43F7B222436F3600D4140F /* _normalize.scss */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = _normalize.scss; sourceTree = "<group>"; };
+		FD43F7B322436F3600D4140F /* _object.scss */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = _object.scss; sourceTree = "<group>"; };
+		FD43F7B422436F3600D4140F /* _print.scss */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = _print.scss; sourceTree = "<group>"; };
+		FD43F7B522436F3600D4140F /* _variables.scss */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = _variables.scss; sourceTree = "<group>"; };
+		FD43F7B622436F3600D4140F /* _xcode.scss */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = _xcode.scss; sourceTree = "<group>"; };
+		FD43F7B722436F3600D4140F /* style.scss */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = style.scss; sourceTree = "<group>"; };
+		FD43F7B822436F3600D4140F /* style.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = style.css; sourceTree = "<group>"; };
+		FD43F7BA22436F3600D4140F /* button_bar_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_bar_background.png; sourceTree = "<group>"; };
+		FD43F7BB22436F3600D4140F /* disclosure.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = disclosure.png; sourceTree = "<group>"; };
+		FD43F7BC22436F3600D4140F /* disclosure_open.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = disclosure_open.png; sourceTree = "<group>"; };
+		FD43F7BD22436F3600D4140F /* library_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = library_background.png; sourceTree = "<group>"; };
+		FD43F7BE22436F3600D4140F /* title_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = title_background.png; sourceTree = "<group>"; };
+		FD43F7BF22436F3600D4140F /* hierarchy.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html.documentation; path = hierarchy.html; sourceTree = "<group>"; };
+		FD43F7C022436F3600D4140F /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html.documentation; path = index.html; sourceTree = "<group>"; };
+		FD43F7C222436F3600D4140F /* script.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = script.js; sourceTree = "<group>"; };
+		FD43F8302243723B00D4140F /* ViridianBridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViridianBridgingHeader.h; sourceTree = "<group>"; };
 		FD5075582209E28300B7EC78 /* TypeAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeAViewController.swift; sourceTree = "<group>"; };
 		FD642C9921F8EEE30072C42B /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		FD642C9B21F8EF710072C42B /* ImpactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImpactViewController.swift; sourceTree = "<group>"; };
@@ -135,6 +305,286 @@
 				FD0BC0512239D658008A751A /* mileage.swift */,
 			);
 			path = Importance;
+			sourceTree = "<group>";
+		};
+		FD43F73622436F3600D4140F /* Amplitude-iOS-master */ = {
+			isa = PBXGroup;
+			children = (
+				FD43F73722436F3600D4140F /* .gitignore */,
+				FD43F73822436F3600D4140F /* Amplitude */,
+				FD43F75E22436F3600D4140F /* Amplitude-iOS.podspec */,
+				FD43F75F22436F3600D4140F /* Amplitude.xcodeproj */,
+				FD43F76222436F3600D4140F /* Amplitude.xcworkspace */,
+				FD43F76322436F3600D4140F /* AmplitudeFramework */,
+				FD43F77E22436F3600D4140F /* AppledocSettings.plist */,
+				FD43F77F22436F3600D4140F /* CHANGELOG.md */,
+				FD43F78022436F3600D4140F /* LICENSE */,
+				FD43F78122436F3600D4140F /* Podfile */,
+				FD43F78222436F3600D4140F /* Podfile.lock */,
+				FD43F78322436F3600D4140F /* README.md */,
+				FD43F78422436F3600D4140F /* appledoc-templates */,
+				FD43F7A722436F3600D4140F /* circle.yml */,
+				FD43F7A822436F3600D4140F /* documentation */,
+			);
+			path = "Amplitude-iOS-master";
+			sourceTree = "<group>";
+		};
+		FD43F73822436F3600D4140F /* Amplitude */ = {
+			isa = PBXGroup;
+			children = (
+				FD43F73922436F3600D4140F /* AMPARCMacros.h */,
+				FD43F73A22436F3600D4140F /* AMPConstants.h */,
+				FD43F73B22436F3600D4140F /* AMPConstants.m */,
+				FD43F73C22436F3600D4140F /* AMPDatabaseHelper.h */,
+				FD43F73D22436F3600D4140F /* AMPDatabaseHelper.m */,
+				FD43F73E22436F3600D4140F /* AMPDeviceInfo.h */,
+				FD43F73F22436F3600D4140F /* AMPDeviceInfo.m */,
+				FD43F74022436F3600D4140F /* AMPIdentify.h */,
+				FD43F74122436F3600D4140F /* AMPIdentify.m */,
+				FD43F74222436F3600D4140F /* AMPLocationManagerDelegate.h */,
+				FD43F74322436F3600D4140F /* AMPLocationManagerDelegate.m */,
+				FD43F74422436F3600D4140F /* AMPRevenue.h */,
+				FD43F74522436F3600D4140F /* AMPRevenue.m */,
+				FD43F74622436F3600D4140F /* AMPTrackingOptions.h */,
+				FD43F74722436F3600D4140F /* AMPTrackingOptions.m */,
+				FD43F74822436F3600D4140F /* AMPURLConnection.h */,
+				FD43F74922436F3600D4140F /* AMPURLConnection.m */,
+				FD43F74A22436F3600D4140F /* AMPURLSession.h */,
+				FD43F74B22436F3600D4140F /* AMPURLSession.m */,
+				FD43F74C22436F3600D4140F /* AMPUtils.h */,
+				FD43F74D22436F3600D4140F /* AMPUtils.m */,
+				FD43F74E22436F3600D4140F /* Amplitude+SSLPinning.h */,
+				FD43F74F22436F3600D4140F /* Amplitude.h */,
+				FD43F75022436F3600D4140F /* Amplitude.m */,
+				FD43F75122436F3600D4140F /* AppledocSettings.plist */,
+				FD43F75222436F3600D4140F /* ComodoCaLimitedRsaCertificationAuthority.der */,
+				FD43F75322436F3600D4140F /* ComodoRsaCA.der */,
+				FD43F75422436F3600D4140F /* ComodoRsaDomainValidationCA.der */,
+				FD43F75522436F3600D4140F /* SSLCertificatePinning */,
+				FD43F75D22436F3600D4140F /* api.amplitude.com.der */,
+			);
+			path = Amplitude;
+			sourceTree = "<group>";
+		};
+		FD43F75522436F3600D4140F /* SSLCertificatePinning */ = {
+			isa = PBXGroup;
+			children = (
+				FD43F75622436F3600D4140F /* ISPCertificatePinning.h */,
+				FD43F75722436F3600D4140F /* ISPCertificatePinning.m */,
+				FD43F75822436F3600D4140F /* ISPPinnedNSURLConnectionDelegate.h */,
+				FD43F75922436F3600D4140F /* ISPPinnedNSURLConnectionDelegate.m */,
+				FD43F75A22436F3600D4140F /* ISPPinnedNSURLSessionDelegate.h */,
+				FD43F75B22436F3600D4140F /* ISPPinnedNSURLSessionDelegate.m */,
+				FD43F75C22436F3600D4140F /* SSLCertificatePinning-Prefix.pch */,
+			);
+			path = SSLCertificatePinning;
+			sourceTree = "<group>";
+		};
+		FD43F76022436F3600D4140F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FD43F7C922436F3600D4140F /* libAmplitude.a */,
+				FD43F7CB22436F3600D4140F /* AmplitudeTests.xctest */,
+				FD43F7CD22436F3600D4140F /* Amplitude.framework */,
+				FD43F7CF22436F3600D4140F /* Amplitude.framework */,
+				FD43F7D122436F3600D4140F /* AmplitudeTVOSTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FD43F76322436F3600D4140F /* AmplitudeFramework */ = {
+			isa = PBXGroup;
+			children = (
+				FD43F76422436F3600D4140F /* Amplitude.modulemap */,
+				FD43F76522436F3600D4140F /* AmplitudeFramework.h */,
+				FD43F76622436F3600D4140F /* Info.plist */,
+			);
+			path = AmplitudeFramework;
+			sourceTree = "<group>";
+		};
+		FD43F78422436F3600D4140F /* appledoc-templates */ = {
+			isa = PBXGroup;
+			children = (
+				FD43F78522436F3600D4140F /* docset */,
+				FD43F78D22436F3600D4140F /* html */,
+				FD43F7A522436F3600D4140F /* publish */,
+			);
+			path = "appledoc-templates";
+			sourceTree = "<group>";
+		};
+		FD43F78522436F3600D4140F /* docset */ = {
+			isa = PBXGroup;
+			children = (
+				FD43F78622436F3600D4140F /* Contents */,
+			);
+			path = docset;
+			sourceTree = "<group>";
+		};
+		FD43F78622436F3600D4140F /* Contents */ = {
+			isa = PBXGroup;
+			children = (
+				FD43F78722436F3600D4140F /* Resources */,
+			);
+			path = Contents;
+			sourceTree = "<group>";
+		};
+		FD43F78722436F3600D4140F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FD43F78822436F3600D4140F /* Documents */,
+				FD43F78A22436F3600D4140F /* nodes-template.xml */,
+				FD43F78B22436F3600D4140F /* tokens-template.xml */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		FD43F78822436F3600D4140F /* Documents */ = {
+			isa = PBXGroup;
+			children = (
+				FD43F78922436F3600D4140F /* documents-template */,
+			);
+			path = Documents;
+			sourceTree = "<group>";
+		};
+		FD43F78D22436F3600D4140F /* html */ = {
+			isa = PBXGroup;
+			children = (
+				FD43F78E22436F3600D4140F /* css */,
+				FD43F79922436F3600D4140F /* img */,
+				FD43F79F22436F3600D4140F /* document-template.html */,
+				FD43F7A022436F3600D4140F /* hierarchy-template.html */,
+				FD43F7A122436F3600D4140F /* js */,
+				FD43F7A322436F3600D4140F /* index-template.html */,
+				FD43F7A422436F3600D4140F /* object-template.html */,
+			);
+			path = html;
+			sourceTree = "<group>";
+		};
+		FD43F78E22436F3600D4140F /* css */ = {
+			isa = PBXGroup;
+			children = (
+				FD43F78F22436F3600D4140F /* scss */,
+				FD43F79822436F3600D4140F /* style.css */,
+			);
+			path = css;
+			sourceTree = "<group>";
+		};
+		FD43F78F22436F3600D4140F /* scss */ = {
+			isa = PBXGroup;
+			children = (
+				FD43F79022436F3600D4140F /* _index.scss */,
+				FD43F79122436F3600D4140F /* _layout.scss */,
+				FD43F79222436F3600D4140F /* _normalize.scss */,
+				FD43F79322436F3600D4140F /* _object.scss */,
+				FD43F79422436F3600D4140F /* _print.scss */,
+				FD43F79522436F3600D4140F /* _variables.scss */,
+				FD43F79622436F3600D4140F /* _xcode.scss */,
+				FD43F79722436F3600D4140F /* style.scss */,
+			);
+			path = scss;
+			sourceTree = "<group>";
+		};
+		FD43F79922436F3600D4140F /* img */ = {
+			isa = PBXGroup;
+			children = (
+				FD43F79A22436F3600D4140F /* button_bar_background.png */,
+				FD43F79B22436F3600D4140F /* disclosure.png */,
+				FD43F79C22436F3600D4140F /* disclosure_open.png */,
+				FD43F79D22436F3600D4140F /* library_background.png */,
+				FD43F79E22436F3600D4140F /* title_background.png */,
+			);
+			path = img;
+			sourceTree = "<group>";
+		};
+		FD43F7A122436F3600D4140F /* js */ = {
+			isa = PBXGroup;
+			children = (
+				FD43F7A222436F3600D4140F /* script.js */,
+			);
+			path = js;
+			sourceTree = "<group>";
+		};
+		FD43F7A522436F3600D4140F /* publish */ = {
+			isa = PBXGroup;
+			children = (
+				FD43F7A622436F3600D4140F /* xml-template.xml */,
+			);
+			path = publish;
+			sourceTree = "<group>";
+		};
+		FD43F7A822436F3600D4140F /* documentation */ = {
+			isa = PBXGroup;
+			children = (
+				FD43F7A922436F3600D4140F /* html */,
+			);
+			path = documentation;
+			sourceTree = "<group>";
+		};
+		FD43F7A922436F3600D4140F /* html */ = {
+			isa = PBXGroup;
+			children = (
+				FD43F7AA22436F3600D4140F /* Classes */,
+				FD43F7AE22436F3600D4140F /* css */,
+				FD43F7B922436F3600D4140F /* img */,
+				FD43F7BF22436F3600D4140F /* hierarchy.html */,
+				FD43F7C022436F3600D4140F /* index.html */,
+				FD43F7C122436F3600D4140F /* js */,
+			);
+			path = html;
+			sourceTree = "<group>";
+		};
+		FD43F7AA22436F3600D4140F /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				FD43F7AB22436F3600D4140F /* AMPIdentify.html */,
+				FD43F7AC22436F3600D4140F /* AMPRevenue.html */,
+				FD43F7AD22436F3600D4140F /* Amplitude.html */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		FD43F7AE22436F3600D4140F /* css */ = {
+			isa = PBXGroup;
+			children = (
+				FD43F7AF22436F3600D4140F /* scss */,
+				FD43F7B822436F3600D4140F /* style.css */,
+			);
+			path = css;
+			sourceTree = "<group>";
+		};
+		FD43F7AF22436F3600D4140F /* scss */ = {
+			isa = PBXGroup;
+			children = (
+				FD43F7B022436F3600D4140F /* _index.scss */,
+				FD43F7B122436F3600D4140F /* _layout.scss */,
+				FD43F7B222436F3600D4140F /* _normalize.scss */,
+				FD43F7B322436F3600D4140F /* _object.scss */,
+				FD43F7B422436F3600D4140F /* _print.scss */,
+				FD43F7B522436F3600D4140F /* _variables.scss */,
+				FD43F7B622436F3600D4140F /* _xcode.scss */,
+				FD43F7B722436F3600D4140F /* style.scss */,
+			);
+			path = scss;
+			sourceTree = "<group>";
+		};
+		FD43F7B922436F3600D4140F /* img */ = {
+			isa = PBXGroup;
+			children = (
+				FD43F7BA22436F3600D4140F /* button_bar_background.png */,
+				FD43F7BB22436F3600D4140F /* disclosure.png */,
+				FD43F7BC22436F3600D4140F /* disclosure_open.png */,
+				FD43F7BD22436F3600D4140F /* library_background.png */,
+				FD43F7BE22436F3600D4140F /* title_background.png */,
+			);
+			path = img;
+			sourceTree = "<group>";
+		};
+		FD43F7C122436F3600D4140F /* js */ = {
+			isa = PBXGroup;
+			children = (
+				FD43F7C222436F3600D4140F /* script.js */,
+			);
+			path = js;
 			sourceTree = "<group>";
 		};
 		FD642CA121F8F3D50072C42B /* Karla */ = {
@@ -230,6 +680,7 @@
 		FDECAC0D21F8EBA0009D91EE = {
 			isa = PBXGroup;
 			children = (
+				FD43F73622436F3600D4140F /* Amplitude-iOS-master */,
 				FDECAC1821F8EBA1009D91EE /* Viridian */,
 				FDECAC1721F8EBA1009D91EE /* Products */,
 			);
@@ -253,6 +704,7 @@
 				FDECAC2521F8EBA3009D91EE /* LaunchScreen.storyboard */,
 				FDECAC2821F8EBA3009D91EE /* Info.plist */,
 				FD642CA121F8F3D50072C42B /* Karla */,
+				FD43F8302243723B00D4140F /* ViridianBridgingHeader.h */,
 			);
 			path = Viridian;
 			sourceTree = "<group>";
@@ -316,12 +768,56 @@
 			mainGroup = FDECAC0D21F8EBA0009D91EE;
 			productRefGroup = FDECAC1721F8EBA1009D91EE /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = FD43F76022436F3600D4140F /* Products */;
+					ProjectRef = FD43F75F22436F3600D4140F /* Amplitude.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				FDECAC1521F8EBA1009D91EE /* Viridian */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		FD43F7C922436F3600D4140F /* libAmplitude.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libAmplitude.a;
+			remoteRef = FD43F7C822436F3600D4140F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FD43F7CB22436F3600D4140F /* AmplitudeTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = AmplitudeTests.xctest;
+			remoteRef = FD43F7CA22436F3600D4140F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FD43F7CD22436F3600D4140F /* Amplitude.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Amplitude.framework;
+			remoteRef = FD43F7CC22436F3600D4140F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FD43F7CF22436F3600D4140F /* Amplitude.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Amplitude.framework;
+			remoteRef = FD43F7CE22436F3600D4140F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FD43F7D122436F3600D4140F /* AmplitudeTVOSTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = AmplitudeTVOSTests.xctest;
+			remoteRef = FD43F7D022436F3600D4140F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		FDECAC1421F8EBA1009D91EE /* Resources */ = {
@@ -330,11 +826,35 @@
 			files = (
 				FD642CA721F8F3D50072C42B /* OFL.txt in Resources */,
 				FDECAC2721F8EBA3009D91EE /* LaunchScreen.storyboard in Resources */,
+				FD43F81822436F3600D4140F /* xml-template.xml in Resources */,
+				FD43F7FF22436F3600D4140F /* Podfile.lock in Resources */,
 				FD642CA921F8F3D50072C42B /* Karla-Italic.ttf in Resources */,
 				FD642CAB21F8F3D50072C42B /* Karla-BoldItalic.ttf in Resources */,
 				FD642CAA21F8F3D50072C42B /* Karla-Bold.ttf in Resources */,
+				FD43F7E122436F3600D4140F /* ComodoRsaDomainValidationCA.der in Resources */,
+				FD43F7E722436F3600D4140F /* Amplitude.xcworkspace in Resources */,
+				FD43F7E022436F3600D4140F /* ComodoRsaCA.der in Resources */,
+				FD43F82B22436F3600D4140F /* hierarchy.html in Resources */,
+				FD43F81C22436F3600D4140F /* Amplitude.html in Resources */,
+				FD43F80222436F3600D4140F /* nodes-template.xml in Resources */,
+				FD43F80922436F3600D4140F /* _print.scss in Resources */,
+				FD43F81422436F3600D4140F /* hierarchy-template.html in Resources */,
 				FDECAC2421F8EBA3009D91EE /* Assets.xcassets in Resources */,
+				FD43F81322436F3600D4140F /* document-template.html in Resources */,
+				FD43F81622436F3600D4140F /* index-template.html in Resources */,
+				FD43F80322436F3600D4140F /* tokens-template.xml in Resources */,
+				FD43F82C22436F3600D4140F /* index.html in Resources */,
+				FD43F81F22436F3600D4140F /* _normalize.scss in Resources */,
+				FD43F81A22436F3600D4140F /* AMPIdentify.html in Resources */,
+				FD43F82022436F3600D4140F /* _object.scss in Resources */,
+				FD43F80122436F3600D4140F /* documents-template in Resources */,
+				FD43F81722436F3600D4140F /* object-template.html in Resources */,
+				FD43F80622436F3600D4140F /* _layout.scss in Resources */,
 				FD642CA821F8F3D50072C42B /* Karla-Regular.ttf in Resources */,
+				FD43F7E522436F3600D4140F /* api.amplitude.com.der in Resources */,
+				FD43F7E622436F3600D4140F /* Amplitude-iOS.podspec in Resources */,
+				FD43F7FC22436F3600D4140F /* CHANGELOG.md in Resources */,
+				FD43F7DF22436F3600D4140F /* ComodoCaLimitedRsaCertificationAuthority.der in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,25 +869,36 @@
 				FD28E408220BC23000BEDB78 /* ActivityData.swift in Sources */,
 				FD0196E82207ECD20032A3BD /* CategoryCollctnVCell.swift in Sources */,
 				FD702E90222B276B00BD8BB6 /* shiftForward.swift in Sources */,
+				FD43F7D722436F3600D4140F /* AMPLocationManagerDelegate.m in Sources */,
 				FD7A1B7E2219FC0C00D7C36B /* ReusingViewController.swift in Sources */,
 				FDF1A0C12202108D00533592 /* Recents.swift in Sources */,
+				FD43F7DD22436F3600D4140F /* Amplitude.m in Sources */,
+				FD43F7DA22436F3600D4140F /* AMPURLConnection.m in Sources */,
 				FDD89E4121FCDA5A00D287A4 /* EntriesTableVC.swift in Sources */,
 				FD2E5C11222B60FB001DEA9E /* watercomparison.swift in Sources */,
+				FD43F7DC22436F3600D4140F /* AMPUtils.m in Sources */,
 				FD2E5C17222C72F1001DEA9E /* paper.swift in Sources */,
 				FD2E5C13222B671F001DEA9E /* LabelAlignment.swift in Sources */,
+				FD43F7E222436F3600D4140F /* ISPCertificatePinning.m in Sources */,
+				FD43F7D522436F3600D4140F /* AMPDeviceInfo.m in Sources */,
 				FDB8691E222220C50076F7F9 /* TipData.swift in Sources */,
 				FDD89E3E21FCD54B00D287A4 /* AllStatisticsVC.swift in Sources */,
 				FD702E8E222B159000BD8BB6 /* CollectTop10.swift in Sources */,
 				FD5075592209E28300B7EC78 /* TypeAViewController.swift in Sources */,
 				FD642C9A21F8EEE30072C42B /* TabBarController.swift in Sources */,
 				FD642C9C21F8EF710072C42B /* ImpactViewController.swift in Sources */,
+				FD43F7E322436F3600D4140F /* ISPPinnedNSURLConnectionDelegate.m in Sources */,
+				FD43F7D922436F3600D4140F /* AMPTrackingOptions.m in Sources */,
+				FD43F7D322436F3600D4140F /* AMPConstants.m in Sources */,
 				FD642C9E21F8EF800072C42B /* LoggingViewController.swift in Sources */,
 				FDE26014221116F90032BC5D /* SearchTableViewController.swift in Sources */,
 				FD702E8C222B155D00BD8BB6 /* Top10.swift in Sources */,
 				FDACF00D21FF8F75005365B9 /* LogActivity.swift in Sources */,
+				FD43F7D822436F3600D4140F /* AMPRevenue.m in Sources */,
 				FD0BC0522239D658008A751A /* mileage.swift in Sources */,
 				FD28843321FCCEF300CC455F /* IdentifyDevice.swift in Sources */,
 				FDED9B452232EA71009DFA32 /* CategoryData.swift in Sources */,
+				FD43F7E422436F3600D4140F /* ISPPinnedNSURLSessionDelegate.m in Sources */,
 				FDB86926222369760076F7F9 /* PullStats.swift in Sources */,
 				FDECAC1A21F8EBA1009D91EE /* AppDelegate.swift in Sources */,
 				FD94410622065C7E00E6933F /* ReducingViewController.swift in Sources */,
@@ -380,10 +911,13 @@
 				FD642CAF21F8F94D0072C42B /* LoggingNavController.swift in Sources */,
 				FD0A603D223AAB90006AF83E /* SettingsViewController.swift in Sources */,
 				FDED73FB22342A0400210461 /* RecentsCollctnVCell.swift in Sources */,
+				FD43F7D622436F3600D4140F /* AMPIdentify.m in Sources */,
 				FDB86922222324CB0076F7F9 /* EntryCell.swift in Sources */,
+				FD43F7D422436F3600D4140F /* AMPDatabaseHelper.m in Sources */,
 				FDECAC2221F8EBA1009D91EE /* Vridian.xcdatamodeld in Sources */,
 				FDE26016221140BB0032BC5D /* SearchBarCustomizations.swift in Sources */,
 				FDB86924222363A80076F7F9 /* Statistics.swift in Sources */,
+				FD43F7DB22436F3600D4140F /* AMPURLSession.m in Sources */,
 				FD11677A2218C78E0010885D /* TypeBViewController.swift in Sources */,
 				FD7CC7D121FD33E200F60562 /* AllStatCell.swift in Sources */,
 				FD642CAD21F8F71C0072C42B /* ImpactNavController.swift in Sources */,
@@ -525,15 +1059,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer: eleanoryoung8@gmail.com (B7SFY5KJSK)";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = MK7Q96J4DT;
 				INFOPLIST_FILE = Viridian/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "-lsqlite3.0";
 				PRODUCT_BUNDLE_IDENTIFIER = eco.viridian;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "Viridian Development Profile";
+				SWIFT_OBJC_BRIDGING_HEADER = Viridian/ViridianBridgingHeader.h;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -543,15 +1081,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = MK7Q96J4DT;
 				INFOPLIST_FILE = Viridian/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "-lsqlite3.0";
 				PRODUCT_BUNDLE_IDENTIFIER = eco.viridian;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "Viridian Distribution Profile";
+				SWIFT_OBJC_BRIDGING_HEADER = Viridian/ViridianBridgingHeader.h;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
