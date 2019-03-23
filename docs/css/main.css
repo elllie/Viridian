@@ -2,7 +2,7 @@ body {
     margin: 0;
     font-family: 'Karla', sans-serif;
     font-weight: regular;
-    font-size: 24px;
+    font-size: 18px;
 }
 
 h1 {
@@ -14,10 +14,16 @@ h1 {
 h3 {
     font-family: 'Karla', sans-serif;
     font-weight: bold;
-    font-size: 24px;
+    font-size: 20px;
 }
 
 div.article {
     margin: auto;
-    max-width: 600px;
+    max-width: 700px;
+}
+
+div.stamp {
+    max-width: 100%;
+    height: auto;
+    float: left;
 }
