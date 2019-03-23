@@ -2,7 +2,7 @@ body {
     margin: 0;
     font-family: 'Karla', sans-serif;
     font-weight: regular;
-    font-size: 18px;
+    font-size: 14px;
 }
 
 h1 {
@@ -23,7 +23,7 @@ div.article {
 }
 
 div.stamp {
-    max-width: 100%;
+    max-width: 100px;
     margin: 10px;
     height: auto;
     float: left;
