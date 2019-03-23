@@ -1,9 +1,23 @@
-body { margin: 0;}
-h2 {
+body { 
+    margin: 0;
+    font-family: 'Karla", sans-serif;
+    font-weight: regular;
+    font-size: 36px;
+}
+
+h1 {
     font-family: 'Karla', sans-serif;
     font-weight: bold;
     font-size: 48px;
 }
+
+h3 {
+    font-family: 'Karla', sans-serif;
+    font-weight: bold;
+    font-size: 36px;
+}
+    
+
 .splash {
     width:100vw;
     height: 100vh;
