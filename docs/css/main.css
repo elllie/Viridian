@@ -24,8 +24,9 @@ div.article {
 }
 
 div.stamp {
-    max-width: 100px;
-    margin: 10px;
+    margin: 20px;
+    max-width: 20px;
     height: auto;
-    float: left;
+/*     float: left; */
+    overflow: hidden;
 }
