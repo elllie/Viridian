@@ -24,6 +24,7 @@ div.article {
 
 div.stamp {
     max-width: 100%;
+    margin: 10px;
     height: auto;
     float: left;
 }
