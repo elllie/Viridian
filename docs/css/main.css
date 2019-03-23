@@ -25,7 +25,7 @@ img {
 div.article {
     margin: auto;
     max-width: 700px;
-    padding: 10px;
+    padding-bottom: 20px;
 }
 
 div.stamp {
