@@ -42,7 +42,7 @@ div.stamp {
 }
 
 #signup h1 {
-    padding-top: 25px;
+    padding-top: 40px;
     font-family: 'Karla', sans-serif;
     font-weight: bold;
     font-size: 30px;
@@ -64,4 +64,5 @@ div.stamp {
 
 #signup a {
     color: white;
+    padding-bottom: 15px;
 }
