@@ -1073,7 +1073,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "Viridian Development Profile";
 				SWIFT_OBJC_BRIDGING_HEADER = Viridian/ViridianBridgingHeader.h;
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1081,7 +1081,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Eleanor Young (MK7Q96J4DT)";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = MK7Q96J4DT;
 				INFOPLIST_FILE = Viridian/Info.plist;
@@ -1095,7 +1095,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "Viridian Distribution Profile";
 				SWIFT_OBJC_BRIDGING_HEADER = Viridian/ViridianBridgingHeader.h;
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
