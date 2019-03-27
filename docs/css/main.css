@@ -52,9 +52,11 @@ div.stamp {
     font-size: 20px;
 }
 
-#signup pre {
+#signup p {
     font-family: 'Karla', sans-serif;
     font-size: 12px;
+    color: white;
+    white-space: pre-wrap;
 }
 
 #signup a {
