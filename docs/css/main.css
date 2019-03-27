@@ -38,19 +38,20 @@ div.stamp {
 #signup {
     background-color: #009B7D;
     color: white;
+}
+
+#signup h1 {
     font-family: 'Karla', sans-serif;
     font-weight: bold;
     font-size: 30px;
 }
 
-#signup p {
+#signup h3 {
     font-family: 'Karla', sans-serif;
     font-size: 20px;
 }
 
-div.footer {
-    background-color: #009B7D;
+#signup p {
     font-family: 'Karla', sans-serif;
     font-size: 12px;
-    color: white;
 }
