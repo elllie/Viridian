@@ -34,3 +34,9 @@ div.stamp {
 /*     padding: 20px 10px 10px 0; */
     padding-top: 20px;
 }
+
+div.footer {
+    background-color: #009B7D;
+    font-family: 'Karla', sans-serif;
+    font-size: 12px;
+}
