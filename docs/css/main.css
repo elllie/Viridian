@@ -42,17 +42,20 @@ div.stamp {
 }
 
 #signup h1 {
+    padding-top: 25px;
     font-family: 'Karla', sans-serif;
     font-weight: bold;
     font-size: 30px;
 }
 
 #signup h3 {
+    padding-top: 25px;
     font-family: 'Karla', sans-serif;
     font-size: 20px;
 }
 
 #signup p {
+    padding-top: 25px;
     font-family: 'Karla', sans-serif;
     font-size: 12px;
     color: white;
