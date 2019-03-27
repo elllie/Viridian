@@ -39,7 +39,6 @@ div.stamp {
     background-color: #009B7D;
     color: white;
     padding: 30px;
-    white-space: pre-wrap;
 }
 
 #signup h1 {
@@ -53,7 +52,7 @@ div.stamp {
     font-size: 20px;
 }
 
-#signup p {
+#signup pre {
     font-family: 'Karla', sans-serif;
     font-size: 12px;
 }
