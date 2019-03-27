@@ -54,6 +54,20 @@ extension Activity {
 //                    appDelegate?.saveContext()
 //                    print("Saved")
                 }
+            } else {
+                let entry = NSEntityDescription.insertNewObject(forEntityName: "Diary", into: moc) as! Diary
+                
+                entry.actID = Int32(activity.id)
+                entry.catID = Int16(activity.catID)
+                entry.name = activity.name
+                entry.logged = NSDate() as Date
+                entry.pts = Int32(activity.pts * amount)
+                entry.kWh = Float((activity.kWh ?? 0) * Float(amount))
+                entry.mi = Float((activity.mi ?? 0) * Float(amount))
+                entry.paper = Int32((activity.paper ?? 0) * amount)
+                entry.plastic = Int32((activity.plastic ?? 0) * amount)
+                entry.water = Float((activity.water ?? 0) * Float(amount))
+                
             }
         }
             else {
