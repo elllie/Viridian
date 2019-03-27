@@ -38,11 +38,13 @@ div.stamp {
 #signup {
     background-color: #009B7D;
     color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
     padding-left: 60px;
 }
 
 #signup h1 {
-    padding-top: 40px;
+    padding-top: 25px;
     font-family: 'Karla', sans-serif;
     font-weight: bold;
     font-size: 30px;
@@ -64,5 +66,4 @@ div.stamp {
 
 #signup a {
     color: white;
-    padding-bottom: 15px;
 }
