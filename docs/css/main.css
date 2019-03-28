@@ -35,6 +35,29 @@ div.stamp {
     padding-top: 20px;
 }
 
+#poster {
+    background-color: white;
+/*     padding-top: 20px;
+    padding-bottom: 10px;
+    padding-left: 60px; */
+    padding: 20px 60px 10px 60px;
+}
+
+#poster h1 {
+    padding-top: 25px;
+    color: #009B7D;
+    font-family: 'Karla', sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+#poster p {
+    padding-top: 25px;
+    color: black;
+    font-family: 'Karla', sans-serif;
+    font-size: 20px;
+}
+
 #signup {
     background-color: #009B7D;
     color: white;
