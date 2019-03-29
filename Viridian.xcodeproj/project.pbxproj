@@ -754,6 +754,7 @@
 				TargetAttributes = {
 					FDECAC1521F8EBA1009D91EE = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -1072,7 +1073,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "Viridian Development Profile";
 				SWIFT_OBJC_BRIDGING_HEADER = Viridian/ViridianBridgingHeader.h;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -1094,7 +1095,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "Viridian Distribution Profile";
 				SWIFT_OBJC_BRIDGING_HEADER = Viridian/ViridianBridgingHeader.h;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
