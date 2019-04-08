@@ -60,7 +60,7 @@ class Top5 {
                 top[4] = (a + 1)
             }
         }
-        // return top
-        return [1, 2, 3, 19, 6]
+        return top
+//        return [1, 2, 3, 19, 6]
     }
 }

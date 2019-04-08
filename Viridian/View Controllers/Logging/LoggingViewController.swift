@@ -78,6 +78,7 @@ class LoggingViewController: UIViewController, UICollectionViewDataSource, UICol
     
     override func viewWillAppear(_ animated: Bool) {
         activities = displayRecents()
+        self.navigationController!.navigationBar.isHidden = true
     }
 
 
@@ -347,7 +348,7 @@ class LoggingViewController: UIViewController, UICollectionViewDataSource, UICol
     }
     
     @objc func searchAction(sender: UIButton!) {
-        self.navigationController?.pushViewController(SearchTableViewController(), animated: true)
+        self.navigationController?.pushViewController(SearchViewController(), animated: true)
     }
 
     @objc func reduce(sender: UIButton!) {

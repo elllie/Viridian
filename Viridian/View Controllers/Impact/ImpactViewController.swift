@@ -45,7 +45,7 @@ class ImpactViewController: UIViewController {
 //        self.view.addSubview(settings)
         
         Top10().collect()
-        if (Top10().entries.count < 50 || Top10().reduceStats().contains(0)) {
+        if (Top10().entries.count < 50 || Top5().reduceStats().contains(0)) {
             youShouldLogMore()
 //            stackTop5()
         } else {
