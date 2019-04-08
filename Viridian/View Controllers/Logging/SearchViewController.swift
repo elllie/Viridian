@@ -12,16 +12,16 @@ class SearchViewController: UIViewController, UITextFieldDelegate, UITableViewDa
     let activities = Activity.allActivities
     var filteredActivities = [Activity]()
     
-    
+    var tableView: UITableView!
     // MARK: Table view delegate
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return activities.count
+        return filteredActivities.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
-        let activity = activities[indexPath.row]
+        let activity = filteredActivities[indexPath.row]
         
         // Set up the detail view controller to show.
         if activity.catID == 3 {
@@ -36,6 +36,11 @@ class SearchViewController: UIViewController, UITextFieldDelegate, UITableViewDa
     }
     
     // MARK: Text field delegate (?)
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        return true
+    }
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
@@ -63,9 +68,10 @@ class SearchViewController: UIViewController, UITextFieldDelegate, UITableViewDa
         searchBar.textAlignment = .left
         searchBar.font = UIFont(name: "Karla-Regular", size: 18)
         searchBar.delegate = self
+        searchBar.addTarget(self, action: #selector(searchRecordsAsPerText(_ :)), for: .editingChanged)
         self.view.addSubview(searchBar)
         
-        let tableView: UITableView
+        
         switch UIDevice().type {
         case .iPhoneSE,.iPhone5,.iPhone5S:
             tableView = UITableView(frame: CGRect(x: 0, y: 125, width: UIScreen.main.bounds.width, height: (UIScreen.main.bounds.height)), style: .grouped)
@@ -83,6 +89,23 @@ class SearchViewController: UIViewController, UITextFieldDelegate, UITableViewDa
     
     @objc func backAction(sender: UIButton!) {
         self.navigationController?.popViewController(animated: true)
+    }
+    
+    @objc func searchRecordsAsPerText(_ textfield:UITextField) {
+        filteredActivities.removeAll()
+        if textfield.text?.count != 0 {
+            for activity in activities {
+                let range = activity.name.lowercased().range(of: textfield.text!, options: .caseInsensitive, range: nil,   locale: nil)
+                
+                if range != nil {
+                    filteredActivities.append(activity)
+                }
+            }
+        } else {
+            filteredActivities = activities
+        }
+        
+        tableView.reloadData()
     }
 
     /*
