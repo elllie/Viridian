@@ -35,6 +35,36 @@ class SearchViewController: UIViewController, UITextFieldDelegate, UITableViewDa
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let activity: Activity
+        activity = filteredActivities[indexPath.row]
+        
+        if (activity is XActivity) {
+            let detailView = TypeAViewController()
+            
+            Activity.CurrentActivity = activity
+            
+            detailView.titleLabelText = activity.name
+            detailView.iconViewImage = activity.image
+            detailView.howManyLabelText = (activity as! XActivity).howMany
+            detailView.tipLabelText = Tip.pick(activity: Activity.CurrentActivity!)
+            
+            self.navigationController?.pushViewController(detailView, animated: true)
+        } else {
+            let detailView = TypeBViewController()
+            
+            Activity.CurrentActivity = activity
+            
+            detailView.titleLabelText = activity.name
+            detailView.iconViewImage = activity.image
+            detailView.tipLabelText = Tip.pick(activity: Activity.CurrentActivity!)
+            
+            self.navigationController?.pushViewController(detailView, animated: true)
+        }
+        Amplitude.instance()?.logEvent("Searched for activity", withEventProperties: ["Activity ID": Activity.CurrentActivity?.id ?? 0])
+        print(activity.name)
+    }
+    
     // MARK: Text field delegate (?)
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
@@ -62,7 +92,7 @@ class SearchViewController: UIViewController, UITextFieldDelegate, UITableViewDa
         back.addTarget(self, action: #selector(backAction), for: .touchUpInside)
         self.view.addSubview(back)
         
-        let searchBar = UITextField(frame: CGRect(x: 50, y: 50, width: UIScreen.main.bounds.width - 70, height: 40))
+        let searchBar = UITextField(frame: CGRect(x: UIScreen.main.bounds.width / 6, y: 50, width: UIScreen.main.bounds.width - 70, height: 40))
         searchBar.drawPlaceholder(in: CGRect(x: 150, y: 50, width: UIScreen.main.bounds.width - 75, height: 35))
         searchBar.placeholder = "Search for an activity..."
         searchBar.textAlignment = .left
@@ -72,12 +102,7 @@ class SearchViewController: UIViewController, UITextFieldDelegate, UITableViewDa
         self.view.addSubview(searchBar)
         
         
-        switch UIDevice().type {
-        case .iPhoneSE,.iPhone5,.iPhone5S:
-            tableView = UITableView(frame: CGRect(x: 0, y: 125, width: UIScreen.main.bounds.width, height: (UIScreen.main.bounds.height)), style: .grouped)
-        default:
-            tableView = UITableView(frame: CGRect(x: 0, y: 100, width: UIScreen.main.bounds.width, height: (UIScreen.main.bounds.height)), style: .grouped)
-        }
+        tableView = UITableView(frame: CGRect(x: 0, y: 100, width: UIScreen.main.bounds.width, height: (UIScreen.main.bounds.height)), style: .grouped)
         tableView.contentInset = UIEdgeInsets(top: 0.0, left: 0.0, bottom: 100, right: 0.0)
         tableView.backgroundColor = nil
         tableView.dataSource = self
