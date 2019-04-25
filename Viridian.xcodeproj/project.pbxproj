@@ -86,12 +86,9 @@
 		FDB86922222324CB0076F7F9 /* EntryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB86921222324CB0076F7F9 /* EntryCell.swift */; };
 		FDB86924222363A80076F7F9 /* Statistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB86923222363A80076F7F9 /* Statistics.swift */; };
 		FDB86926222369760076F7F9 /* PullStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB86925222369760076F7F9 /* PullStats.swift */; };
-		FDD054D4224E7F38009197D1 /* SearchResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD054D3224E7F38009197D1 /* SearchResultsTableViewController.swift */; };
 		FDD49CE9225BCD4C0083DCBD /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD49CE8225BCD4C0083DCBD /* SearchViewController.swift */; };
 		FDD89E3E21FCD54B00D287A4 /* AllStatisticsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD89E3D21FCD54B00D287A4 /* AllStatisticsVC.swift */; };
 		FDD89E4121FCDA5A00D287A4 /* EntriesTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD89E4021FCDA5A00D287A4 /* EntriesTableVC.swift */; };
-		FDE26014221116F90032BC5D /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE26013221116F90032BC5D /* SearchTableViewController.swift */; };
-		FDE26016221140BB0032BC5D /* SearchBarCustomizations.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE26015221140BB0032BC5D /* SearchBarCustomizations.swift */; };
 		FDECAC1A21F8EBA1009D91EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDECAC1921F8EBA1009D91EE /* AppDelegate.swift */; };
 		FDECAC2221F8EBA1009D91EE /* Vridian.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FDECAC2021F8EBA1009D91EE /* Vridian.xcdatamodeld */; };
 		FDECAC2421F8EBA3009D91EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDECAC2321F8EBA3009D91EE /* Assets.xcassets */; };
@@ -275,12 +272,9 @@
 		FDB86921222324CB0076F7F9 /* EntryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryCell.swift; sourceTree = "<group>"; };
 		FDB86923222363A80076F7F9 /* Statistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Statistics.swift; sourceTree = "<group>"; };
 		FDB86925222369760076F7F9 /* PullStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullStats.swift; sourceTree = "<group>"; };
-		FDD054D3224E7F38009197D1 /* SearchResultsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsTableViewController.swift; sourceTree = "<group>"; };
 		FDD49CE8225BCD4C0083DCBD /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		FDD89E3D21FCD54B00D287A4 /* AllStatisticsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllStatisticsVC.swift; sourceTree = "<group>"; };
 		FDD89E4021FCDA5A00D287A4 /* EntriesTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntriesTableVC.swift; sourceTree = "<group>"; };
-		FDE26013221116F90032BC5D /* SearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
-		FDE26015221140BB0032BC5D /* SearchBarCustomizations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarCustomizations.swift; sourceTree = "<group>"; };
 		FDECAC1621F8EBA1009D91EE /* Viridian.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Viridian.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDECAC1921F8EBA1009D91EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDECAC2121F8EBA1009D91EE /* Vridian.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Vridian.xcdatamodel; sourceTree = "<group>"; };
@@ -638,10 +632,7 @@
 			isa = PBXGroup;
 			children = (
 				FD642C9D21F8EF800072C42B /* LoggingViewController.swift */,
-				FDE26013221116F90032BC5D /* SearchTableViewController.swift */,
 				FDD49CE8225BCD4C0083DCBD /* SearchViewController.swift */,
-				FDD054D3224E7F38009197D1 /* SearchResultsTableViewController.swift */,
-				FDE26015221140BB0032BC5D /* SearchBarCustomizations.swift */,
 				FDAE931E2209EDDB00FB70FC /* Detail View Controllers */,
 				FD94410722065C8700E6933F /* Categories */,
 				FDF1A0C02202108D00533592 /* Recents.swift */,
@@ -906,12 +897,10 @@
 				FD43F7D922436F3600D4140F /* AMPTrackingOptions.m in Sources */,
 				FD43F7D322436F3600D4140F /* AMPConstants.m in Sources */,
 				FD642C9E21F8EF800072C42B /* LoggingViewController.swift in Sources */,
-				FDE26014221116F90032BC5D /* SearchTableViewController.swift in Sources */,
 				FD702E8C222B155D00BD8BB6 /* Top10.swift in Sources */,
 				FDACF00D21FF8F75005365B9 /* LogActivity.swift in Sources */,
 				FD43F7D822436F3600D4140F /* AMPRevenue.m in Sources */,
 				FD0BC0522239D658008A751A /* mileage.swift in Sources */,
-				FDD054D4224E7F38009197D1 /* SearchResultsTableViewController.swift in Sources */,
 				FD28843321FCCEF300CC455F /* IdentifyDevice.swift in Sources */,
 				FDED9B452232EA71009DFA32 /* CategoryData.swift in Sources */,
 				FD43F7E422436F3600D4140F /* ISPPinnedNSURLSessionDelegate.m in Sources */,
@@ -931,7 +920,6 @@
 				FDB86922222324CB0076F7F9 /* EntryCell.swift in Sources */,
 				FD43F7D422436F3600D4140F /* AMPDatabaseHelper.m in Sources */,
 				FDECAC2221F8EBA1009D91EE /* Vridian.xcdatamodeld in Sources */,
-				FDE26016221140BB0032BC5D /* SearchBarCustomizations.swift in Sources */,
 				FDB86924222363A80076F7F9 /* Statistics.swift in Sources */,
 				FD43F7DB22436F3600D4140F /* AMPURLSession.m in Sources */,
 				FD11677A2218C78E0010885D /* TypeBViewController.swift in Sources */,
