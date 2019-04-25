@@ -13,6 +13,7 @@ class TypeAViewController: UIViewController, UITextFieldDelegate {
     var iconViewImage: UIImage?
     var howManyLabelText: String?
     let tipLabelIndent: String = "          "
+    let impactLabelIndent: String = "                  "
     var tipLabelText: String?
     let twentyFive = (UIScreen.main.bounds.width) / 2.5 // this used to be /4 hence 25 but im too lazy to change the variable name
     var amt: Int = 1
@@ -103,6 +104,19 @@ class TypeAViewController: UIViewController, UITextFieldDelegate {
         tipLabel.numberOfLines = 0
         tipLabel.sizeToFit()
         self.view.addSubview(tipLabel)
+        
+        let impact = UILabel(frame: CGRect(x: 55, y: titleLabel.frame.height + 350, width: 45, height: 25))
+        impact.font = UIFont(name: "Karla-Bold", size: 14)
+        impact.text = "Impact:"
+        impact.sizeToFit()
+        self.view.addSubview(impact)
+        
+        let impactLabel = UILabel(frame: CGRect(x: 55, y: (titleLabel.frame.height + 350), width: UIScreen.main.bounds.width - 110, height: UIScreen.main.bounds.height - 475))
+        impactLabel.text = String(impactLabelIndent + (tipLabelText ?? ""))
+        impactLabel.font = UIFont(name: "Karla-Regular", size: 14)
+        impactLabel.numberOfLines = 0
+        impactLabel.sizeToFit()
+        self.view.addSubview(impactLabel)
     }
     
     @objc func backAction(sender: UIButton!) {
@@ -116,4 +130,3 @@ class TypeAViewController: UIViewController, UITextFieldDelegate {
 
 
 }
-

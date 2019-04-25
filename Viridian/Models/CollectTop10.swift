@@ -14,7 +14,7 @@ extension Top10 {
         moc = appDelegate?.persistentContainer.viewContext
         let fetchRequest = NSFetchRequest<Diary>(entityName: "Diary")
         fetchRequest.sortDescriptors = [NSSortDescriptor(key: "logged", ascending: false)]
-        fetchRequest.fetchLimit = 100 // one day this will evaluate to the user's average count per week.
+//        fetchRequest.fetchLimit = 100 // one day this will evaluate to the user's average count per week.
         
 //        persistentContainer.loadPersistentStores { (persistentStoreDescription, error) in
 //            if let error = error {
@@ -23,7 +23,9 @@ extension Top10 {
 //
 //            } else {
                 do {
-                    try self.entries = self.moc.fetch(fetchRequest)
+                    fetchRequest.fetchLimit = 100
+                    try Top10.entries = self.moc.fetch(fetchRequest)
+                    print(Top10.entries)
                 } catch {
                     let fetchError = error as NSError
                     print("Unable to Perform Fetch Request")

@@ -328,22 +328,6 @@ class LoggingViewController: UIViewController, UICollectionViewDataSource, UICol
         recentsView.register(RecentsCollectionViewCell.self, forCellWithReuseIdentifier: "coll")
         pageScroll.addSubview(recentsView)
         
-        
-//        let favoritesLabel: UILabel!
-//        switch UIDevice().type {
-//        case .iPhone5S, .iPhoneSE, .iPhone6, .iPhone7, .iPhone8:
-//            favoritesLabel = UILabel(frame: CGRect(x: 30, y: 350, width: 150, height: 40))
-//            favoritesLabel.font = UIFont(name: "Karla-Bold", size: 14)
-//        default:
-//            favoritesLabel = UILabel(frame: CGRect(x: 30, y: 400, width: 150, height: 40))
-//            favoritesLabel.font = UIFont(name: "Karla-Bold", size: 16)
-//        }
-//        favoritesLabel.text = "Favorites"
-//        favoritesLabel.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-//        pageScroll.addSubview(favoritesLabel)
-////        loadFavorites()
-//        //favorites collection view height: 140
-        
         self.view.addSubview(pageScroll)
     }
     

@@ -35,7 +35,7 @@ extension ImpactViewController {
             statStack.frame = CGRect(x: 0, y: -180, width: UIScreen.main.bounds.width, height: 790)
         }
         
-        let topStats = Top10().reduceStats()
+        let topStats = Top5().reduceStats()
         for i in 0...4 {
             let yOffset: Int
             switch UIDevice().type {
@@ -107,7 +107,6 @@ extension ImpactViewController {
                 titleColor = UIColor(named: "blueTint") ?? .black
                 // green miles traveled
                 // gallons of gas saved
-                // single-use drink cups saved
                 // times composted?
             case 19, 20, 23, 26:
                 align = .rightThirdQuarter

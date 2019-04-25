@@ -14,7 +14,7 @@ class Top10 {
     let appDelegate = UIApplication.shared.delegate as? AppDelegate
     var moc: NSManagedObjectContext!
     let persistentContainer = NSPersistentContainer(name: "Vridian")
-    var entries: [Diary] = []
+    static var entries: [Diary] = []
     
     var i: Int = 0
     
@@ -23,7 +23,7 @@ class Top10 {
         collect()
       //  while (i <= 100) {
             for a in 0...28 {
-                counts[a] = entries.filter( {$0.actID == (a + 1) }).reduce(0) {(result, entry) -> Int in
+                counts[a] = Top10.entries.filter( {$0.actID == (a + 1) }).reduce(0) {(result, entry) -> Int in
                     return result + 1
                 }
            // i += counts[a]
@@ -75,7 +75,7 @@ class Top10 {
                 top[9] = (a + 1)
             }
         }
-        // return top
-        return [1, 2, 3, 19, 6, 7, 8, 14, 16, 12]
+         return top
+//        return [1, 2, 3, 19, 6, 7, 8, 14, 16, 12]
     }
 }

@@ -23,7 +23,7 @@ class Top5 {
         Top10().collect()
       //  while (i <= 100) {
             for a in 0...28 {
-                counts[a] = entries.filter( {$0.actID == (a + 1) }).reduce(0) {(result, entry) -> Int in
+                counts[a] = Top10.entries.filter( {$0.actID == (a + 1) }).reduce(0) {(result, entry) -> Int in
                     return result + 1
                 }
            // i += counts[a]
@@ -61,6 +61,6 @@ class Top5 {
             }
         }
         return top
-//        return [1, 2, 3, 19, 6]
+//        return [26, 27, 28, 29, 1]
     }
 }
