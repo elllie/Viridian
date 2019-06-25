@@ -22,13 +22,15 @@ class Activity {
     var paper: Int?
     var plastic: Int?
     var water: Float?
+//    var impact: String
     
     
-    init(id: Int, catID: Int, name: String, image: UIImage, pts: Int, kWh: Float?, mi: Float?, paper: Int?, plastic: Int?, water: Float?){
+    init(id: Int, catID: Int, name: String, image: UIImage, pts: Int, kWh: Float?, mi: Float?, paper: Int?, plastic: Int?, water: Float?){//}, impact: String){
         self.id = id
         self.catID = catID
         self.name = name
         self.image = image
+//        self.impact = impact
         
         self.pts = pts
         self.kWh = kWh ?? 0.0

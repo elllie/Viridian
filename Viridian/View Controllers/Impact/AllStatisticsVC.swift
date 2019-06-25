@@ -67,7 +67,7 @@ class AllStatisticsViewController: UIViewController, UITableViewDataSource, UITa
         self.view.addSubview(back)
         
         let yourImpact = UILabel(frame: CGRect(x: 55, y: 50, width: 220, height: 40))
-        yourImpact.text = "Total impact"
+        yourImpact.text = "Your impact" // Total impact
         yourImpact.font = UIFont(name: "Karla-Bold", size: 36)
         yourImpact.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         self.view.addSubview(yourImpact)

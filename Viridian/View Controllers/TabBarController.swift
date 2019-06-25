@@ -11,7 +11,7 @@ class TabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let firstViewController = ImpactNavController(rootViewController: ImpactViewController())
+        let firstViewController = ImpactNavController(rootViewController: GoalViewController())
         
         firstViewController.tabBarItem = UITabBarItem(title: "Impact", image: UIImage(named: "impact-tab"), tag: 0)
         
