@@ -78,6 +78,8 @@
 		FD94410622065C7E00E6933F /* ReducingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD94410522065C7E00E6933F /* ReducingViewController.swift */; };
 		FDACF00721FEEEC9005365B9 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDACF00621FEEEC9005365B9 /* Activity.swift */; };
 		FDACF00D21FF8F75005365B9 /* LogActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDACF00C21FF8F75005365B9 /* LogActivity.swift */; };
+		FDB2593422C2C604002E9BD6 /* GoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB2593322C2C604002E9BD6 /* GoalViewController.swift */; };
+		FDB2593722C2C847002E9BD6 /* Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB2593622C2C847002E9BD6 /* Goal.swift */; };
 		FDB4FF14224D99CF00BFE532 /* Top5.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB4FF13224D99CF00BFE532 /* Top5.swift */; };
 		FDB4FF16224D9A2D00BFE532 /* StackTop5.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB4FF15224D9A2D00BFE532 /* StackTop5.swift */; };
 		FDB8691A22220FBF0076F7F9 /* XActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB8691922220FBF0076F7F9 /* XActivity.swift */; };
@@ -264,6 +266,8 @@
 		FD94410522065C7E00E6933F /* ReducingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReducingViewController.swift; sourceTree = "<group>"; };
 		FDACF00621FEEEC9005365B9 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		FDACF00C21FF8F75005365B9 /* LogActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogActivity.swift; sourceTree = "<group>"; };
+		FDB2593322C2C604002E9BD6 /* GoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalViewController.swift; sourceTree = "<group>"; };
+		FDB2593622C2C847002E9BD6 /* Goal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goal.swift; sourceTree = "<group>"; };
 		FDB4FF13224D99CF00BFE532 /* Top5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Top5.swift; sourceTree = "<group>"; };
 		FDB4FF15224D9A2D00BFE532 /* StackTop5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackTop5.swift; sourceTree = "<group>"; };
 		FDB8691922220FBF0076F7F9 /* XActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XActivity.swift; sourceTree = "<group>"; };
@@ -604,6 +608,7 @@
 		FD642CB021F8F9960072C42B /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				FDB2592D22C2C5BA002E9BD6 /* Goals */,
 				FD642C9921F8EEE30072C42B /* TabBarController.swift */,
 				FD0A603C223AAB90006AF83E /* SettingsViewController.swift */,
 				FD642CB121F8F9AF0072C42B /* Impact */,
@@ -657,6 +662,7 @@
 		FDACF00921FF8DCB005365B9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				FDB2593522C2C834002E9BD6 /* Goals */,
 				FD2E5C0F222B60DC001DEA9E /* Importance */,
 				FDECAC2021F8EBA1009D91EE /* Vridian.xcdatamodeld */,
 				FDED9B432232EA3E009DFA32 /* Activities */,
@@ -678,6 +684,22 @@
 				FD1167792218C78E0010885D /* TypeBViewController.swift */,
 			);
 			path = "Detail View Controllers";
+			sourceTree = "<group>";
+		};
+		FDB2592D22C2C5BA002E9BD6 /* Goals */ = {
+			isa = PBXGroup;
+			children = (
+				FDB2593322C2C604002E9BD6 /* GoalViewController.swift */,
+			);
+			path = Goals;
+			sourceTree = "<group>";
+		};
+		FDB2593522C2C834002E9BD6 /* Goals */ = {
+			isa = PBXGroup;
+			children = (
+				FDB2593622C2C847002E9BD6 /* Goal.swift */,
+			);
+			path = Goals;
 			sourceTree = "<group>";
 		};
 		FDECAC0D21F8EBA0009D91EE = {
@@ -897,6 +919,7 @@
 				FD43F7D922436F3600D4140F /* AMPTrackingOptions.m in Sources */,
 				FD43F7D322436F3600D4140F /* AMPConstants.m in Sources */,
 				FD642C9E21F8EF800072C42B /* LoggingViewController.swift in Sources */,
+				FDB2593722C2C847002E9BD6 /* Goal.swift in Sources */,
 				FD702E8C222B155D00BD8BB6 /* Top10.swift in Sources */,
 				FDACF00D21FF8F75005365B9 /* LogActivity.swift in Sources */,
 				FD43F7D822436F3600D4140F /* AMPRevenue.m in Sources */,
@@ -910,6 +933,7 @@
 				FD2E5C15222C563A001DEA9E /* kilowatthours.swift in Sources */,
 				FD7A1B80221A257300D7C36B /* FoodViewController.swift in Sources */,
 				FDB8691C22221D920076F7F9 /* Tip.swift in Sources */,
+				FDB2593422C2C604002E9BD6 /* GoalViewController.swift in Sources */,
 				FD2E5C19222C8ADB001DEA9E /* plastique.swift in Sources */,
 				FDACF00721FEEEC9005365B9 /* Activity.swift in Sources */,
 				FD7DA793220E7BDA00747F2E /* RecyclingViewController.swift in Sources */,
